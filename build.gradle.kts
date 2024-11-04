@@ -74,6 +74,11 @@ allprojects {
     }
 
     repositories {
+        maven("https://mirrors.tuna.tsinghua.edu.cn/repository/maven/")
+        maven("https://maven.aliyun.com/nexus/content/repositories/google")
+        maven("https://maven.aliyun.com/nexus/content/groups/public")
+        maven("https://maven.aliyun.com/nexus/content/repositories/jcenter")
+
         mavenCentral()
         maven("https://cache-redirector.jetbrains.com/repo.maven.apache.org/maven2")
         maven("https://cache-redirector.jetbrains.com/intellij-dependencies")
