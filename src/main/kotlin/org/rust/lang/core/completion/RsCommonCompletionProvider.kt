@@ -511,7 +511,7 @@ fun LookupElement.withImportCandidate(candidate: ImportCandidate): RsImportLooku
  * We need to distinguish lookup elements with the same psi element and the same lookup text
  * but belong to different import candidates, otherwise the platform shows only one such item.
  *
- * See [#5415](https://github.com/intellij-rust/intellij-rust/issues/5415)
+ * See [#5415](https://github.com/intellij-loong/intellij-loong/issues/5415)
  */
 class RsImportLookupElement(
     delegate: LookupElement,

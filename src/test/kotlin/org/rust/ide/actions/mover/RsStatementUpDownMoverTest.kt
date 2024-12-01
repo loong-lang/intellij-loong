@@ -498,7 +498,7 @@ class RsStatementUpDownMoverTest : RsStatementUpDownMoverTestBase() {
     """)
 
 
-    // https://github.com/intellij-rust/intellij-rust/issues/3548
+    // https://github.com/intellij-loong/intellij-loong/issues/3548
     fun `test statement ends with comment`() = moveDown("""
         fn main() {
             1;
@@ -627,7 +627,7 @@ class RsStatementUpDownMoverTest : RsStatementUpDownMoverTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/7376
+    // https://github.com/intellij-loong/intellij-loong/issues/7376
     fun `test move down in block inside argument list`() = moveDown("""
         fn foo(a: u32) {}
 

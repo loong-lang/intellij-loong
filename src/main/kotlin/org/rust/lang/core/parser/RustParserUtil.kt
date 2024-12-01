@@ -329,7 +329,7 @@ object RustParserUtil : GeneratedParserUtilBase() {
     /**
      * `FLOAT_LITERAL` is never produced during lexing. We construct it during parsing from one or
      * several `INTEGER_LITERAL` tokens. We need this in order to support nested tuple fields
-     * access syntax (see https://github.com/intellij-rust/intellij-rust/issues/6029)
+     * access syntax (see https://github.com/intellij-loong/intellij-loong/issues/6029)
      *
      * Here we collapse these sequences of tokes:
      * 1. `INTEGER_LITERAL`, `DOT`, `INTEGER_LITERAL`. Like `0.0`

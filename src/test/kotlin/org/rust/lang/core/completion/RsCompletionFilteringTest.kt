@@ -234,7 +234,7 @@ class RsCompletionFilteringTest: RsCompletionTestBase() {
         pub use foo::asser/*caret*/
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3694
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3694
     fun `test issue 3694`() = doSingleCompletion("""
         mod foo {
             pub struct S { field: i32 }

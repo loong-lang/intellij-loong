@@ -289,7 +289,7 @@ resolve each candidate and check if it indeed points to our file.
 Read more about [indexing].
 
 [indexing]: https://www.jetbrains.org/intellij/sdk/docs/basics/indexing_and_psi_stubs.html
-[stub-switch]: https://github.com/intellij-rust/intellij-rust/blob/1cc9e40248bd36e43cc016d008270d0e0f4d7f8a/src/main/kotlin/org/rust/lang/core/psi/impl/RustStubbedNamedElementImpl.kt#L27
+[stub-switch]: https://github.com/intellij-loong/intellij-loong/blob/1cc9e40248bd36e43cc016d008270d0e0f4d7f8a/src/main/kotlin/org/rust/lang/core/psi/impl/RustStubbedNamedElementImpl.kt#L27
 
 
 # Project model
@@ -381,19 +381,19 @@ A: [CargoWorkspace.Package.name] is a name of a dependency that should be mentio
 
 See Cargo's [workspace.rs], [package.rs] and [manifest.rs].
 
-[attachCargoProject]:                  https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L45
-[CargoProject]:                        https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L90
-[CargoProject.workspace]:              https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L97
-[CargoWorkspace]:                      https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L28
-[CargoWorkspace.packages]:             https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L36
-[CargoWorkspace.Package]:              https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L51
-[CargoWorkspace.Package.dependencies]: https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L66
-[CargoWorkspace.Package.name]:         https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L55
-[CargoWorkspace.Package.normName]:     https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L56
-[CargoWorkspace.Target]:               https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L78
-[CargoWorkspace.Target.name]:          https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L79
-[CargoWorkspace.Target.normName]:      https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L82
-[CargoWorkspace.Target.crateRoot]:     https://github.com/intellij-rust/intellij-rust/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L95
+[attachCargoProject]:                  https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L45
+[CargoProject]:                        https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L90
+[CargoProject.workspace]:              https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/model/CargoProjectService.kt#L97
+[CargoWorkspace]:                      https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L28
+[CargoWorkspace.packages]:             https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L36
+[CargoWorkspace.Package]:              https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L51
+[CargoWorkspace.Package.dependencies]: https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L66
+[CargoWorkspace.Package.name]:         https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L55
+[CargoWorkspace.Package.normName]:     https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L56
+[CargoWorkspace.Target]:               https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L78
+[CargoWorkspace.Target.name]:          https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L79
+[CargoWorkspace.Target.normName]:      https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L82
+[CargoWorkspace.Target.crateRoot]:     https://github.com/intellij-loong/intellij-loong/blob/1a8cc0ee1/src/main/kotlin/org/rust/cargo/project/workspace/CargoWorkspace.kt#L95
 [workspace.rs]: https://github.com/rust-lang/cargo/blob/d0f82841/src/cargo/core/workspace.rs
 [package.rs]: https://github.com/rust-lang/cargo/blob/d0f82841/src/cargo/core/package.rs
 [manifest.rs]: https://github.com/rust-lang/cargo/blob/d0f82841/src/cargo/core/manifest.rs#L228

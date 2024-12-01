@@ -111,7 +111,7 @@ class RsBuiltinMacroExpansionTest : RsMacroExpansionTestBase() {
         format_args!("{a}", a = a)
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9282
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9282
     fun `test incorrect syntax`() = doErrorTest("""
         #[rustc_builtin_macro]
         macro_rules! format_args {}

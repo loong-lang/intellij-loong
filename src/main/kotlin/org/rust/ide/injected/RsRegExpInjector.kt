@@ -42,7 +42,7 @@ class RsRegExpInjector : MultiHostInjector {
 
         // We switched to this dumb implementation because this code is sometimes
         // called from EDT, and invoking `reference.resolve()` can freeze the UI.
-        // See https://github.com/intellij-rust/intellij-rust/issues/2733
+        // See https://github.com/intellij-loong/intellij-loong/issues/2733
         val call = ((context.parent?.parent as? RsCallExpr)?.expr as? RsPathExpr) ?: return false
         return call.path.text == "Regex::new"
     }

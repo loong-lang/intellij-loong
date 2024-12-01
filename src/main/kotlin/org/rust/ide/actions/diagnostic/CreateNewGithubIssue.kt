@@ -64,7 +64,7 @@ class CreateNewGithubIssue : DumbAwareAction() {
             additionalExperimentalFeatures
         )
         val body = ISSUE_TEMPLATE.format(environmentInfo, codeSnippet)
-        val link = "https://github.com/intellij-rust/intellij-rust/issues/new?body=${URLUtil.encodeURIComponent(body)}"
+        val link = "https://github.com/intellij-loong/intellij-loong/issues/new?body=${URLUtil.encodeURIComponent(body)}"
         BrowserUtil.browse(link)
     }
 

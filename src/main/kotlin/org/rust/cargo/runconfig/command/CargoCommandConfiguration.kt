@@ -180,7 +180,7 @@ open class CargoCommandConfiguration(
         config as CleanConfiguration.Ok
 
         // TODO: remove when `com.intellij.execution.process.ElevationService` supports error stream redirection
-        // https://github.com/intellij-rust/intellij-rust/issues/7320
+        // https://github.com/intellij-loong/intellij-loong/issues/7320
         if (withSudo && showTestToolWindow(config.cmd)) {
             val message = if (SystemInfo.isWindows) {
                 RsBundle.message("notification.run.tests.as.root.windows")

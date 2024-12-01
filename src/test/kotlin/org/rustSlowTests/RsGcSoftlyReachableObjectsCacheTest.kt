@@ -27,7 +27,7 @@ import org.rust.lang.core.types.implLookup
  */
 class RsGcSoftlyReachableObjectsCacheTest : RsTestBase() {
     /**
-     * Issue https://github.com/intellij-rust/intellij-rust/issues/9432
+     * Issue https://github.com/intellij-loong/intellij-loong/issues/9432
      *
      * A kind of test for [org.rust.lang.core.crate.impl.CargoBasedCrate.equals] and
      * [org.rust.lang.core.crate.hasTransitiveDependencyOrSelf].
@@ -56,7 +56,7 @@ class RsGcSoftlyReachableObjectsCacheTest : RsTestBase() {
         check(impls.isNotEmpty()) // use `impls` in order to retain it in the memory until this moment
     }
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9468
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9468
     fun `test only one in-memory macro expansion per macro call may exist in the memory at a time`() {
         InlineFile("""
             macro_rules! as_is { ($($ t:tt)*) => { $($ t)* } }

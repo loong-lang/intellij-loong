@@ -23,7 +23,7 @@ class CargoFeatureLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
     @MockCargoFeatures("foo", "bar", "foobar")
     fun `test simple features`() = doTest("foo", """
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -36,7 +36,7 @@ class CargoFeatureLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
     @MockCargoFeatures("foo")
     fun `test optional dependency`() = doTest("foo", """
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -48,7 +48,7 @@ class CargoFeatureLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
     @MockCargoFeatures("foo")
     fun `test optional dependency inline table`() = doTest("foo", """
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -61,7 +61,7 @@ class CargoFeatureLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
     fun `test optional dependency is not a feature`() = expect<Throwable> {
     doTest("foo", """
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 

@@ -862,7 +862,7 @@ class RsCompletionTest : RsCompletionTestBase() {
         function_like_as_is!(/*caret*/)
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1598
+    // https://github.com/intellij-loong/intellij-loong/issues/1598
     fun `test no macro completion in item element definition`() {
         for (itemKeyword in listOf("fn", "struct", "enum", "union", "trait", "type", "impl")) {
             checkNoCompletion("""
@@ -872,7 +872,7 @@ class RsCompletionTest : RsCompletionTestBase() {
         }
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1598
+    // https://github.com/intellij-loong/intellij-loong/issues/1598
     fun `test no macro completion after path segment`() = checkNoCompletion("""
         struct Foo;
         macro_rules! foo_bar { () => () }

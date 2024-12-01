@@ -39,7 +39,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
     fun `test resolve external library which hides std crate`() = buildProject {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -60,7 +60,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
         val testProject = buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -459,7 +459,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
     fun `test cargo rename`() = buildProject {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
             edition = "2018"
@@ -479,7 +479,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
     fun `test cargo rename of local dependency`() = buildProject {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
             edition = "2018"
@@ -514,7 +514,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
     fun `test cargo rename of local dependency with custom lib target name`() = buildProject {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
             edition = "2018"
@@ -580,7 +580,7 @@ class CargoProjectResolveTest : RsWithToolchainTestBase() {
         val testProject = buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 

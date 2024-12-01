@@ -268,7 +268,7 @@ class RsMacroExpansionCachingTest : RsMacroExpansionTestBase() {
         struct S3;
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9023, we're checking there are no exceptions
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9023, we're checking there are no exceptions
     @CheckTestmarkHit(MacroExpansionTask.MoveToTheSameDir::class)
     fun `test a macro change that leaves the first 2 letters of mixHash the same as before the change`() = checkReExpanded(type("\b"), """
         macro_rules! foo {

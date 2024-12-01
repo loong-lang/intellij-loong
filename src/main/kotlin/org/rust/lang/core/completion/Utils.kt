@@ -26,7 +26,7 @@ private fun areAncestorTypesEquals(psi1: PsiElement, psi2: PsiElement): Boolean 
 
 fun rerunCompletion(parameters: CompletionParameters, result: CompletionResultSet) {
     // BACKCOMPAT 2022.3: `LiveTemplateCompletionContributor` throws an exception on 2022.3 when invoked
-    //  with a light virtual file. See https://github.com/intellij-rust/intellij-rust/issues/9822
+    //  with a light virtual file. See https://github.com/intellij-loong/intellij-loong/issues/9822
     //  Here we exclude `LiveTemplateCompletionContributor` from completion. This approach works since
     //  `LiveTemplateCompletionContributor` is the first in the completion list
     val liveTemplateContributor = CompletionContributor.forParameters(parameters)

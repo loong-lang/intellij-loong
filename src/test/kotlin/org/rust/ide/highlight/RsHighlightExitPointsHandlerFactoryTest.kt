@@ -437,7 +437,7 @@ class RsHighlightExitPointsHandlerFactoryTest : RsTestBase() {
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/7833
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/7833
     fun `test string literals in macros are not highlighted`() = doTest("""
         fn foo() -> i32 {
             foo!("foobar");

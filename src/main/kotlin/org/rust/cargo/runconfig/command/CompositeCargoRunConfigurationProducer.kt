@@ -23,7 +23,7 @@ import java.util.function.Function
  * configurations, taking into account configurations that other [producers] can create.
  * The problem with the previous approach is that if there is an existing configuration that matches the context, the
  * platform does not compare this configuration with those that can be created by other producers, even if these
- * configurations are better matched with the context (see [#1252](https://github.com/intellij-rust/intellij-rust/issues/1252)).
+ * configurations are better matched with the context (see [#1252](https://github.com/intellij-loong/intellij-loong/issues/1252)).
  */
 class CompositeCargoRunConfigurationProducer : CargoRunConfigurationProducer() {
     private val producers: List<CargoRunConfigurationProducer> =

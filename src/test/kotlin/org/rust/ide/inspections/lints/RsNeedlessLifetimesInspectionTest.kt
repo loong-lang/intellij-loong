@@ -318,7 +318,7 @@ class RsNeedlessLifetimesInspectionTest : RsInspectionsTestBase(RsNeedlessLifeti
         fn foo<'a, T>(s: &'a str, t: T) where T: S<'a> { unimplemented!() }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/7092
+    // https://github.com/intellij-loong/intellij-loong/issues/7092
     fun `test no elision when lifetime in where 3`() = doTest("""
         trait A<'b> {}
 

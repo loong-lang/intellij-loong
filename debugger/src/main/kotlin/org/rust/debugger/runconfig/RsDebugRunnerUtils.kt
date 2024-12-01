@@ -43,7 +43,7 @@ object RsDebugRunnerUtils {
             runExecutable,
             state.cargoProject,
             // TODO: always pass `withSudo` when `com.intellij.execution.process.ElevationService` supports error stream redirection
-            // https://github.com/intellij-rust/intellij-rust/issues/7320
+            // https://github.com/intellij-loong/intellij-loong/issues/7320
             if (state is CargoTestRunState) false else state.runConfiguration.withSudo
         )
         return XDebuggerManager.getInstance(environment.project)

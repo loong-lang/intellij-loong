@@ -524,7 +524,7 @@ class RsTypeAwareResolveTest : RsResolveTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1269
+    // https://github.com/intellij-loong/intellij-loong/issues/1269
     fun `test tuple field`() = checkByCode("""
         struct Foo;
         impl Foo {
@@ -572,7 +572,7 @@ class RsTypeAwareResolveTest : RsResolveTestBase() {
         }      //^ unresolved
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1549
+    // https://github.com/intellij-loong/intellij-loong/issues/1549
     fun `test Self type in assoc function`() = checkByCode("""
         struct Foo;
         impl Foo {

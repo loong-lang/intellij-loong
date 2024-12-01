@@ -191,7 +191,7 @@ class RsEnterInLineCommentHandlerTest : RsTypingTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/578
+    // https://github.com/intellij-loong/intellij-loong/issues/578
     fun `test issue578`() = doTestByText("""
         //! This crate does something useful
         <caret>//! Description goes here

@@ -786,7 +786,7 @@ class RsLivenessInspectionTest : RsInspectionsTestBase(RsLivenessInspection::cla
         }
     """))
 
-    // https://github.com/intellij-rust/intellij-rust/issues/6513
+    // https://github.com/intellij-loong/intellij-loong/issues/6513
     fun `test remove function argument when function is used as an argument`() = checkFixByText("Remove parameter `x`", """
         fn foo(<warning>x/*caret*/</warning>: i32) {}
         fn id<T>(<warning>t</warning>: T) {}

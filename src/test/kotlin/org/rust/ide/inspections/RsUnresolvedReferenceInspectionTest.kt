@@ -336,7 +336,7 @@ class RsUnresolvedReferenceInspectionTest : RsInspectionsTestBase(RsUnresolvedRe
         }
     """, false)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/8962
+    // https://github.com/intellij-loong/intellij-loong/issues/8962
     fun `test no unresolved reference for explicit type-qualified associated member path`() = checkByText("""
         struct S;
         mod module {

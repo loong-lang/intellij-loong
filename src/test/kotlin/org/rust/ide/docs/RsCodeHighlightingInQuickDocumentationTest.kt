@@ -39,7 +39,7 @@ class RsCodeHighlightingInQuickDocumentationTest : RsDocumentationProviderTest()
         </div>
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/495
+    // https://github.com/intellij-loong/intellij-loong/issues/495
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test issue495`() = doTest("""
         /// A cheap, reference-to-reference conversion.

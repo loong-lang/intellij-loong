@@ -52,7 +52,7 @@ jobs:
             - name: Set up git user
               run: |
                   git config --local user.email "intellij.rust@gmail.com"
-                  git config --local user.name "intellij-rust-bot"
+                  git config --local user.name "intellij-loong-bot"
 
             - name: Update changelog link
               if: github.event_name == 'workflow_dispatch' && github.event.inputs.type == 'stable' && github.event.inputs.update_changelog != 'false'

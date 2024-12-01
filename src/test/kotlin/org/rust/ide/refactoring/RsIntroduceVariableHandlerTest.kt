@@ -243,7 +243,7 @@ class RsIntroduceVariableHandlerTest : RsTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/2919
+    // https://github.com/intellij-loong/intellij-loong/issues/2919
     fun `test issue2919`() = doTest("""
         fn main() {
             let i1 = 1;

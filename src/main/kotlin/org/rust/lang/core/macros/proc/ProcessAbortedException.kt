@@ -8,4 +8,4 @@ package org.rust.lang.core.macros.proc
 import java.io.IOException
 
 class ProcessAbortedException(cause: Throwable, val exitCode: Int) :
-    IOException("`intellij-rust-helper` is aborted; exit code: $exitCode", cause)
+    IOException("`intellij-loong-helper` is aborted; exit code: $exitCode", cause)

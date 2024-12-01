@@ -1088,7 +1088,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ Result<X, Y>
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1549
+    // https://github.com/intellij-loong/intellij-loong/issues/1549
     fun `test Self type in assoc function`() = testExpr("""
         struct S<A>(A);
         impl<B> S<B> {
@@ -1976,7 +1976,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ B
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/4026
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/4026
     fun `test struct field with associated type`() = testExpr("""
         struct Foo<V: Trait> {
             input: <V as Trait>::Item,
@@ -2013,7 +2013,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         }      //^ X<u8, 0>
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/4026
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/4026
     fun `test tuple struct field with associated type`() = testExpr("""
         struct Foo<V: Trait>(<V as Trait>::Item);
         trait Trait { type Item; }
@@ -2042,7 +2042,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         }      //^ X<u8, 0>
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3999
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3999
     fun `test default type argument is not used in expression context 1`() = testExpr("""
         struct S<T = X>(T);
         struct X;
@@ -2435,7 +2435,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ S
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/5897
+    // https://github.com/intellij-loong/intellij-loong/issues/5897
     fun `test issue 5897`() = testExpr("""
         trait Index<Idx: ?Sized> {
             type Output: ?Sized;
@@ -2484,7 +2484,7 @@ class RsGenericExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ u8
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/8236
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/8236
     fun `test select impl with associated type projection in trait ref`() = testExpr("""
         struct S;
         struct X;

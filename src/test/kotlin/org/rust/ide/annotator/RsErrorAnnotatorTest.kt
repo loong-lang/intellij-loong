@@ -1128,7 +1128,7 @@ class RsErrorAnnotatorTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
         use foo::bar::<error descr="Function `eggs` is private [E0603]">eggs</error>;
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3558
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3558
     fun `test no E0603 for 'pub(in self)' restricted module`() = checkErrors("""
         pub(self) mod foo {}
         use self::foo as bar;
@@ -1385,7 +1385,7 @@ class RsErrorAnnotatorTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
         impl<T: Eq> Eq for Box<T> {}
     """)
 
-    // Issue // https://github.com/intellij-rust/intellij-rust/issues/8786
+    // Issue // https://github.com/intellij-loong/intellij-loong/issues/8786
     fun `test no E0277 when Self-related associated type is mentioned in the parent trait`() = checkErrors("""
         struct S;
         trait Foo<T> {}
@@ -1650,7 +1650,7 @@ class RsErrorAnnotatorTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
         }
     """)
 
-    /** Issue [#3410](https://github.com/intellij-rust/intellij-rust/issues/3410) */
+    /** Issue [#3410](https://github.com/intellij-loong/intellij-loong/issues/3410) */
     @MockRustcVersion("1.32.0")
     fun `test const pattern is not irrefutable`() = checkErrors("""
         #[derive(PartialEq, Eq)]

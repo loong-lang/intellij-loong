@@ -221,7 +221,7 @@ class RsBorrowCheckerUninitializedTest : RsInspectionsTestBase(RsBorrowCheckerIn
         }
     """, checkWarn = false)
 
-    /** Issue [#4008](https://github.com/intellij-rust/intellij-rust/issues/4008) */
+    /** Issue [#4008](https://github.com/intellij-loong/intellij-loong/issues/4008) */
     fun `test no E0381 never type`() = checkByText("""
         fn foo(flag: bool) -> i32 {
             let value: i32;

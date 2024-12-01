@@ -122,7 +122,7 @@ class ConvertToNamedFieldsRefactoringTest : RsTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/5017
+    // https://github.com/intellij-loong/intellij-loong/issues/5017
     fun `test convert function call`() = doAvailableTest("""
         struct S(/*caret*/u32);
         impl S {

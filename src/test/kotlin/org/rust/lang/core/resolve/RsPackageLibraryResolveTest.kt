@@ -364,7 +364,7 @@ class RsPackageLibraryResolveTest : RsResolveTestBase() {
                    //X
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3642
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3642
     fun `test issue 3642 1`() = stubOnlyResolve("""
     //- lib.rs
         use dep_lib_target::foobar::*;
@@ -378,7 +378,7 @@ class RsPackageLibraryResolveTest : RsResolveTestBase() {
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3642
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3642
     @ProjectDescriptor(WithStdlibAndDependencyRustProjectDescriptor::class)
     fun `test issue 3642 2`() = stubOnlyResolve("""
     //- lib.rs
@@ -894,7 +894,7 @@ class RsPackageLibraryResolveTest : RsResolveTestBase() {
         """)
     }
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3846
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3846
     fun `test extra use of crate name 1`() = stubOnlyResolve("""
     //- dep-lib/lib.rs
         pub struct Foo;
@@ -942,7 +942,7 @@ class RsPackageLibraryResolveTest : RsResolveTestBase() {
           //^ dep-lib/lib.rs
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3912
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3912
     fun `test star import of item with the same name as extern crate`() = stubOnlyResolve("""
     //- dep-lib/lib.rs
         mod dep_lib_target {}
@@ -1011,7 +1011,7 @@ class RsPackageLibraryResolveTest : RsResolveTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/7215
+    // https://github.com/intellij-loong/intellij-loong/issues/7215
     fun `test usual import override glob-import`() = stubOnlyResolve("""
     //- lib.rs
         pub mod header {

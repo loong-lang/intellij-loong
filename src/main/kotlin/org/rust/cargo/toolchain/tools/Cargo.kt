@@ -306,7 +306,7 @@ class Cargo(
             // So we use `INTELLIJ_ORIGINAL_RUSTC_BOOTSTRAP` environment variable to keep original value
             // of `RUSTC_BOOTSTRAP` and restore it (if needed) for `rustc` call in native-helper binary
             //
-            // See https://github.com/intellij-rust/intellij-rust/issues/9700
+            // See https://github.com/intellij-loong/intellij-loong/issues/9700
             if (originalRustcBootstrapValue != null) {
                 envMap += ORIGINAL_RUSTC_BOOTSTRAP to originalRustcBootstrapValue
             }
@@ -454,7 +454,7 @@ class Cargo(
                     }
                     if (args.target.kind !is CargoWorkspace.TargetKind.Test) {
                         // Check `#[test]`/`#[cfg(test)]`
-                        // TODO try using `--profile test`, see https://github.com/intellij-rust/intellij-rust/issues/6277
+                        // TODO try using `--profile test`, see https://github.com/intellij-loong/intellij-loong/issues/6277
                         add("--tests")
                     }
                     addAll(ParametersListUtil.parse(args.extraArguments))
@@ -523,7 +523,7 @@ class Cargo(
                 parameters,
                 emulateTerminal,
                 // TODO: always pass `withSudo` when `com.intellij.execution.process.ElevationService` supports error stream redirection
-                // https://github.com/intellij-rust/intellij-rust/issues/7320
+                // https://github.com/intellij-loong/intellij-loong/issues/7320
                 if (isFeatureEnabled(RsExperiments.BUILD_TOOL_WINDOW)) withSudo else false,
                 http = http
             ).withEnvironment("RUSTC", rustcExecutable)

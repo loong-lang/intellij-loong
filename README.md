@@ -1,3 +1,3 @@
 # Loong plugin for the IntelliJ Platform
 
-Clone from [intellij-rust](https://github.com/intellij-rust/intellij-rust)
+Clone from [intellij-loong](https://github.com/intellij-loong/intellij-loong)

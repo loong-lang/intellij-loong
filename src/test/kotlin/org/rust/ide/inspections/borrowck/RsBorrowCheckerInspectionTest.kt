@@ -269,7 +269,7 @@ class RsBorrowCheckerInspectionTest : RsInspectionsTestBase(RsBorrowCheckerInspe
         }
     """)
 
-    /** [See github issue 2711](https://github.com/intellij-rust/intellij-rust/issues/2711) */
+    /** [See github issue 2711](https://github.com/intellij-loong/intellij-loong/issues/2711) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test vector index`() = checkByText("""
         fn f() {
@@ -279,7 +279,7 @@ class RsBorrowCheckerInspectionTest : RsInspectionsTestBase(RsBorrowCheckerInspe
         }
     """, checkWarn = false)
 
-    /** Issue [3914](https://github.com/intellij-rust/intellij-rust/issues/3914) */
+    /** Issue [3914](https://github.com/intellij-loong/intellij-loong/issues/3914) */
     fun `test closure borrow parameter of unknown type as mutable`() = checkByText("""
         fn main() {
             |x| &mut x;

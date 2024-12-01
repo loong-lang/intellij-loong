@@ -212,7 +212,7 @@ object CargoBuildManager {
         val commandArguments = parseArgs(parsed.command, parsed.additionalArguments).commandArguments.toMutableList()
         commandArguments.addAll(configuration.localBuildArgsForRemoteRun)
 
-        // https://github.com/intellij-rust/intellij-rust/issues/3707
+        // https://github.com/intellij-loong/intellij-loong/issues/3707
         if (parsed.command == "test" && commandArguments.contains("--doc")) return null
 
         val buildConfiguration = configuration.clone() as CargoCommandConfiguration

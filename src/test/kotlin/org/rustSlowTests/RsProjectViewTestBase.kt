@@ -29,7 +29,7 @@ abstract class RsProjectViewTestBase : RsWithToolchainTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -48,7 +48,7 @@ abstract class RsProjectViewTestBase : RsWithToolchainTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 

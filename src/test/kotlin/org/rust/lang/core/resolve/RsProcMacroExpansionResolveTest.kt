@@ -709,7 +709,7 @@ class RsProcMacroExpansionResolveTest : RsResolveTestBase() {
         }           //^
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9531
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9531
     fun `test no stack overflow with derives in included file`() = stubOnlyResolve("""
     //- main.rs
         #[macro_export]

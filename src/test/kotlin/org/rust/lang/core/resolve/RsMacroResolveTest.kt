@@ -95,7 +95,7 @@ class RsMacroResolveTest : RsResolveTestBase() {
     """)
 
     // Macros are scoped by lexical order
-    // see https://github.com/intellij-rust/intellij-rust/issues/1474
+    // see https://github.com/intellij-loong/intellij-loong/issues/1474
     fun `test resolve macro mod wrong order`() = checkByCode("""
         mod b {
             fn main() {

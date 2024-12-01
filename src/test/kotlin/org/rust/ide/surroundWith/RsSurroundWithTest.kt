@@ -10,7 +10,7 @@ import org.rust.RsTestBase
 
 class RsSurroundWithTest : RsTestBase() {
 
-    // https://github.com/intellij-rust/intellij-rust/issues/5256
+    // https://github.com/intellij-loong/intellij-loong/issues/5256
     fun `test insert pair curly brace in use item`() =
         withOptionValue(CodeInsightSettings.getInstance()::SURROUND_SELECTION_ON_QUOTE_TYPED, true) {
             checkByText(

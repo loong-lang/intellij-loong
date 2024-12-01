@@ -336,7 +336,7 @@ private class ProcMacroServerProcess private constructor(
             MACRO_LOG.debug { "Starting proc macro expander process $expanderExecutable" }
 
             val env = mapOf(
-                "INTELLIJ_RUST" to "1", // Let a proc macro know that it is run from intellij-rust
+                "INTELLIJ_RUST" to "1", // Let a proc macro know that it is run from intellij-loong
                 "RA_DONT_COPY_PROC_MACRO_DLL" to "1",
                 "RUST_ANALYZER_INTERNALS_DO_NOT_USE" to "this is unstable",
             )

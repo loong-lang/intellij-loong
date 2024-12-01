@@ -40,7 +40,7 @@ class CargoTomlWatcher(
     private fun isInterestingEvent(event: VFileEvent): Boolean {
         if (!Companion.isInterestingEvent(cargoProjects.project, event)) return false
 
-        // Fixes https://github.com/intellij-rust/intellij-rust/issues/5621
+        // Fixes https://github.com/intellij-loong/intellij-loong/issues/5621
         // For some reason, Cargo bumps modification time of `Cargo.toml` of `openid 0.4.0`
         // dependency on each `cargo metadata` invocation. Let's ignore changes in
         // `Cargo.toml`/`Cargo.lock` outside of a workspace

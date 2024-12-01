@@ -1122,7 +1122,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1269
+    // https://github.com/intellij-loong/intellij-loong/issues/1269
     fun `test tuple field`() = testExpr("""
         fn main() {
             let x = (1, "foo").1;
@@ -1131,7 +1131,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1269
+    // https://github.com/intellij-loong/intellij-loong/issues/1269
     fun `test tuple out of bound field`() = testExpr("""
         fn main() {
             let x = (1, "foo").2;
@@ -1140,7 +1140,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1423
+    // https://github.com/intellij-loong/intellij-loong/issues/1423
     fun `test tuple incorrect field`() = testExpr("""
         fn main() {
             let x = (1, "foo").1departure_code;
@@ -1149,7 +1149,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1584
+    // https://github.com/intellij-loong/intellij-loong/issues/1584
     fun `test tuple reference field`() = testExpr("""
         fn main() {
             let a: (u32, u32) = (0, 0);
@@ -1160,7 +1160,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/6029
+    // https://github.com/intellij-loong/intellij-loong/issues/6029
     fun `test nested tuple fields`() = testExpr("""
         fn foo(a: ((i32, ), )) {
             let b = a.0.0;
@@ -1202,7 +1202,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ S
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1549
+    // https://github.com/intellij-loong/intellij-loong/issues/1549
     fun `test Self type in assoc function`() = testExpr("""
         struct Foo;
         impl Foo {
@@ -1215,7 +1215,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1549
+    // https://github.com/intellij-loong/intellij-loong/issues/1549
     fun `test Self type in assoc function with complex ret type`() = testExpr("""
         struct Foo;
         impl Foo {
@@ -1638,7 +1638,7 @@ class RsExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ <unknown>
     """)
 
-    /** part of [issue 2688](https://github.com/intellij-rust/intellij-rust/issues/2688) */
+    /** part of [issue 2688](https://github.com/intellij-loong/intellij-loong/issues/2688) */
     fun `test call expr with callee of struct without fields type 1`() = testExpr("""
         struct S;
         fn main() {

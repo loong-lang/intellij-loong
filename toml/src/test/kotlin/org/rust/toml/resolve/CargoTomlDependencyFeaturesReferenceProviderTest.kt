@@ -14,7 +14,7 @@ class CargoTomlDependencyFeaturesReferenceProviderTest : CargoTomlResolveTestBas
     fun `test inline dependency feature`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -25,7 +25,7 @@ class CargoTomlDependencyFeaturesReferenceProviderTest : CargoTomlResolveTestBas
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -39,7 +39,7 @@ class CargoTomlDependencyFeaturesReferenceProviderTest : CargoTomlResolveTestBas
     fun `test table dependency feature`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -51,7 +51,7 @@ class CargoTomlDependencyFeaturesReferenceProviderTest : CargoTomlResolveTestBas
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 

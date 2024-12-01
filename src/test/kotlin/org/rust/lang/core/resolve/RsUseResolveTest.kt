@@ -681,7 +681,7 @@ class RsUseResolveTest : RsResolveTestBase() {
         }          //^
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3989
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3989
     @BothEditions
     fun `test issue #3989 1`() = checkByCode("""
         pub use crate::{bar::*, baz::*};
@@ -694,7 +694,7 @@ class RsUseResolveTest : RsResolveTestBase() {
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/3989
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/3989
     @BothEditions
     fun `test issue #3989 2`() = checkByCode("""
         pub use foo::{bar::*, baz::*};

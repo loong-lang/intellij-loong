@@ -1985,7 +1985,7 @@ class AutoImportFixTest : AutoImportFixTestBase() {
         }
     """)
 
-    /** Issue [2822](https://github.com/intellij-rust/intellij-rust/issues/2822) */
+    /** Issue [2822](https://github.com/intellij-loong/intellij-loong/issues/2822) */
     fun `test do not try to import trait object method`() = checkAutoImportFixIsUnavailable("""
         mod foo {
             pub trait Foo {
@@ -2010,7 +2010,7 @@ class AutoImportFixTest : AutoImportFixTestBase() {
         }
     """)
 
-    /** Issue [2863](https://github.com/intellij-rust/intellij-rust/issues/2863) */
+    /** Issue [2863](https://github.com/intellij-loong/intellij-loong/issues/2863) */
     fun `test do not try to import aliased trait`() = checkAutoImportFixIsUnavailable("""
         mod foo {
             pub trait Foo {

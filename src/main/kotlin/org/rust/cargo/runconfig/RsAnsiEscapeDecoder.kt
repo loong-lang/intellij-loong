@@ -126,7 +126,7 @@ class RsAnsiEscapeDecoder : AnsiEscapeDecoder() {
 
         private fun getColorAttribute(realAnsiColor: Ansi4BitColor, isForeground: Boolean): Int {
             // Rude hack for Windows: map the bright white foreground color to black.
-            // See https://github.com/intellij-rust/intellij-rust/pull/3312#issue-249111003
+            // See https://github.com/intellij-loong/intellij-loong/pull/3312#issue-249111003
             val isForcedWhiteFontUnderLightTheme = realAnsiColor == Ansi4BitColor.BRIGHT_WHITE &&
                 isForeground && SystemInfo.isWindows && !isUnderDarkTheme
             val ansiColor = if (isForcedWhiteFontUnderLightTheme) {

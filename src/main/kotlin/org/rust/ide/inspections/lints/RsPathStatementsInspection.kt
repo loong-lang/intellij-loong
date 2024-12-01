@@ -14,7 +14,7 @@ import org.rust.lang.core.psi.RsPathExpr
 import org.rust.lang.core.psi.RsVisitor
 import org.rust.lang.core.psi.ext.isTailStmt
 
-// TODO: Future improvements: https://github.com/intellij-rust/intellij-rust/issues/9555
+// TODO: Future improvements: https://github.com/intellij-loong/intellij-loong/issues/9555
 //  The inspection is currently disabled by default.
 /** Analogue of https://doc.rust-lang.org/rustc/lints/listing/warn-by-default.html#path-statements */
 class RsPathStatementsInspection : RsLintInspection() {

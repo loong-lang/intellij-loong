@@ -368,11 +368,11 @@ class RsFormatterTest : RsFormatterTestBase() {
     // FIXME: this test is way too big
     fun `test spacing`() = doTest()
 
-    fun `test issue451`() = doTest()   // https://github.com/intellij-rust/intellij-rust/issues/451
-    fun `test issue526`() = doTest()   // https://github.com/intellij-rust/intellij-rust/issues/526
-    fun `test issue569`() = doTest()   // https://github.com/intellij-rust/intellij-rust/issues/569
+    fun `test issue451`() = doTest()   // https://github.com/intellij-loong/intellij-loong/issues/451
+    fun `test issue526`() = doTest()   // https://github.com/intellij-loong/intellij-loong/issues/526
+    fun `test issue569`() = doTest()   // https://github.com/intellij-loong/intellij-loong/issues/569
 
-    // https://github.com/intellij-rust/intellij-rust/issues/543
+    // https://github.com/intellij-loong/intellij-loong/issues/543
     fun `test issue543a`() = checkNotChanged("""
         pub type TeraResult<T> = Result<T, TeraError>;
     """)
@@ -401,7 +401,7 @@ class RsFormatterTest : RsFormatterTestBase() {
 
     fun `test issue654`() = doTest()
 
-    fun `test use root`() = doTest() // https://github.com/intellij-rust/intellij-rust/issues/746
+    fun `test use root`() = doTest() // https://github.com/intellij-loong/intellij-loong/issues/746
 
     fun `test special macros`() = doTextTest("""
         fn main() {
@@ -704,7 +704,7 @@ class RsFormatterTest : RsFormatterTestBase() {
         fn foo<T, C>(value: T) where T: Trait<Output=C> {}
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/907
+    // https://github.com/intellij-loong/intellij-loong/issues/907
     fun `test issue 907`() = checkNotChanged("""
         struct TestStruct
         {

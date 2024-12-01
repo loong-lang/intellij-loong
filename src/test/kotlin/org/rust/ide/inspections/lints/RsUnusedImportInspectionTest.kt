@@ -579,7 +579,7 @@ class RsUnusedImportInspectionTest : RsInspectionsTestBase(RsUnusedImportInspect
         }
     """)
 
-    // TODO: https://github.com/intellij-rust/intellij-rust/issues/7314 needs to be fixed
+    // TODO: https://github.com/intellij-loong/intellij-loong/issues/7314 needs to be fixed
     /*@ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test colon colon import`() = checkByText("""
         mod foo {

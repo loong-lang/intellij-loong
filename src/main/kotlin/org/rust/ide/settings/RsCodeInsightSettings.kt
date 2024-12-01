@@ -42,7 +42,7 @@ class RsCodeInsightSettings : PersistentStateComponent<RsCodeInsightSettings>, D
         private val DEFAULT_EXCLUDED_PATHS: Array<ExcludedPath> = arrayOf(
             // These imports interfere with `RefCell::borrow` & `RefCell::borrow_mut` and methods from
             // them are very rarely needed (mostly inside a `HashMap` implementations).
-            // See https://github.com/intellij-rust/intellij-rust/issues/5805
+            // See https://github.com/intellij-loong/intellij-loong/issues/5805
             ExcludedPath("std::borrow::Borrow", ExclusionType.Methods),
             ExcludedPath("std::borrow::BorrowMut", ExclusionType.Methods),
             ExcludedPath("core::borrow::Borrow", ExclusionType.Methods),
@@ -51,7 +51,7 @@ class RsCodeInsightSettings : PersistentStateComponent<RsCodeInsightSettings>, D
             ExcludedPath("alloc::borrow::BorrowMut", ExclusionType.Methods),
             // Functions from this module are often suggested instead of `panic!()` macro, also
             // it is always unstable (with a stable alternative - `panic!()` macro).
-            // See https://github.com/intellij-rust/intellij-rust/issues/9157
+            // See https://github.com/intellij-loong/intellij-loong/issues/9157
             ExcludedPath("core::panicking::*"),
             // This method is often suggested in completion instead of `unreachable!()` macro, also
             // it is always unstable (with a stable alternative - `core::hint::unreachable_unchecked`)

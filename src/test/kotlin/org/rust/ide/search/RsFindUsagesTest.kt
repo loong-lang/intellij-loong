@@ -261,7 +261,7 @@ class RsFindUsagesTest : RsTestBase() {
         """)
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/5265
+    // https://github.com/intellij-loong/intellij-loong/issues/5265
     fun `test issue 5265`() = doTestByText("""
         mod foo {
             pub(crate) enum Foo { Bar { x: i32 } }

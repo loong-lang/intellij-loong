@@ -265,7 +265,7 @@ class RsNonExhaustiveMatchInspectionTest : RsInspectionsTestBase(RsNonExhaustive
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/3776
+    // https://github.com/intellij-loong/intellij-loong/issues/3776
     fun `test tuple with multiple types exhaustiveness`() = checkByText("""
         enum E { A }
 
@@ -409,7 +409,7 @@ class RsNonExhaustiveMatchInspectionTest : RsInspectionsTestBase(RsNonExhaustive
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/3958
+    // https://github.com/intellij-loong/intellij-loong/issues/3958
     fun `test ignored fields 2`() = checkByText("""
         struct S { s: String, e: E }
         enum E { A, B }

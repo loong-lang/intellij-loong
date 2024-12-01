@@ -12,16 +12,16 @@ Don't forget to say "Thank you!" when merging pull requests! :)
 
 After pull request accepting you need:
 * add the corresponding milestone for the pull request to make search "when this change was released" easier
-* add [project](https://github.com/intellij-rust/intellij-rust/projects) to inform QA 
+* add [project](https://github.com/intellij-loong/intellij-loong/projects) to inform QA 
 that these changes should be tested. We don't usually add a project to pull request if it doesn't affect users
-* mark the pull request by special labels ([feature](https://github.com/intellij-rust/intellij-rust/pulls?q=is%3Apr+label%3Afeature), 
-[fix](https://github.com/intellij-rust/intellij-rust/pulls?q=is%3Apr+label%3Afix),
-[performance](https://github.com/intellij-rust/intellij-rust/pulls?q=is%3Apr+label%3Aperformance) and 
-[internal](https://github.com/intellij-rust/intellij-rust/pulls?q=is%3Apr+label%3Ainternal)) if you consider
+* mark the pull request by special labels ([feature](https://github.com/intellij-loong/intellij-loong/pulls?q=is%3Apr+label%3Afeature), 
+[fix](https://github.com/intellij-loong/intellij-loong/pulls?q=is%3Apr+label%3Afix),
+[performance](https://github.com/intellij-loong/intellij-loong/pulls?q=is%3Apr+label%3Aperformance) and 
+[internal](https://github.com/intellij-loong/intellij-loong/pulls?q=is%3Apr+label%3Ainternal)) if you consider
 that the corresponding changes should be mentioned in changelog.
 If pull request doesn't have any of these labels it will be ignored while changelog generation
 See more about releases in the [corresponding](#Releases) section.
-* mark the pull request by [to be documented](https://github.com/intellij-rust/intellij-rust/labels/to%20be%20documented) label
+* mark the pull request by [to be documented](https://github.com/intellij-loong/intellij-loong/labels/to%20be%20documented) label
 if the corresponding change should be mentioned in documentation or affects existing documentation
 
 
@@ -202,7 +202,7 @@ After that, it builds the plugin from release branch and publishes it into `stab
 
 Note, each command may provide additional options. Add `--help` option to get actual option list.  
 
-Release notes live in [intellij-rust.github.io](https://github.com/intellij-rust/intellij-rust.github.io).
+Release notes live in [intellij-loong.github.io](https://github.com/intellij-loong/intellij-loong.github.io).
 To write notes, run `./changelog.py`. It goes thorough all pull requests from the corresponding milestone and 
 creates a template with default info about merged PRs in `_posts`. 
 The initial version of each post depends on special tags that PR can be labeled. 

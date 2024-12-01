@@ -41,7 +41,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -52,12 +52,12 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         }.checkReferenceIsResolved<RsPath>("src/main.rs")
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/4579
+    // https://github.com/intellij-loong/intellij-loong/issues/4579
     fun `test do not overflow stack 1`() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -92,20 +92,20 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         }.checkReferenceIsResolved<RsPath>("src/main.rs")
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/4579
+    // https://github.com/intellij-loong/intellij-loong/issues/4579
     fun `test do not overflow stack 2`() {
         buildProject {
             toml("Cargo.toml", """
                 [workspace]
                 members = [
-                    "intellij-rust-test-1",
-                    "intellij-rust-test-2"
+                    "intellij-loong-test-1",
+                    "intellij-loong-test-2"
                 ]
             """)
-            dir("intellij-rust-test-1") {
+            dir("intellij-loong-test-1") {
                 toml("Cargo.toml", """
                     [package]
-                    name = "intellij-rust-test-1"
+                    name = "intellij-loong-test-1"
                     version = "0.1.0"
                     authors = []
 
@@ -139,10 +139,10 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
                     """)
                 }
             }
-            dir("intellij-rust-test-2") {
+            dir("intellij-loong-test-2") {
                 toml("Cargo.toml", """
                     [package]
-                    name = "intellij-rust-test-2"
+                    name = "intellij-loong-test-2"
                     version = "0.1.0"
                     authors = []
                 """)
@@ -163,14 +163,14 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
                     """)
                 }
             }
-        }.checkReferenceIsResolved<RsPath>("intellij-rust-test-1/src/lib.rs")
+        }.checkReferenceIsResolved<RsPath>("intellij-loong-test-1/src/lib.rs")
     }
 
     fun `test include in dependency`() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -193,7 +193,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -258,7 +258,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -325,7 +325,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -392,7 +392,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -459,7 +459,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -526,7 +526,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -551,7 +551,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -586,7 +586,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -634,7 +634,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -682,7 +682,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -721,7 +721,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -759,7 +759,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
             }
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -787,7 +787,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -809,20 +809,20 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test-1"
+                name = "intellij-loong-test-1"
                 version = "0.1.0"
                 authors = []
 
                 [workspace]
-                members = ["intellij-rust-test-2"]
+                members = ["intellij-loong-test-2"]
             """)
             dir("src") {
                 rust("main.rs", "fn main() {}")
             }
-            dir("intellij-rust-test-2") {
+            dir("intellij-loong-test-2") {
                 toml("Cargo.toml", """
                     [package]
-                    name = "intellij-rust-test-2"
+                    name = "intellij-loong-test-2"
                     version = "0.1.0"
                     authors = []
                 """)
@@ -832,15 +832,15 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
                 }
                 rust("build.rs", BUILD_RS)
             }
-        }.checkReferenceIsResolved<RsPath>("intellij-rust-test-2/src/main.rs", toFile = ".../hello.rs")
+        }.checkReferenceIsResolved<RsPath>("intellij-loong-test-2/src/main.rs", toFile = ".../hello.rs")
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/8057
+    // https://github.com/intellij-loong/intellij-loong/issues/8057
     fun `test generated impl block`() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -879,7 +879,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -895,7 +895,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -933,7 +933,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -978,7 +978,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
         buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)

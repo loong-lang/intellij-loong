@@ -14,7 +14,7 @@ import org.toml.lang.psi.TomlKeySegment
 class CargoTomlKeyResolveTest : CargoTomlResolveTestBase() {
     fun `test in dependencies block`() = checkResolve("""
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -25,7 +25,7 @@ class CargoTomlKeyResolveTest : CargoTomlResolveTestBase() {
 
     fun `test in dev dependencies block`() = checkResolve("""
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -36,7 +36,7 @@ class CargoTomlKeyResolveTest : CargoTomlResolveTestBase() {
 
     fun `test specific dependency`() = checkResolve("""
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 

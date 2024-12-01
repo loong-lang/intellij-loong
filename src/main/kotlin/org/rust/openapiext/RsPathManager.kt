@@ -13,7 +13,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 object RsPathManager {
-    const val INTELLIJ_RUST_NATIVE_HELPER: String = "intellij-rust-native-helper"
+    const val INTELLIJ_RUST_NATIVE_HELPER: String = "intellij-loong-native-helper"
 
     fun prettyPrintersDir(): Path = pluginDir().resolve("prettyPrinters")
     private fun pluginDir(): Path = plugin().pluginPath
@@ -39,7 +39,7 @@ object RsPathManager {
         }
     }
 
-    fun pluginDirInSystem(): Path = Paths.get(PathManager.getSystemPath()).resolve("intellij-rust")
+    fun pluginDirInSystem(): Path = Paths.get(PathManager.getSystemPath()).resolve("intellij-loong")
     fun stdlibDependenciesDir(): Path = pluginDirInSystem().resolve("stdlib")
-    fun tempPluginDirInSystem(): Path = Paths.get(PathManager.getTempPath()).resolve("intellij-rust")
+    fun tempPluginDirInSystem(): Path = Paths.get(PathManager.getTempPath()).resolve("intellij-loong")
 }

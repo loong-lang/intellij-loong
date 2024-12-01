@@ -142,7 +142,7 @@ class RsRawLiteralHashesBalancerTest : RsTypingTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/817
+    // https://github.com/intellij-loong/intellij-loong/issues/817
     fun `test don't messup broken literal`() = doTestByText("""
         static CHILD_TEMPLATE: &'static str = r<caret>"
         {% extends "parent.html" %}

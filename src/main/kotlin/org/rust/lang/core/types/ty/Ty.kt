@@ -181,7 +181,7 @@ fun Ty.structTail(): Ty? {
 
 /**
  * TODO:
- * There are some problems with `Self` inference (e.g. https://github.com/intellij-rust/intellij-rust/issues/2530)
+ * There are some problems with `Self` inference (e.g. https://github.com/intellij-loong/intellij-loong/issues/2530)
  * so for now just assume `Self` is always copyable
  */
 fun Ty.isMovesByDefault(lookup: ImplLookup): Boolean =

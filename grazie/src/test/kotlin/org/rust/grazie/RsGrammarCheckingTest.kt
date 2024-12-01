@@ -74,7 +74,7 @@ class RsGrammarCheckingTest : RsInspectionsTestBase(GrazieInspection::class) {
         }
     """, checkInComments = true)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/7024
+    // https://github.com/intellij-loong/intellij-loong/issues/7024
     fun `test check single sentence in sequential comments 1`() = doTest("""
         fn main() {
             // Path to directory where someone <TYPO>write</TYPO>
@@ -86,7 +86,7 @@ class RsGrammarCheckingTest : RsInspectionsTestBase(GrazieInspection::class) {
         }
     """, checkInComments = true)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/7024
+    // https://github.com/intellij-loong/intellij-loong/issues/7024
     fun `test check single sentence in sequential comments 2`() = doTest("""
         fn main() {
             // Path to directory where someone writes

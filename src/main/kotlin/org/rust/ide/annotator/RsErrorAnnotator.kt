@@ -1765,7 +1765,7 @@ fun RsCallExpr.getFunctionCallContext(): FunctionCallContext? {
         is RsPatBinding -> {
             val type = el.type.stripReferences()
             // TODO: replace with more generic solution
-            // when https://github.com/intellij-rust/intellij-rust/issues/6391 will be implemented
+            // when https://github.com/intellij-loong/intellij-loong/issues/6391 will be implemented
             if (type is TyFunction) {
                 val letDecl = el.parent?.parent as? RsLetDecl
                 if (letDecl?.expr is RsLambdaExpr) {

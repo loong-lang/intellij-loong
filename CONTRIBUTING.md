@@ -23,8 +23,8 @@ You can also [install](https://www.jetbrains.com/help/idea/sdk.html#set-up-jdk) 
 ## Clone
 
 ```
-git clone https://github.com/intellij-rust/intellij-rust.git
-cd intellij-rust
+git clone https://github.com/intellij-loong/intellij-loong.git
+cd intellij-loong
 ```
 
 ## Building & Running
@@ -74,7 +74,7 @@ You might want to install the following plugins:
 # Contributing
 
 To find a problem to work on, look for
-[`help wanted`](https://github.com/intellij-rust/intellij-rust/labels/help%20wanted)
+[`help wanted`](https://github.com/intellij-loong/intellij-loong/labels/help%20wanted)
 issues on Github, or, even better, try to fix a problem you face yourself when
 using the plugin.
 
@@ -85,8 +85,8 @@ they provided some instructions about how to fix it, links to the relevant code
 and so on. If you are looking for a good first issue, `E-mentor`-labeled one is the
 best choice.
 
-[`help-wanted`]: https://github.com/intellij-rust/intellij-rust/labels/help%20wanted
-[`E-mentor`]: https://github.com/intellij-rust/intellij-rust/labels/E-mentor
+[`help-wanted`]: https://github.com/intellij-loong/intellij-loong/labels/help%20wanted
+[`E-mentor`]: https://github.com/intellij-loong/intellij-loong/labels/E-mentor
 
 To familiarize yourself with the plugin source code, read
 the [architecture](ARCHITECTURE.md) document and look at some existing pull
@@ -98,11 +98,11 @@ questions.
 
 Here are some example pull requests:
 
-  - Adding an inspection: [#713](https://github.com/intellij-rust/intellij-rust/pull/713/).
+  - Adding an inspection: [#713](https://github.com/intellij-loong/intellij-loong/pull/713/).
 
-  - Adding an intention: [#318](https://github.com/intellij-rust/intellij-rust/pull/318/).
+  - Adding an intention: [#318](https://github.com/intellij-loong/intellij-loong/pull/318/).
 
-  - Adding a gutter icon: [#758](https://github.com/intellij-rust/intellij-rust/pull/758).
+  - Adding a gutter icon: [#758](https://github.com/intellij-loong/intellij-loong/pull/758).
 
 And also a tutorial series "Contributing to Intellij-Rust" by [@Kobzol](https://github.com/Kobzol):
 
@@ -262,7 +262,7 @@ final state. It is good practice to put fixtures in the same package as tests.
 Another way of providing fixtures is to use Kotlin's triple quoted multiline
 string literals. You can get Rust syntax highlighting inside them if you have a
 `@Language("Rust")` annotation applied. You can see an example
-[here](https://github.com/intellij-rust/intellij-rust/blob/b5e680cc80e90523610016e662a131985aa88e56/src/test/kotlin/org/rust/ide/intentions/MoveTypeConstraintToWhereClauseIntentionTest.kt).
+[here](https://github.com/intellij-loong/intellij-loong/blob/b5e680cc80e90523610016e662a131985aa88e56/src/test/kotlin/org/rust/ide/intentions/MoveTypeConstraintToWhereClauseIntentionTest.kt).
 
 In general, triple quoted string fixtures should be preferred over separate Rust files.
 
@@ -334,11 +334,11 @@ follow it exactly. I will show command line commands, but you can use any git
 client of your choice.
 
 First, I press the fork button on the GitHub website to fork
-`https://github.com/intellij-rust/intellij-rust` to
-`https://github.com/matklad/intellij-rust`. Then I clone my fork:
+`https://github.com/intellij-loong/intellij-loong` to
+`https://github.com/matklad/intellij-loong`. Then I clone my fork:
 
 ```
-$ git clone git://github.com/matklad/intellij-rust && cd intellij-rust
+$ git clone git://github.com/matklad/intellij-loong && cd intellij-loong
 ```
 
 The next thing is usually creating a branch:
@@ -400,7 +400,7 @@ First, I add the original repository as a remote, so that I can pull changes
 from it.
 
 ```
-$ git remote add upstream https://github.com/intellij-rust/intellij-rust
+$ git remote add upstream https://github.com/intellij-loong/intellij-loong
 $ git fetch upstream
 $ git merge upstream/master master  # The dedicated PR branch helps a lot here.
 ```
@@ -418,4 +418,4 @@ $ ./gradlew test && git push --force-with-lease
 ```
 
 
-[Gitter]: https://gitter.im/intellij-rust/intellij-rust
+[Gitter]: https://gitter.im/intellij-loong/intellij-loong

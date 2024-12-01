@@ -129,7 +129,7 @@ private fun findNamesInLocalScope(expr: PsiElement): Set<String> {
     val functionScope = expr.ancestorOrSelf<RsFunction>()
 
     // Existing names should not be shadowed.
-    // For example, see https://github.com/intellij-rust/intellij-rust/issues/2919
+    // For example, see https://github.com/intellij-loong/intellij-loong/issues/2919
     return PsiTreeUtil.findChildrenOfAnyType(functionScope, RsPatBinding::class.java, RsPath::class.java)
         .mapNotNullToSet {
             when (it) {

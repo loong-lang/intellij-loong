@@ -14,7 +14,7 @@ import org.toml.lang.psi.TomlLiteral
 class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase() {
     fun `test feature in the same package 1`() = checkResolve("""
         [package]
-        name = "intellij-rust-test"
+        name = "intellij-loong-test"
         version = "0.1.0"
         authors = []
 
@@ -78,7 +78,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
     fun `test feature in another package`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -92,7 +92,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -106,7 +106,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
     fun `test optional dependency as a feature in another package 1`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -120,7 +120,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -134,7 +134,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
     fun `test optional dependency as a feature in another package 2`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -148,7 +148,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -163,7 +163,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
     fun `test weak dependency feature in another package`() = doResolveTest<TomlLiteral> {
         toml("Cargo.toml", """
             [package]
-            name = "intellij-rust-test"
+            name = "intellij-loong-test"
             version = "0.1.0"
             authors = []
 
@@ -177,7 +177,7 @@ class CargoTomlFeatureDependencyReferenceProviderTest : CargoTomlResolveTestBase
         dir("dep-lib") {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 

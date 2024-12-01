@@ -739,7 +739,7 @@ class RsStdlibExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    /** Issue [#2514](https://github.com/intellij-rust/intellij-rust/issues/2514) */
+    /** Issue [#2514](https://github.com/intellij-loong/intellij-loong/issues/2514) */
     fun `test issue 2514`() = stubOnlyTypeInfer("""
     //- main.rs
         struct Foo {
@@ -754,7 +754,7 @@ class RsStdlibExpressionTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    /** Issue [#2791](https://github.com/intellij-rust/intellij-rust/issues/2791)*/
+    /** Issue [#2791](https://github.com/intellij-loong/intellij-loong/issues/2791)*/
     fun `test issue 2791`() = stubOnlyTypeInfer("""
     //- main.rs
         fn main() {
@@ -869,7 +869,7 @@ class RsStdlibExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ S
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/6749
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/6749
     fun `test diverging and non-diverging match arm`() = stubOnlyTypeInfer("""
     //- main.rs
         fn foo(x: i32) {}
@@ -884,7 +884,7 @@ class RsStdlibExpressionTypeInferenceTest : RsTypificationTestBase() {
         } //^ i32
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/8405
+    // https://github.com/intellij-loong/intellij-loong/issues/8405
     @MinRustcVersion("1.51.0")
     fun `test addr_of_mut!`() = stubOnlyTypeInfer("""
     //- main.rs

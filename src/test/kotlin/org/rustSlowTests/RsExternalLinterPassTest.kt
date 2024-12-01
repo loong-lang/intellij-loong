@@ -137,7 +137,7 @@ class RsExternalLinterPassTest : RsWithToolchainTestBase() {
         }
     }
 
-    // https://github.com/intellij-rust/intellij-rust/issues/2503
+    // https://github.com/intellij-loong/intellij-loong/issues/2503
     fun `test unique errors`() {
         fileTree {
             toml("Cargo.toml", """

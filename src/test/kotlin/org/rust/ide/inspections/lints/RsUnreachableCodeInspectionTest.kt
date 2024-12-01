@@ -304,7 +304,7 @@ class RsUnreachableCodeInspectionTest : RsInspectionsTestBase(RsUnreachableCodeI
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9355
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9355
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no false-positive when todo macro is used`() = checkByText("""
         fn foo(a: u32) -> u32 {
@@ -315,7 +315,7 @@ class RsUnreachableCodeInspectionTest : RsInspectionsTestBase(RsUnreachableCodeI
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/9681
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/9681
     fun `test no false-positive when let-else statement inside loop block`() = checkByText("""
         fn main() {
             loop {

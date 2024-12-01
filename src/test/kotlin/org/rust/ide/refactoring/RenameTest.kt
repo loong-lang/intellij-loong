@@ -506,7 +506,7 @@ class RenameTest : RsTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/3483
+    // https://github.com/intellij-loong/intellij-loong/issues/3483
     fun `test change file type`() = checkByDirectory("""
     //- foo.txt
         fn foo() {}

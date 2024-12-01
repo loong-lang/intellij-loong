@@ -48,7 +48,7 @@ FILE
             PsiElement(})('}')
         PsiElement(;)(';')
       PsiWhiteSpace('\n    ')
-      PsiComment(<EOL_COMMENT>)('// https://github.com/intellij-rust/intellij-rust/issues/5786')
+      PsiComment(<EOL_COMMENT>)('// https://github.com/intellij-loong/intellij-loong/issues/5786')
       PsiWhiteSpace('\n    ')
       RsLetDeclImpl(LET_DECL)
         PsiElement(let)('let')

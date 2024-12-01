@@ -50,7 +50,7 @@ fn run_rustc(rustc_executable: OsString, args: Vec<OsString>) -> io::Result<Exit
     // So we use `INTELLIJ_ORIGINAL_RUSTC_BOOTSTRAP` environment variable to keep original value
     // of `RUSTC_BOOTSTRAP` and restore it (if needed) for `rustc` call.
     //
-    // See https://github.com/intellij-rust/intellij-rust/issues/9700
+    // See https://github.com/intellij-loong/intellij-loong/issues/9700
     command.env_remove(RUSTC_BOOTSTRAP);
     if let Some(original_rustc_bootstrap_value) = std::env::var_os(ORIGINAL_RUSTC_BOOTSTRAP) {
         command.env(RUSTC_BOOTSTRAP, original_rustc_bootstrap_value);

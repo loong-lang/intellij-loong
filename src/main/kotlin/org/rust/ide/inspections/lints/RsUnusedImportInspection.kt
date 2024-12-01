@@ -98,7 +98,7 @@ class RsUnusedImportInspection : RsLintInspection() {
 
     private fun markAsUnused(useSpeck: RsUseSpeck, holder: RsProblemsHolder) {
         val element = getHighlightElement(useSpeck)
-        // https://github.com/intellij-rust/intellij-rust/issues/7565
+        // https://github.com/intellij-loong/intellij-loong/issues/7565
         val fixes = if (useSpeck.isDoctestInjection) emptyList() else listOf((RemoveImportFix(element)))
         holder.registerLintProblem(
             element,

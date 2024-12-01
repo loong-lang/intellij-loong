@@ -406,7 +406,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3040](https://github.com/intellij-rust/intellij-rust/issues/3040) */
+    /** Issue [#3040](https://github.com/intellij-loong/intellij-loong/issues/3040) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error E0507 when deref Box`() = checkByText("""
         fn main() {
@@ -482,7 +482,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3062](https://github.com/intellij-rust/intellij-rust/issues/3062) */
+    /** Issue [#3062](https://github.com/intellij-loong/intellij-loong/issues/3062) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error E0507 when deref copyable self`() = checkByText("""
         trait Dummy where Self: Copy {
@@ -492,7 +492,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3093](https://github.com/intellij-rust/intellij-rust/issues/3093) */
+    /** Issue [#3093](https://github.com/intellij-loong/intellij-loong/issues/3093) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error E0507 on copyable type parameter`() = checkByText("""
         fn foo<X: Copy>(x: &[X]) -> X {
@@ -507,7 +507,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3251](https://github.com/intellij-rust/intellij-rust/issues/3251) */
+    /** Issue [#3251](https://github.com/intellij-loong/intellij-loong/issues/3251) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error E0382 after noreturn`() = checkByText("""
         fn noreturn() -> ! { panic!() }
@@ -536,7 +536,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3270](https://github.com/intellij-rust/intellij-rust/issues/3270) */
+    /** Issue [#3270](https://github.com/intellij-loong/intellij-loong/issues/3270) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error E0382 if let`() = checkByText("""
         struct S;
@@ -594,7 +594,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3314](https://github.com/intellij-rust/intellij-rust/issues/3314) */
+    /** Issue [#3314](https://github.com/intellij-loong/intellij-loong/issues/3314) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error deref str inside binary expr`() = checkByText("""
         fn main() {
@@ -666,7 +666,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#3970](https://github.com/intellij-rust/intellij-rust/issues/3970) */
+    /** Issue [#3970](https://github.com/intellij-loong/intellij-loong/issues/3970) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error while let with break`() = checkByText("""
         struct S;
@@ -742,7 +742,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /** Issue [#4307](https://github.com/intellij-rust/intellij-rust/issues/4307) */
+    /** Issue [#4307](https://github.com/intellij-loong/intellij-loong/issues/4307) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test no move error copy slice`() = checkByText("""
         fn main() {
@@ -792,7 +792,7 @@ class RsBorrowCheckerMovesTest : RsInspectionsTestBase(RsBorrowCheckerInspection
         }
     """, checkWarn = false)
 
-    /* Issue https://github.com/intellij-rust/intellij-rust/issues/4795 */
+    /* Issue https://github.com/intellij-loong/intellij-loong/issues/4795 */
     fun `test no move when deref raw pointer`() = checkByText("""
         struct Node<T> {
             data: T,

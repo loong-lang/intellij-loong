@@ -9,14 +9,14 @@ import org.intellij.lang.annotations.Language
 import org.rust.ide.annotator.*
 
 class DoctestFixTest : RsAnnotationTestBase() {
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/6790
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/6790
     fun `test in doctest fix const`() = doTest("Add type i32", """
         <error descr="Missing type for `const` item">const CONST/*caret*/ = 1;</error>
     """, """
         const CONST:i32/*caret*/ = 1;
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/6790
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/6790
     fun `test in doctest add missing fields`() = doTest("Add missing fields", """
         struct Foo {
             a: i32,
@@ -38,7 +38,7 @@ class DoctestFixTest : RsAnnotationTestBase() {
         """
     )
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/6790
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/6790
     fun `test in doctest add missing tuple fields`() = doTest("Fill missing arguments", """
         struct S(i32, i32);
         fn main() {
@@ -51,7 +51,7 @@ class DoctestFixTest : RsAnnotationTestBase() {
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/6790
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/6790
     fun `test in doctest fill function arguments`() = doTest("Fill missing arguments", """
         fn foo(a: u32) {}
         fn main() {

@@ -198,8 +198,8 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/2670
-    // https://github.com/intellij-rust/intellij-rust/issues/3791
+    // https://github.com/intellij-loong/intellij-loong/issues/2670
+    // https://github.com/intellij-loong/intellij-loong/issues/3791
     fun `test no type mismatch E0308 when matching with string literal`() = checkByText("""
         fn main() {
             match "" {
@@ -225,7 +225,7 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/2482
+    // https://github.com/intellij-loong/intellij-loong/issues/2482
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test issue 2482`() = checkByText("""
         fn main() {
@@ -233,7 +233,7 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/2460
+    // https://github.com/intellij-loong/intellij-loong/issues/2460
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test issue 2460`() = checkByText("""
         fn f64compare(x: &f64, y: &f64) -> ::std::cmp::Ordering {
@@ -241,7 +241,7 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    /** Issue [2713](https://github.com/intellij-rust/intellij-rust/issues/2713) */
+    /** Issue [2713](https://github.com/intellij-loong/intellij-loong/issues/2713) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test issue 2713`() = checkByText("""
         fn main() { u64::from(0u8); }
@@ -255,7 +255,7 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    /** Issue [3125](https://github.com/intellij-rust/intellij-rust/issues/3125) */
+    /** Issue [3125](https://github.com/intellij-loong/intellij-loong/issues/3125) */
     @ProjectDescriptor(WithStdlibRustProjectDescriptor::class)
     fun `test issue 3125`() = checkByText("""
         struct S;
@@ -356,7 +356,7 @@ class RsTypeCheckInspectionTest : RsInspectionsTestBase(RsTypeCheckInspection::c
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/7420
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/7420
     fun `test correctly match const arguments with const parameters`() = checkErrors("""
         struct Foo<const N: u8, const S: bool>(u32);
 

@@ -21,7 +21,7 @@ class RsContentRootsTest : RsWithToolchainTestBase() {
         val project = buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
 
@@ -73,7 +73,7 @@ class RsContentRootsTest : RsWithToolchainTestBase() {
         val project = buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)
@@ -224,7 +224,7 @@ class RsContentRootsTest : RsWithToolchainTestBase() {
         val testProject = buildProject {
             toml("Cargo.toml", """
                 [package]
-                name = "intellij-rust-test"
+                name = "intellij-loong-test"
                 version = "0.1.0"
                 authors = []
             """)

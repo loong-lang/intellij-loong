@@ -87,7 +87,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "intellij-rust-native-helper"
+name = "intellij-loong-native-helper"
 version = "0.1.0"
 dependencies = [
  "proc-macro-srv",

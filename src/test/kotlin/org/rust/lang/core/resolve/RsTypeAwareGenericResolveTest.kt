@@ -987,7 +987,7 @@ class RsTypeAwareGenericResolveTest : RsResolveTestBase() {
         }    //^
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/1649
+    // https://github.com/intellij-loong/intellij-loong/issues/1649
     fun `test issue 1649`() = checkByCode("""
         trait Foo {}
         struct S<A: Foo> { a: A }

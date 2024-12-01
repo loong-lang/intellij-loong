@@ -105,7 +105,7 @@ class CargoCommandConfigurationEditor(project: Project)
         false
     ).apply {
         // TODO: remove when `com.intellij.execution.process.ElevationService` supports error stream redirection
-        // https://github.com/intellij-rust/intellij-rust/issues/7320
+        // https://github.com/intellij-loong/intellij-loong/issues/7320
         isEnabled = isFeatureEnabled(RsExperiments.BUILD_TOOL_WINDOW)
     }
     private val buildOnRemoteTarget = CheckBox("Build on remote target", true)

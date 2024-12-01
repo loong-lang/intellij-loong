@@ -45,7 +45,7 @@ val compileNativeCodeTaskName = "compileNativeCode"
 
 val grammarKitFakePsiDeps = "grammar-kit-fake-psi-deps"
 
-val basePluginArchiveName = "intellij-rust"
+val basePluginArchiveName = "intellij-loong"
 
 plugins {
     idea
@@ -145,11 +145,11 @@ allprojects {
             }
         }
 
-        // It makes sense to copy native binaries only for root ("intellij-rust") and "plugin" projects because:
-        // - `intellij-rust` is supposed to provide all necessary functionality related to procedural macro expander.
+        // It makes sense to copy native binaries only for root ("intellij-loong") and "plugin" projects because:
+        // - `intellij-loong` is supposed to provide all necessary functionality related to procedural macro expander.
         //   So the binaries are required for the corresponding tests.
         // - `plugin` is root project to build plugin artifact and exactly its sandbox is included into the plugin artifact
-        if (project.name in listOf("intellij-rust", "plugin")) {
+        if (project.name in listOf("intellij-loong", "plugin")) {
             task<Exec>(compileNativeCodeTaskName) {
                 workingDir = rootDir.resolve("native-helper")
                 executable = "cargo"
@@ -252,7 +252,7 @@ val patchVersion = prop("patchVersion").toInt()
 project(":plugin") {
     version = "$majorVersion.$patchVersion.${prop("buildNumber")}$versionSuffix"
     intellij {
-        pluginName.set("intellij-rust")
+        pluginName.set("intellij-loong")
         val pluginList = mutableListOf(
             tomlPlugin,
             intelliLangPlugin,

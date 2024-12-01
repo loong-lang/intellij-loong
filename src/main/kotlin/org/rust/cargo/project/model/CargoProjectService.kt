@@ -37,7 +37,7 @@ import java.util.concurrent.CompletableFuture
  * Stores a list of [CargoProject]s associated with the current IntelliJ [Project].
  * Use [Project.cargoProjects] to get an instance of the service.
  *
- * See [ARCHITECTURE.md](https://github.com/intellij-rust/intellij-rust/blob/master/ARCHITECTURE.md#project-model)
+ * See [ARCHITECTURE.md](https://github.com/intellij-loong/intellij-loong/blob/master/ARCHITECTURE.md#project-model)
  * for more details.
  */
 interface CargoProjectsService {

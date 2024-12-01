@@ -76,7 +76,7 @@ class RsQuoteHandlerTest : RsTypingTestBase() {
         fn f() { let _ = r"<caret>" }
     """, '"')
 
-    // https://github.com/intellij-rust/intellij-rust/issues/687
+    // https://github.com/intellij-loong/intellij-loong/issues/687
     fun `test double quote in raw string`() = doTestByText("""
         r###"Hello, <caret> World!"###
     """, """

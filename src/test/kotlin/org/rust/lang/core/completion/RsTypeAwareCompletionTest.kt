@@ -228,7 +228,7 @@ class RsTypeAwareCompletionTest : RsCompletionTestBase() {
         }
     """)
 
-    // Issue https://github.com/intellij-rust/intellij-rust/issues/8236
+    // Issue https://github.com/intellij-loong/intellij-loong/issues/8236
     fun `test select impl with associated type projection in trait ref`() = checkContainsCompletion("foo", """
         struct S;
         struct X;

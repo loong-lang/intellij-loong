@@ -1362,7 +1362,7 @@ class RsQuickDocumentationTest : RsDocumentationProviderTest() {
         <div class='content'><p>Some docs</p></div>
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/8732
+    // https://github.com/intellij-loong/intellij-loong/issues/8732
     fun `test do not throw exceptions on fake psi elements`() = doTest("""
         fn main() {
             let s = "http://localhost:8080";

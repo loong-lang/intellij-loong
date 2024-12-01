@@ -22,8 +22,8 @@ open class RsCustomTemplate(
     @Suppress("UnstableApiUsage") @ListItem name: String,
     val url: String
 ) : RsProjectTemplate(name, false, RsIcons.CARGO_GENERATE) {
-    object ProcMacroTemplate : RsCustomTemplate("Procedural Macro", "https://github.com/intellij-rust/rust-procmacro-quickstart-template")
-    object WasmPackTemplate : RsCustomTemplate("WebAssembly Lib", "https://github.com/intellij-rust/wasm-pack-template")
+    object ProcMacroTemplate : RsCustomTemplate("Procedural Macro", "https://github.com/intellij-loong/rust-procmacro-quickstart-template")
+    object WasmPackTemplate : RsCustomTemplate("WebAssembly Lib", "https://github.com/intellij-loong/wasm-pack-template")
 
     val shortLink: String
         get() = url.substringAfter("//")

@@ -176,7 +176,7 @@ class RsAutoIndentTest : RsTypingTestBase() {
         }
     """)
 
-    // https://github.com/intellij-rust/intellij-rust/issues/475
+    // https://github.com/intellij-loong/intellij-loong/issues/475
     fun `test issue 475`() = doTestByText("""
         fn foobar(n: u64) -> String {
             match (n % 3, n % 5) {

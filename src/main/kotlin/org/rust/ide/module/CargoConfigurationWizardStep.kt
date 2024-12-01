@@ -58,7 +58,7 @@ class CargoConfigurationWizardStep(
 
     // It's simple hack to imitate new UI style if new project wizard is enabled
     // TODO: drop it and support new project wizard properly
-    //  see https://github.com/intellij-rust/intellij-rust/issues/8585
+    //  see https://github.com/intellij-loong/intellij-loong/issues/8585
     private fun <T : JComponent> T.withBorderIfNeeded(): T {
         if (isNewWizard()) {
             // border size is taken from `com.intellij.ide.wizard.NewProjectWizardStepPanel`
@@ -82,7 +82,7 @@ class CargoConfigurationWizardStep(
             }
             // We don't use SDK, but let's inherit one to reduce the amount of
             // "SDK not configured" errors
-            // https://github.com/intellij-rust/intellij-rust/issues/1062
+            // https://github.com/intellij-loong/intellij-loong/issues/1062
             rootModel.inheritSdk()
 
             val contentEntry = rootModel.contentEntries.singleOrNull()

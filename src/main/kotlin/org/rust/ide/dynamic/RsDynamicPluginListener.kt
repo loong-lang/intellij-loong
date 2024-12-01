@@ -14,7 +14,7 @@ import org.rust.openapiext.PLUGIN_ID
 class RsDynamicPluginListener : DynamicPluginListener {
     override fun checkUnloadPlugin(pluginDescriptor: IdeaPluginDescriptor) {
         if (pluginDescriptor.pluginId == PluginId.findId(PLUGIN_ID)) {
-            // See https://github.com/intellij-rust/intellij-rust/issues/4832
+            // See https://github.com/intellij-loong/intellij-loong/issues/4832
             throw CannotUnloadPluginException("Rust plugin cannot be dynamically unloaded for now")
         }
     }

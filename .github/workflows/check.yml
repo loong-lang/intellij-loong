@@ -243,7 +243,7 @@ jobs:
               uses: actions-rs/cargo@v1
               with:
                   command: install
-                  # https://github.com/intellij-rust/intellij-rust/issues/9406
+                  # https://github.com/intellij-loong/intellij-loong/issues/9406
                   args: evcxr_repl --locked --version ${{ env.EVCXR_REPL_VERSION }}
 
             - name: Install cargo-generate

@@ -16,7 +16,7 @@ jobs:
             - name: Set up git user
               run: |
                   git config --local user.email "intellij.rust@gmail.com"
-                  git config --local user.name "intellij-rust-bot"
+                  git config --local user.name "intellij-loong-bot"
 
             - name: Check date
               if: github.event_name == 'schedule'
