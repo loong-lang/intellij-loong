@@ -1,14 +1,10 @@
 <idea-plugin package="org.rust" xmlns:xi="http://www.w3.org/2001/XInclude" allow-bundled-update="true">
     <id>org.rust.lang</id>
-    <name>Rust</name>
+    <name>Loong</name>
 
     <vendor>JetBrains</vendor>
 
-    <change-notes><![CDATA[
-        <a href="https://intellij-rust.github.io/2023/06/12/changelog-196.html">
-                 https://intellij-rust.github.io/2023/06/12/changelog-196.html
-    ]]>
-    </change-notes>
+    <change-notes></change-notes>
 
     <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
          on how to target different products -->
