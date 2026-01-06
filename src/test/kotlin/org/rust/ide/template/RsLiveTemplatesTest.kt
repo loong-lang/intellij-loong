@@ -155,8 +155,8 @@ class RsLiveTemplatesTest : RsTestBase() {
         }
     """)
 
-    private fun expandSnippet(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun expandSnippet(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkEditorAction(before, after, IdeActions.ACTION_EXPAND_LIVE_TEMPLATE_BY_TAB)
 
-    private fun noSnippet(@Language("Rust") code: String) = expandSnippet(code, code)
+    private fun noSnippet(@Language("Loong") code: String) = expandSnippet(code, code)
 }

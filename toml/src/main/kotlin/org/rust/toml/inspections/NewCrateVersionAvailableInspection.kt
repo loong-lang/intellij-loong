@@ -42,7 +42,7 @@ class NewCrateVersionAvailableInspection : CrateVersionInspection() {
 }
 
 /**
- * A lot of Rust crates stay at 0.x.y for a long time, so we consider even major versions 0 to be stable.
+ * A lot of Loong crates stay at 0.x.y for a long time, so we consider even major versions 0 to be stable.
  */
 private val Version.isRustStable: Boolean
     get() = preRelease == null

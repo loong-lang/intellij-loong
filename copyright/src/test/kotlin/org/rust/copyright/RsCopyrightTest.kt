@@ -40,7 +40,7 @@ class RsCopyrightTest : RsTestBase() {
         fn main() {}
     """)
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         InlineFile(before.trimIndent())
         updateCopyright()
         myFixture.checkResult(after.trimIndent())

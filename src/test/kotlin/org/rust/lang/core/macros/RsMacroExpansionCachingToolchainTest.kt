@@ -67,7 +67,7 @@ class RsMacroExpansionCachingToolchainTest : RsWithToolchainTestBase() {
             it.path.referenceName.orEmpty() to expansion.file.virtualFile.timeStamp
         }
 
-    private fun checkReExpanded(action: (p: TestProject) -> Unit, @Language("Rust") code: String, vararg names: String) {
+    private fun checkReExpanded(action: (p: TestProject) -> Unit, @Language("Loong") code: String, vararg names: String) {
         val p = fileTree {
             toml("Cargo.toml", """
                 [package]

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<templateSet group="Rust">
+<templateSet group="Loong">
     <template name="p" description="println!" toReformat="true" toShortenFQNames="true"
               value="println!(&quot;$END$&quot;);">
         <context>

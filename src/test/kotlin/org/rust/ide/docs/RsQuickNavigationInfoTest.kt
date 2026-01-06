@@ -729,6 +729,6 @@ class RsQuickNavigationInfoTest : RsDocumentationProviderTest() {
         fn <b>clone</b>(&amp;self) -&gt; Self
     """)
 
-    private fun doTest(@Language("Rust") code: String, @Language("Html") expected: String)
+    private fun doTest(@Language("Loong") code: String, @Language("Html") expected: String)
         = doTest(code, expected, block = RsDocumentationProvider::getQuickNavigateInfo)
 }

@@ -103,7 +103,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - name: Set up Rust
+            - name: Set up Loong
               uses: actions-rs/toolchain@v1
               with:
                   profile: minimal
@@ -161,7 +161,7 @@ jobs:
                       pretty_printers_tests/target
                   key: pretty_printers_tests-${{ runner.os }}-${{ matrix.rust-version }}-${{ hashFiles('pretty_printers_tests/src/**', 'pretty_printers_tests/examples/**', 'pretty_printers_tests/Cargo.toml', 'pretty_printers_tests/Cargo.lock') }}
 
-            - name: Check bundled Rust formatters
+            - name: Check bundled Loong formatters
               run: python3 scripts/run_pretty_printer_tests.py --clion_version ${{ steps.clion-version.outputs.version }}
 
     check-plugin:
@@ -206,7 +206,7 @@ jobs:
                   distribution: corretto
                   java-version: 17
 
-            - name: Set up Rust
+            - name: Set up Loong
               uses: actions-rs/toolchain@v1
               with:
                   profile: minimal
@@ -215,7 +215,7 @@ jobs:
                   default: true
 
             # Requires for tests with overridden toolchain
-            - name: Set up nightly Rust
+            - name: Set up nightly Loong
               uses: actions-rs/toolchain@v1
               with:
                   profile: minimal
@@ -247,7 +247,7 @@ jobs:
                   args: evcxr_repl --locked --version ${{ env.EVCXR_REPL_VERSION }}
 
             - name: Install cargo-generate
-              # BACKCOMPAT: cargo-generate 0.15.2 requires Rust 1.61.0 or newer
+              # BACKCOMPAT: cargo-generate 0.15.2 requires Loong 1.61.0 or newer
               if: matrix.rust-version >= '1.61.0'
               uses: actions-rs/cargo@v1
               with:
@@ -271,12 +271,12 @@ jobs:
             - name: Set up test env variables
               run: echo "RUST_SRC_WITH_SYMLINK=$HOME/.rust-src" >> $GITHUB_ENV
 
-            - name: Create symlink for Rust stdlib Unix
+            - name: Create symlink for Loong stdlib Unix
               if: matrix.os != 'windows-latest'
               run: ln -s $(rustc --print sysroot)/lib/rustlib/src/rust $RUST_SRC_WITH_SYMLINK
 
             # FIXME: find out why it doesn't work on CI
-            # - name: Create symlink for Rust stdlib Windows
+            # - name: Create symlink for Loong stdlib Windows
             #  if: matrix.os == 'windows-latest'
             #  run: New-Item -ItemType Junction -Path "$env:RUST_SRC_WITH_SYMLINK" -Target "$(rustc --print sysroot)/lib/rustlib/src/rust"
 

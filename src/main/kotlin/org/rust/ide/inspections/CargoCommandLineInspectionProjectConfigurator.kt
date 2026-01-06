@@ -99,17 +99,17 @@ class CargoCommandLineInspectionProjectConfigurator : CommandLineInspectionProje
             }
         }
 
-        logger.info("Expanding Rust macros...")
+        logger.info("Expanding Loong macros...")
         ProgressIndicatorUtils.awaitWithCheckCanceled(macroExpansionFinished)
 
-        // Ensure all Rust plugin tasks has been finished
+        // Ensure all Loong plugin tasks has been finished
         val taskQueue = project.taskQueue
         if (!taskQueue.isEmpty) {
             while (!taskQueue.isEmpty) {
                 Thread.sleep(10)
             }
         }
-        logger.info("Rust macro expansion has been finished")
+        logger.info("Loong macro expansion has been finished")
     }
 
     private class LoggerWrapper(

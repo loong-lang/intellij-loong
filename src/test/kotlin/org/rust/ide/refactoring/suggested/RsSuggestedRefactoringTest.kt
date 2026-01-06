@@ -18,7 +18,7 @@ import org.rust.RsTestBase
 
 abstract class RsSuggestedRefactoringTestBase : RsTestBase() {
     protected fun doUnavailableTest(
-        @Language("Rust") initialText: String,
+        @Language("Loong") initialText: String,
         editingAction: () -> Unit
     ) {
         InlineFile(initialText).withCaret()
@@ -31,8 +31,8 @@ abstract class RsSuggestedRefactoringTestBase : RsTestBase() {
     }
 
     protected fun doTestRename(
-        @Language("Rust") initialText: String,
-        @Language("Rust") textAfterRefactoring: String,
+        @Language("Loong") initialText: String,
+        @Language("Loong") textAfterRefactoring: String,
         oldName: String,
         newName: String,
         editingAction: () -> Unit
@@ -46,8 +46,8 @@ abstract class RsSuggestedRefactoringTestBase : RsTestBase() {
     }
 
     protected fun doTestChangeSignature(
-        @Language("Rust") initialText: String,
-        @Language("Rust") textAfterRefactoring: String,
+        @Language("Loong") initialText: String,
+        @Language("Loong") textAfterRefactoring: String,
         usagesName: String,
         editingAction: () -> Unit,
         expectedPresentation: String? = null

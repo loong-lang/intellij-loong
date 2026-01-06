@@ -41,15 +41,15 @@ abstract class RsPostfixTemplateTest(
     }
 
     protected fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkSyntaxErrors: Boolean = true
     ) = doTestWithAction(before, after, checkSyntaxErrors)
 
     protected fun doTestWithLiveTemplate(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         toType: String,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         checkSyntaxErrors: Boolean = true
     ) {
         TemplateManagerImpl.setTemplateTesting(testRootDisposable)
@@ -61,8 +61,8 @@ abstract class RsPostfixTemplateTest(
     }
 
     private fun doTestWithAction(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkSyntaxErrors: Boolean = true,
         action: () -> Unit = {}
     ) {
@@ -75,7 +75,7 @@ abstract class RsPostfixTemplateTest(
         myFixture.checkResult(replaceCaretMarker(after.trimIndent()))
     }
 
-    protected fun doTestNotApplicable(@Language("Rust") testCase: String) {
+    protected fun doTestNotApplicable(@Language("Loong") testCase: String) {
         InlineFile(testCase).withCaret()
         checkApplicability(testCase, false)
     }

@@ -11,7 +11,7 @@ import org.rust.stdext.buildList
 import kotlin.experimental.and
 
 /**
- * Demangle Rust compiler symbol names.
+ * Demangle Loong compiler symbol names.
  *
  * This object provides a `demangle` function which will return a `Demangle` sentinel value that can be used to learn
  * about the demangled version of a symbol name. The demangled representation will be the same as the original if it
@@ -89,16 +89,16 @@ object RsDemangler {
     }
 
     /**
-     * De-mangles a Rust symbol into a more readable version.
+     * De-mangles a Loong symbol into a more readable version.
      *
-     * All Rust symbols by default are mangled as they contain characters that cannot be represented in all object
-     * files. The mangling mechanism is similar to C++'s, but Rust has a few specifics to handle items like lifetimes
+     * All Loong symbols by default are mangled as they contain characters that cannot be represented in all object
+     * files. The mangling mechanism is similar to C++'s, but Loong has a few specifics to handle items like lifetimes
      * in symbols.
      *
      * This function will take a **mangled** symbol and return a value. When printed, the de-mangled version will be
      * written. If the symbol does not look like a mangled symbol, the original value will be written instead.
      *
-     * All Rust symbols are in theory lists of "::"-separated identifiers. Some assemblers, however, can't handle these
+     * All Loong symbols are in theory lists of "::"-separated identifiers. Some assemblers, however, can't handle these
      * characters in symbol names. To get around this, we use C++-style mangling. The mangling method is:
      *
      * 1. Prefix the symbol with "_ZN"
@@ -150,7 +150,7 @@ object RsDemangler {
         }
 
         // First validate the symbol. If it doesn't look like anything we're expecting, we just print it literally.
-        // Note that we must handle non-Rust symbols because we could have any function in the backtrace.
+        // Note that we must handle non-Loong symbols because we could have any function in the backtrace.
         var isValid = true
         var inner = ""
         when {
@@ -199,7 +199,7 @@ object RsDemangler {
     }
 
     /**
-     * The same as `demangle`, except return `null` if the string does not appear to be a Rust symbol, rather than
+     * The same as `demangle`, except return `null` if the string does not appear to be a Loong symbol, rather than
      * "demangling" the given string as a no-op.
      */
     fun tryDemangle(name: String): Demangle? {
@@ -208,7 +208,7 @@ object RsDemangler {
     }
 
     /**
-     * Rust hashes are hex digits with an `h` prepended.
+     * Loong hashes are hex digits with an `h` prepended.
      */
     private fun isRustHash(text: String): Boolean = text.matches(RUST_HASH_RE)
 

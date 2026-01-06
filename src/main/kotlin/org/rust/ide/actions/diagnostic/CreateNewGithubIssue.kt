@@ -100,8 +100,8 @@ class CreateNewGithubIssue : DumbAwareAction() {
             macroExpansionState: String,
             additionalExperimentalFeatures: String?,
         ): String = """
-            * **IntelliJ Rust plugin version:** $pluginVersion
-            * **Rust toolchain version:** $toolchainVersion
+            * **IntelliJ Loong plugin version:** $pluginVersion
+            * **Loong toolchain version:** $toolchainVersion
             * **IDE name and version:** $ideNameAndVersion
             * **Operating system:** $os
             * **Macro expansion:** $macroExpansionState

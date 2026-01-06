@@ -96,7 +96,7 @@ class RsExtractStructFieldsProcessor(
         RsInPlaceVariableIntroducer(newField, editor, project, "choose field name").performInplaceRefactoring(null)
     }
 
-    override fun getCommandName(): String = RsBundle.message("action.Rust.RsExtractStructFields.command.name")
+    override fun getCommandName(): String = RsBundle.message("action.Loong.RsExtractStructFields.command.name")
 
     override fun createUsageViewDescriptor(usages: Array<out UsageInfo>): UsageViewDescriptor =
         BaseUsageViewDescriptor(ctx.struct)

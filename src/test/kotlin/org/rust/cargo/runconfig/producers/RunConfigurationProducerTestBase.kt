@@ -134,32 +134,32 @@ abstract class RunConfigurationProducerTestBase : RsTestBase() {
         private val simpleBench = """#[bench] fn bench_simple() {}"""
         private val hello = """pub fn hello() -> String { return "Hello, World!".to_string(); }"""
 
-        fun bin(name: String, path: String, @Language("Rust") code: String = helloWorld): TestProjectBuilder {
+        fun bin(name: String, path: String, @Language("Loong") code: String = helloWorld): TestProjectBuilder {
             addTarget(name, TargetKind.Bin, DEFAULT_EDITION_FOR_TESTS, path, code)
             return this
         }
 
-        fun example(name: String, path: String, @Language("Rust") code: String = helloWorld): TestProjectBuilder {
+        fun example(name: String, path: String, @Language("Loong") code: String = helloWorld): TestProjectBuilder {
             addTarget(name, TargetKind.ExampleBin, DEFAULT_EDITION_FOR_TESTS, path, code)
             return this
         }
 
-        fun test(name: String, path: String, @Language("Rust") code: String = simpleTest): TestProjectBuilder {
+        fun test(name: String, path: String, @Language("Loong") code: String = simpleTest): TestProjectBuilder {
             addTarget(name, TargetKind.Test, DEFAULT_EDITION_FOR_TESTS, path, code)
             return this
         }
 
-        fun bench(name: String, path: String, @Language("Rust") code: String = simpleBench): TestProjectBuilder {
+        fun bench(name: String, path: String, @Language("Loong") code: String = simpleBench): TestProjectBuilder {
             addTarget(name, TargetKind.Bench, DEFAULT_EDITION_FOR_TESTS, path, code)
             return this
         }
 
-        fun lib(name: String, path: String, @Language("Rust") code: String = hello): TestProjectBuilder {
+        fun lib(name: String, path: String, @Language("Loong") code: String = hello): TestProjectBuilder {
             addTarget(name, TargetKind.Lib(LibKind.LIB), DEFAULT_EDITION_FOR_TESTS, path, code)
             return this
         }
 
-        fun file(path: String, @Language("Rust") code: String): TestProjectBuilder {
+        fun file(path: String, @Language("Loong") code: String): TestProjectBuilder {
             addFile(path, code)
             return this
         }

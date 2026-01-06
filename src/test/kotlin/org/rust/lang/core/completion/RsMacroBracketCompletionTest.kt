@@ -143,7 +143,7 @@ class RsMacroBracketCompletionTest : RsCompletionTestBase() {
      * Checks completion for both macro 1.0 and macro 2.0.
      * It substitutes [MACRO_PLACEHOLDER] with actual macro definition of macro `foo`
      */
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         fun doTest(macroDefinition: String) {
             doSingleCompletion(
                 before.replace(MACRO_PLACEHOLDER, macroDefinition),

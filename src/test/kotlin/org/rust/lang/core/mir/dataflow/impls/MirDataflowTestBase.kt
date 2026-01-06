@@ -22,7 +22,7 @@ abstract class MirDataflowTestBase<Domain: Any> : RsTestBase() {
     abstract fun formatStateDiff(oldState: Domain, newState: Domain): String?
 
     fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         mir: String,
     ) {
         InlineFile(code)

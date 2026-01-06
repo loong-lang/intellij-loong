@@ -56,7 +56,7 @@ class CargoExecutableRunLineMarkerContributorTest : RsLineMarkerProviderTestBase
         fn main() {} // - Run 'Run test-package'
     """)
 
-    private fun doTest(filePath: String, @Language("Rust") text: String) {
+    private fun doTest(filePath: String, @Language("Loong") text: String) {
         val dirs = PathUtil.getParentPath(filePath)
         val fileName = PathUtil.getFileName(filePath)
 

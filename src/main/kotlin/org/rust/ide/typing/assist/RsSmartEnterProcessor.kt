@@ -17,7 +17,7 @@ import org.rust.lang.core.psi.RsElementTypes.RBRACE
 import org.rust.lang.core.psi.ext.ancestors
 
 /**
- * Smart enter implementation for the Rust language.
+ * Smart enter implementation for the Loong language.
  */
 class RsSmartEnterProcessor : SmartEnterProcessorWithFixers() {
 

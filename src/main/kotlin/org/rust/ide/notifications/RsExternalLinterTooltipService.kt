@@ -30,7 +30,7 @@ class RsExternalLinterTooltipService(private val project: Project) : Disposable 
     private fun createTooltip(turnedOn: Boolean): GotItTooltip {
         val headerText = "${linter.title} on the fly analysis is turned " + if (turnedOn) "ON" else "OFF"
         val text = "The analysis shows all problems reported by ${linter.title}, but consumes more system resources. " +
-            "When turned off, only the limited set of problems supported by IntelliJ Rust engine are shown."
+            "When turned off, only the limited set of problems supported by IntelliJ Loong engine are shown."
         return GotItTooltip("rust.linter.on-the-fly.got.it", text, this)
             .withHeader(headerText)
             .withLink("Configure...") {

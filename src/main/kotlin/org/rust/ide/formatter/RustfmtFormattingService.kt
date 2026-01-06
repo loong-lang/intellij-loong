@@ -83,7 +83,7 @@ class RustfmtFormattingService : AsyncDocumentFormattingService() {
         }
     }
 
-    override fun getNotificationGroupId(): String = "Rust Plugin"
+    override fun getNotificationGroupId(): String = "Loong Plugin"
 
     override fun getName(): String = "rustfmt"
 

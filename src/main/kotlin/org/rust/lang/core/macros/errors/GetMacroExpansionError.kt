@@ -54,14 +54,14 @@ sealed class GetMacroExpansionError {
         MacroExpansionEngineIsNotReady -> "macro expansion engine is not ready"
         IncludingFileNotFound -> "including file is not found"
         FileIncludedIntoMultiplePlaces -> "including file included in multiple places; " +
-            "IntelliJ-Rust supports only inclusion into one place"
-        OldEngineStd -> "the old macro expansion engine can't expand macros in Rust stdlib"
+            "IntelliJ-Loong supports only inclusion into one place"
+        OldEngineStd -> "the old macro expansion engine can't expand macros in Loong stdlib"
         MemExpAttrMacro -> "the old macro expansion engine can't expand an attribute or derive macro"
         is MemExpParsingError -> "can't parse `$expansionText` as `$context`"
         CfgDisabled -> "the macro call is conditionally disabled with a `#[cfg()]` attribute"
         MacroCallSyntax -> "there is an error in the macro call syntax"
         MacroDefSyntax -> "there is an error in the macro definition syntax"
-        Skipped -> "expansion of this procedural macro is skipped by IntelliJ-Rust"
+        Skipped -> "expansion of this procedural macro is skipped by IntelliJ-Loong"
         Unresolved -> "the macro is not resolved"
         NoProcMacroArtifact -> "the procedural macro is not compiled successfully"
         is UnmatchedProcMacroKind -> "`$defKind` proc macro can't be called as `$callKind`"
@@ -80,7 +80,7 @@ sealed class GetMacroExpansionError {
             ProcMacroExpansionError.CantRunExpander -> "error occurred during `${RsPathManager.INTELLIJ_RUST_NATIVE_HELPER}` " +
                 "process creation; see logs for more details"
             ProcMacroExpansionError.ExecutableNotFound -> "`${RsPathManager.INTELLIJ_RUST_NATIVE_HELPER}` executable is not found; " +
-                "(maybe it's not provided for your platform by IntelliJ-Rust)"
+                "(maybe it's not provided for your platform by IntelliJ-Loong)"
             ProcMacroExpansionError.ProcMacroExpansionIsDisabled -> "procedural macro expansion is not enabled"
         }
         ModDataNotFound -> "internal error: can't find ModData for containing mod of the macro call"

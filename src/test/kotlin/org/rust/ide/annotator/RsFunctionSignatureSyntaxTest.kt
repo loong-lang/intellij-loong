@@ -7,7 +7,7 @@ package org.rust.ide.annotator
 
 class RsFunctionSignatureSyntaxTest : RsAnnotatorTestBase(RsSyntaxErrorsAnnotator::class) {
     fun `test E0045 error when use variadic parameter on non-C ABI`() = checkErrors("""
-        extern "Rust" {
+        extern "Loong" {
             /*error descr="C-variadic function must have a compatible calling convention, like `C` or `cdecl` [E0045]"*/fn foo(x: u8, ...);/*error**/
         }
     """)

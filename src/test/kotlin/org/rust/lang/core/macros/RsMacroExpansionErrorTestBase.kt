@@ -17,7 +17,7 @@ import org.rust.stdext.RsResult
 
 abstract class RsMacroExpansionErrorTestBase : RsTestBase() {
     protected inline fun <reified T : GetMacroExpansionError> checkError(
-        @Language("Rust") code: String
+        @Language("Loong") code: String
     ) {
         checkError(code, T::class.java)
     }
@@ -28,7 +28,7 @@ abstract class RsMacroExpansionErrorTestBase : RsTestBase() {
     }
 
     protected inline fun <reified T : GetMacroExpansionError> checkErrorByTree(
-        @Language("Rust") code: String
+        @Language("Loong") code: String
     ) {
         checkError(code, T::class.java)
     }

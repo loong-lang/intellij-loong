@@ -20,7 +20,7 @@ class RsWordScanner : DefaultWordsScanner(
     RS_ALL_STRING_LITERALS
 ) {
     init {
-        // This actually means that it's possible to do language injections into Rust string literals
+        // This actually means that it's possible to do language injections into Loong string literals
         setMayHaveFileRefsInLiterals(true)
     }
 

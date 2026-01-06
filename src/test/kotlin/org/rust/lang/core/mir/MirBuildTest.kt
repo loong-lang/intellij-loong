@@ -81,7 +81,7 @@ class MirBuildTest : RsTestBase() {
     }
 
     private fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expectedFilePath: String,
         fileName: String = "main.rs",
     ) {
@@ -93,7 +93,7 @@ class MirBuildTest : RsTestBase() {
 
     @Suppress("unused")
     private fun test(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         mir: String,
         fileName: String = "main.rs"
     ) {

@@ -43,7 +43,7 @@ class RsMoveFilesOrDirectoriesDialog(
 
     init {
         check(!isUnitTestMode)
-        title = "Move (Rust)"
+        title = "Move (Loong)"
     }
 
     override fun performMove(targetDirectory: PsiDirectory) {

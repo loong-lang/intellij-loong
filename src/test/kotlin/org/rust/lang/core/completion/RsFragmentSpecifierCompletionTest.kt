@@ -28,11 +28,11 @@ class RsFragmentSpecifierCompletionTest : RsCompletionTestBase() {
     """)
 
     @Suppress("SameParameterValue")
-    private fun checkContains(@Language("Rust") text: String) {
+    private fun checkContains(@Language("Loong") text: String) {
         checkContainsCompletion(FragmentKind.kinds.toList(), text)
     }
 
-    private fun checkNotContains(@Language("Rust") text: String) {
+    private fun checkNotContains(@Language("Loong") text: String) {
         checkNotContainsCompletion(FragmentKind.kinds.toSet(), text)
     }
 }

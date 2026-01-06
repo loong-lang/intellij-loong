@@ -31,7 +31,7 @@ It's also very inspirational to browse existing plugins. Check out [Erlang] and
 The plugin is composed of three main packages: `org.rust.lang`, `org.rust.ide`
 and `org.rust.cargo`.
 
-The `lang` package is the heart of the plugin. It includes a parser for the Rust
+The `lang` package is the heart of the plugin. It includes a parser for the Loong
 language, machinery for connecting declaration and usages and a type inference
 algorithm. Completion and go to declarations is built using the `lang` package.
 
@@ -155,9 +155,9 @@ fn bar() {
 }
 ```
 
-The implementation of name resolution is different in Intellij-Rust and in
+The implementation of name resolution is different in Intellij-Loong and in
 rustc. Compiler resolves the whole crate at once, walking the tree of modules in
-a top-down fashion. Intellij-Rust lazily resolves names by walking the PSI
+a top-down fashion. Intellij-Loong lazily resolves names by walking the PSI
 tree upwards from the reference. This allows to do resolve only in the file
 currently opened in the editor and its dependencies, ignoring most of the
 crates. See `NameResolution.kt` for the details.
@@ -184,7 +184,7 @@ If the type of expression is obvious (is not generic), we record it
 right away. However sometimes we can't infer the type of expression
 precisely without context, for example:
 
-```Rust
+```Loong
 let mut a = 0; 
 // We need this assignment to learn that `a: u64`
 a += 92u64;
@@ -199,7 +199,7 @@ type and record it.
 More complex constraints appear when we process generics and traits,
 for example:
 
-```Rust
+```Loong
 trait Foo<T> { }
 
 struct S1;
@@ -250,7 +250,7 @@ based and AST based implementation. It provides a nice unified programming API
 that you can accidentally cause a file reparse if you use some API which is
 implemented only by AST.
 
-Rust stubs are in defined `org.rust.lang.core.stubs` package.
+Loong stubs are in defined `org.rust.lang.core.stubs` package.
 
 All other indexes are implemented on top of the stubs. When constructing a stub
 tree, you may associated current stub-based PSI element with some key. Latter,
@@ -294,7 +294,7 @@ Read more about [indexing].
 
 # Project model
 
-Each Rust project in IDE consists of multiple [CargoProject]s. 
+Each Loong project in IDE consists of multiple [CargoProject]s. 
 
 ```
               [CargoProject]
@@ -361,7 +361,7 @@ A: Dependency (that is `foo = "1.0"` in `Cargo.toml`) is a
   [CargoWorkspace.Package] (of specified name and version) with one
   _library_ target. See [CargoWorkspace.Package.dependencies]
 
-Q: What is a Rust crate in the terms of this model?
+Q: What is a Loong crate in the terms of this model?
 
 A: It is always [CargoWorkspace.Target]. In the case of `extern crate foo;`
   it is a library [CargoWorkspace.Target] (with a name `foo`) of some
@@ -371,7 +371,7 @@ Q: What's the difference between [CargoWorkspace.Package.name] and [CargoWorkspa
 
 A: [CargoWorkspace.Package.name] is a name of a dependency that should be mentioned in
   `[dependencies]` section of `Cargo.toml`. [CargoWorkspace.Target.name] is a name
-  that visible in the Rust code, e.g. in `extern crate` syntax. Usually they are equal.
+  that visible in the Loong code, e.g. in `extern crate` syntax. Usually they are equal.
   A name of a package can be specified by `[package.name]` property in `Cargo.toml`.
   A name of a target can be specified in sections like `[lib]`, `[[bin]]`, etc.
   Also, name of a dependency target can be changed.

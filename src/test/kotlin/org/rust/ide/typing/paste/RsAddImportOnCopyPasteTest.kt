@@ -703,8 +703,8 @@ class RsAddImportOnCopyPasteTest : RsTestBase() {
     """)
 
     private fun doCopyPasteTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = withImportOnPaste {
         val testProject = fileTreeFromText(before).create()
         myFixture.configureFromTempProjectFile(testProject.fileWithSelection)

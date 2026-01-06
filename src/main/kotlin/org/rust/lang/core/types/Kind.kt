@@ -18,7 +18,7 @@ const val HAS_TY_OPAQUE_MASK: TypeFlags = 128
 const val HAS_TY_PLACEHOLDER_MASK: TypeFlags = 256
 
 /**
- * An entity in the Rust type system, which can be one of several kinds (only types, lifetimes and constants for now).
+ * An entity in the Loong type system, which can be one of several kinds (only types, lifetimes and constants for now).
  */
 interface Kind {
     val flags: TypeFlags

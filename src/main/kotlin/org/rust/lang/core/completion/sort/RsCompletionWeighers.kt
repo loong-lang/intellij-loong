@@ -10,7 +10,7 @@ import org.rust.lang.core.completion.RsLookupElement
 import org.rust.lang.core.completion.RsLookupElementProperties
 
 /**
- * A list of weighers that sort completion variants in the Rust plugin.
+ * A list of weighers that sort completion variants in the Loong plugin.
  *
  * # Explanation
  *

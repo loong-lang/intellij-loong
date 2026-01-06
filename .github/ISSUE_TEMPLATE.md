@@ -7,8 +7,8 @@ Feel free to remove all the irrelevant text to request a new feature.
 
 ## Environment
 
-* **IntelliJ Rust plugin version:**
-* **Rust toolchain version:**
+* **IntelliJ Loong plugin version:**
+* **Loong toolchain version:**
 * **IDE name and version:**
 * **Operating system:**
 

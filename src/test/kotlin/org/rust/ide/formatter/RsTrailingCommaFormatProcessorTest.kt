@@ -131,7 +131,7 @@ class RsTrailingCommaFormatProcessorTest : RsFormatterTestBase() {
     """)
 
     fun `test trailing comma processor works when RustfmtExternalFormatProcessor is used`() {
-        @Language("Rust")
+        @Language("Loong")
         val before = """
             mod foo {
                 struct T1(
@@ -147,7 +147,7 @@ class RsTrailingCommaFormatProcessorTest : RsFormatterTestBase() {
             }
         """.trimIndent()
 
-        @Language("Rust")
+        @Language("Loong")
         val after = """
             mod foo {
                 struct T1(

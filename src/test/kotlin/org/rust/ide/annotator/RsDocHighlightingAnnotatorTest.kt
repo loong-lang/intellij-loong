@@ -237,6 +237,6 @@ class RsDocHighlightingAnnotatorTest : RsAnnotatorTestBase(RsDocHighlightingAnno
         fn foo() {}
     """)
 
-    private fun checkHighlightingStrict(@Language("Rust") text: String) =
+    private fun checkHighlightingStrict(@Language("Loong") text: String) =
         annotationFixture.checkHighlighting(text, ignoreExtraHighlighting = false)
 }

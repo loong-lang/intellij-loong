@@ -5,4 +5,4 @@
 
 package org.rust.ide.utils
 
-const val USER_AGENT = "IntelliJ Rust Plugin (https://github.com/intellij-loong/intellij-loong)"
+const val USER_AGENT = "IntelliJ Loong Plugin (https://github.com/intellij-loong/intellij-loong)"

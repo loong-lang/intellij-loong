@@ -97,7 +97,7 @@ class AddTurbofishFixTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
             }
         """
 
-    private fun checkQuickFix(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun checkQuickFix(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkFixByTextWithoutHighlighting(intention, before, after)
 
 }

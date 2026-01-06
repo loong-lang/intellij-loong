@@ -10,7 +10,7 @@ import org.rust.lang.core.psi.RsUnaryExpr
 import org.rust.lang.core.psi.RsVisitor
 
 /**
- * Checks for usage of double negation, which is a no-op in Rust but might be misleading for
+ * Checks for usage of double negation, which is a no-op in Loong but might be misleading for
  * programmers with background in languages that have prefix operators.
  *
  * Analogue of Clippy's double_neg.

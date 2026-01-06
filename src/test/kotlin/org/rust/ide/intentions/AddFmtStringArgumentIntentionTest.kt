@@ -110,7 +110,7 @@ class AddFmtStringArgumentIntentionTest : RsIntentionTestBase(AddFmtStringArgume
         }
     """)
 
-    fun doTest(@Language("Rust") before: String, @Language("Rust") after: String, fragmentText: String = "x") {
+    fun doTest(@Language("Loong") before: String, @Language("Loong") after: String, fragmentText: String = "x") {
         AddFmtStringArgumentIntention.CODE_FRAGMENT_TEXT = fragmentText
         doAvailableTest(before, after)
     }

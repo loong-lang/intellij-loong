@@ -27,7 +27,7 @@ import javax.swing.Icon
 object RsIcons {
     // Logos
 
-    val RUST = load("/icons/rust.svg")
+    val LOONG = load("/icons/rust.svg")
 
     // File types
 

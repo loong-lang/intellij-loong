@@ -779,12 +779,12 @@ class AddStructFieldsFixTest : RsAnnotatorTestBase(RsExpressionAnnotator::class)
         }
     """)
 
-    private fun checkBothQuickFix(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun checkBothQuickFix(@Language("Loong") before: String, @Language("Loong") after: String) {
         checkFixByText("Add missing fields", before, after)
         checkFixByText("Recursively add missing fields", before, after)
     }
 
-    private fun checkRecursiveQuickFix(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun checkRecursiveQuickFix(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkFixByText("Recursively add missing fields", before, after)
 
 }

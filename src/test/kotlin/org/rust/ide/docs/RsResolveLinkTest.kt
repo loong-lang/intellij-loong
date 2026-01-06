@@ -384,7 +384,7 @@ class RsResolveLinkTest : RsTestBase() {
               //^
     """, "test_package/fn.foo.html")
 
-    private fun doTest(@Language("Rust") code: String, link: String) {
+    private fun doTest(@Language("Loong") code: String, link: String) {
         InlineFile(code, "lib.rs")
         val context = findElementInEditor<RsNamedElement>("^")
         val expectedElement = findElementInEditor<RsNamedElement>("X")

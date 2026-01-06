@@ -1049,15 +1049,15 @@ class RsConvertJsonToStructCopyPasteTest : RsTestBase() {
     """, """{"1_": {"field": 1}}""")
 
     private fun doCopyPasteTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         @Language("JSON") toPaste: String,
         hasSerde: Boolean = false
     ) = doTest(before, after, toPaste, hasSerde = hasSerde)
 
     private fun doCopyPasteTestWithLiveTemplate(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         @Language("JSON") toPaste: String,
         toType: String,
         hasSerde: Boolean = false
@@ -1074,8 +1074,8 @@ class RsConvertJsonToStructCopyPasteTest : RsTestBase() {
     }
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         @Language("JSON") toPaste: String,
         action: () -> Unit = {},
         hasSerde: Boolean

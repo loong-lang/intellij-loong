@@ -102,7 +102,7 @@ class RsCodeStatusTest : RsTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code)
         val (element, data) = findElementAndDataInEditor<RsElement>()
 

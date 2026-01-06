@@ -363,7 +363,7 @@ object CargoMetadata {
     }
 
     /**
-     * Rust buildscripts (`build.rs`) often generate files that are larger than the default IntelliJ size limit.
+     * Loong buildscripts (`build.rs`) often generate files that are larger than the default IntelliJ size limit.
      * The default filesize limit is specified by [com.intellij.openapi.util.io.FileUtilRt.DEFAULT_INTELLISENSE_LIMIT]
      * or "idea.max.intellisense.filesize" system property.
      * Here we ensure that the file size limit is not less than [ADJUSTED_FILE_SIZE_LIMIT_FOR_OUTPUT_FILES] for

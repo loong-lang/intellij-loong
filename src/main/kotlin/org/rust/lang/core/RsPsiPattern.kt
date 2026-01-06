@@ -21,7 +21,7 @@ import org.rust.lang.core.psi.RsElementTypes.*
 import org.rust.lang.core.psi.ext.*
 
 /**
- * Rust PSI tree patterns.
+ * Loong PSI tree patterns.
  */
 object RsPsiPattern {
     private val STATEMENT_BOUNDARIES = TokenSet.create(SEMICOLON, LBRACE, RBRACE)

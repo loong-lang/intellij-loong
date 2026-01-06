@@ -88,7 +88,7 @@ class RsUsageViewTreeTest : RsTestBase() {
             10fn foo(s1: &S) {}
     """)
 
-    private fun doTestByText(@Language("Rust") code: String, representation: String) {
+    private fun doTestByText(@Language("Loong") code: String, representation: String) {
         InlineFile(code)
         val source = findElementInEditor<RsNamedElement>()
 

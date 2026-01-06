@@ -236,7 +236,7 @@ class RsResolveCacheTest : RsTestBase() {
     override val followMacroExpansions: Boolean
         get() = true
 
-    private fun checkResolvedToXY(@Language("Rust") code: String, textToType: String) {
+    private fun checkResolvedToXY(@Language("Loong") code: String, textToType: String) {
         InlineFile(code).withCaret()
 
         val (refElement, _, offset) = findElementWithDataAndOffsetInEditor<RsReferenceElement>("^")
@@ -250,7 +250,7 @@ class RsResolveCacheTest : RsTestBase() {
         refElement.checkResolvedTo("Y", offset)
     }
 
-    private fun checkResolvedAndThenUnresolved(@Language("Rust") code: String, textToType: String) {
+    private fun checkResolvedAndThenUnresolved(@Language("Loong") code: String, textToType: String) {
         InlineFile(code).withCaret()
 
         val (refElement, _, offset) = findElementWithDataAndOffsetInEditor<RsReferenceElement>("^")

@@ -9,7 +9,7 @@ import org.rust.lang.core.macros.tt.Spacing.Alone
 import org.rust.lang.core.psi.MacroBraces
 
 /**
- * [TokenTree] is a kind of AST used to communicate with Rust procedural macros.
+ * [TokenTree] is a kind of AST used to communicate with Loong procedural macros.
  *
  * A procedural macro (defined in terms of [TokenTree]s) is a function that accepts a [TokenTree] and
  * returns a [TokenTree].

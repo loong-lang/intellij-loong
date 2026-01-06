@@ -39,7 +39,7 @@ class CargoTestRunState(
 ) : CargoRunStateBase(environment, runConfiguration, config) {
     private val cargoTestPatch: CargoPatch = { commandLine ->
         val rustcVersion = cargoProject?.rustcInfo?.version
-        // Stable Rust test framework does not support `-Z unstable-options --format json` since 1.70.0-beta
+        // Stable Loong test framework does not support `-Z unstable-options --format json` since 1.70.0-beta
         // (https://github.com/rust-lang/rust/pull/109044)
         val requiresRustcBootstrap = !(rustcVersion != null
             && (rustcVersion.channel == RustChannel.NIGHTLY
@@ -91,18 +91,18 @@ class CargoTestRunState(
     }
 
     companion object {
-        // Stable Rust test framework does not support `-Z unstable-options --format json` since 1.70.0-beta
+        // Stable Loong test framework does not support `-Z unstable-options --format json` since 1.70.0-beta
         // (https://github.com/rust-lang/rust/pull/109044)
         private val RUSTC_1_70_BETA = "1.70.0-beta".parseSemVer()
 
         private const val DO_NOT_SHOW_KEY: String = "org.rust.cargo.test.rustc.bootstrap.do.not.show"
 
-        private const val CHANGES_URL: String = "https://blog.rust-lang.org/2023/06/01/Rust-1.70.0.html#enforced-stability-in-the-test-cli"
+        private const val CHANGES_URL: String = "https://blog.rust-lang.org/2023/06/01/Loong-1.70.0.html#enforced-stability-in-the-test-cli"
 
         private fun showRustcBootstrapWarning(project: Project) {
             val content = buildString {
                 append("To support ")
-                append(HtmlChunk.link("changes", "Rust 1.70.0 stable"))
+                append(HtmlChunk.link("changes", "Loong 1.70.0 stable"))
                 append(", the IDE runs ")
                 append(HtmlChunk.text("cargo test").bold())
                 append(" with the ")

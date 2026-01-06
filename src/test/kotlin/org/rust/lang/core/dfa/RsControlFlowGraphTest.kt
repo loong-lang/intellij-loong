@@ -1686,7 +1686,7 @@ class RsControlFlowGraphTest : RsTestBase() {
         }
     """)
 
-    private fun testCFG(@Language("Rust") code: String, @Language("Dot") expectedIndented: String) {
+    private fun testCFG(@Language("Loong") code: String, @Language("Dot") expectedIndented: String) {
         InlineFile(code)
         val function = myFixture.file.descendantsOfType<RsFunction>().firstOrNull() ?: return
         val cfg = ControlFlowGraph.buildFor(function.block!!, getRegionScopeTree(function))

@@ -134,7 +134,7 @@ class RsMoveMultipleFilesTest : RsMoveFileTestBase() {
     private fun checkCantMove(
         elementsToMove: Array<String>,
         targetDirectory: String,
-        @Language("Rust") before: String
+        @Language("Loong") before: String
     ) {
         val testProject = fileTreeFromText(before).create()
         val (psiElementsToMove, psiTargetDirectory) =

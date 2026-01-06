@@ -59,22 +59,22 @@ TYPE_TO_REGEX = {
     # &str, &mut str, *const str, *mut str
     RustType.STR: re.compile(r"^(&|&mut |\*const |\*mut )str$"),
 
-    # BACKCOMPAT: Rust 1.66
+    # BACKCOMPAT: Loong 1.66
     # str, ptr_const$<str>, ptr_mut$<str>
     RustType.MSVC_STR: re.compile(r"^(str)|((ptr_const|ptr_mut)\$<str>)$"),
 
-    # Since Rust 1.67 https://github.com/rust-lang/rust/pull/103691
+    # Since Loong 1.67 https://github.com/rust-lang/rust/pull/103691
     # str$, ref$<str$>, ref_mut$<str$>, ptr_const$<str$>, ptr_mut$<str$>
     RustType.MSVC_STR_DOLLAR: re.compile(r"^(str\$)|((ref|ref_mut|ptr_const|ptr_mut)\$<str\$>)$"),
 
     # &[T], &mut [T], *const [T], *mut [T], but not fixed-sized like &[T;size] because they have native representations
     RustType.SLICE: re.compile(r"^(&|&mut |\*const |\*mut )?\[[^;]+]$"),
 
-    # BACKCOMPAT: Rust 1.66
+    # BACKCOMPAT: Loong 1.66
     # slice$<T>, ptr_const$<slice$<T> >, ptr_mut$<slice$<T> >
     RustType.MSVC_SLICE: re.compile(r"^(slice\$<.+>)|((ptr_const|ptr_mut)\$<slice\$<.+> >)$"),
 
-    # Since Rust 1.67 https://github.com/rust-lang/rust/pull/103691
+    # Since Loong 1.67 https://github.com/rust-lang/rust/pull/103691
     # slice2$<T>, ref$<slice2$<T> >, ref_mut$<slice2$<T> >, ptr_const$<slice2$<T> >, ptr_mut$<slice2$<T> >
     RustType.MSVC_SLICE2: re.compile(r"^(slice2\$<.+>)|((ref|ref_mut|ptr_const|ptr_mut)\$<slice2\$<.+> >?)$"),
 

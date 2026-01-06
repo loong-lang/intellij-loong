@@ -76,7 +76,7 @@ jobs:
                   distribution: corretto
                   java-version: 17
 
-            - name: Set up Rust
+            - name: Set up Loong
               uses: actions-rs/toolchain@v1
               with:
                   profile: minimal

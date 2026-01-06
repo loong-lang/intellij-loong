@@ -228,8 +228,8 @@ class RsEnterInLineCommentHandlerTest : RsTypingTestBase() {
     """)
 
     private fun doDoctestTestByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) {
         doTestByText(before, after, fileName = "lib.rs")
         check(myFixture.file.virtualFile is VirtualFileWindow) {

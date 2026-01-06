@@ -340,7 +340,7 @@ class RsIncludeMacroResolveTest : RsResolveTestBase() {
                //^ unresolved
     """)
 
-    private fun checkResolve(@Language("Rust") code: String) {
+    private fun checkResolve(@Language("Loong") code: String) {
         stubOnlyResolve(code) { element -> element.containingFile.virtualFile }
     }
 }

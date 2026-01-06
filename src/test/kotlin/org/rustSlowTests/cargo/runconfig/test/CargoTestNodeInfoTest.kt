@@ -179,7 +179,7 @@ class CargoTestNodeInfoTest : CargoTestRunnerTestBase() {
     }
 
     private fun checkErrors(
-        @Language("Rust") testFnText: String,
+        @Language("Loong") testFnText: String,
         message: String,
         diff: Diff? = null,
         shouldPass: Boolean = false
@@ -193,7 +193,7 @@ class CargoTestNodeInfoTest : CargoTestRunnerTestBase() {
         }
     }
 
-    private fun checkOutput(@Language("Rust") testFnText: String, output: String, shouldPass: Boolean = true) {
+    private fun checkOutput(@Language("Loong") testFnText: String, output: String, shouldPass: Boolean = true) {
         val testNode = getTestNode(testFnText, shouldPass)
         assertEquals(output.trimIndent(), testNode.output.trimIndent())
     }

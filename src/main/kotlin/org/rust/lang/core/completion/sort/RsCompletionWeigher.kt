@@ -8,7 +8,7 @@ package org.rust.lang.core.completion.sort
 import com.intellij.codeInsight.lookup.LookupElement
 
 /**
- * A weigher for Rust completion variants.
+ * A weigher for Loong completion variants.
  *
  * @see RS_COMPLETION_WEIGHERS
  */

@@ -1370,11 +1370,11 @@ class RsQuickDocumentationTest : RsDocumentationProviderTest() {
         }
     """, null)
 
-    private fun doTest(@Language("Rust") code: String, @Language("Html") expected: String?)
+    private fun doTest(@Language("Loong") code: String, @Language("Html") expected: String?)
         = doTest(code, expected, block = RsDocumentationProvider::generateDoc)
 
     private fun doTestRegex(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         @Language("Html") expected: String,
         findElement: () -> Pair<PsiElement, Int> = { findElementAndOffsetInEditor() }
     ) = doTest(code, Regex(expected.trimIndent(), setOf(RegexOption.MULTILINE, RegexOption.DOT_MATCHES_ALL)), findElement, RsDocumentationProvider::generateDoc)

@@ -1366,8 +1366,8 @@ Cannot change signature of function with cfg-disabled parameters""")
         = RsExpressionCodeFragment(myFixture.project, text, context).expr!!
 
     private fun doTest(
-        @Language("Rust") code: String,
-        @Language("Rust") expected: String,
+        @Language("Loong") code: String,
+        @Language("Loong") expected: String,
         modifyConfig: RsChangeFunctionSignatureConfig.() -> Unit
     ) {
         withMockChangeFunctionSignature({ config ->
@@ -1378,7 +1378,7 @@ Cannot change signature of function with cfg-disabled parameters""")
     }
 
     private fun checkConflicts(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expectedConflicts: Set<String>,
         modifyConfig: RsChangeFunctionSignatureConfig.() -> Unit
     ) {
@@ -1393,7 +1393,7 @@ Cannot change signature of function with cfg-disabled parameters""")
         }
     }
 
-    private fun checkError(@Language("Rust") code: String, errorMessage: String) {
+    private fun checkError(@Language("Loong") code: String, errorMessage: String) {
         try {
             checkEditorAction(code, code, "ChangeSignature")
             error("No error found, expected $errorMessage")

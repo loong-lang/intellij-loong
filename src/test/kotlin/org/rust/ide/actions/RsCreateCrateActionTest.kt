@@ -39,7 +39,7 @@ class RsCreateCrateActionTest : RsWithToolchainTestBase() {
                 return CargoNewCrateSettings(binary, name)
             }
         }) {
-            myFixture.launchAction("Rust.NewCargoCrate", CommonDataKeys.VIRTUAL_FILE to file)
+            myFixture.launchAction("Loong.NewCargoCrate", CommonDataKeys.VIRTUAL_FILE to file)
         }
 
         val src = if (binary) "main" else "lib"

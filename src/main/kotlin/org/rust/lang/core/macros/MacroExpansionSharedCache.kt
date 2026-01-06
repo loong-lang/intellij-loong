@@ -180,7 +180,7 @@ class MacroExpansionSharedCache : Disposable {
         return getOrPut(PersistentCacheData::stubs, RetrieveEverythingStrategy, hash) { serMgr ->
             val fc = fileContent()
             val stub = StubTreeBuilder.buildStubTree(fc)
-            // e.g. large expansion which is parsed as plain text (and not as Rust file)
+            // e.g. large expansion which is parsed as plain text (and not as Loong file)
                 ?: return@getOrPut null
             SerializedStubTree.serializeStub(stub, serMgr, stubExternalizer)
         }

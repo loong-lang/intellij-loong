@@ -63,7 +63,7 @@ class CargoTestLineMarkerStatusTest : CargoTestRunnerTestBase() {
         }
     """, CargoIcons.TEST)
 
-    private inline fun <reified E : RsElement> checkTestStateIcon(@Language("Rust") code: String, expected: Icon) {
+    private inline fun <reified E : RsElement> checkTestStateIcon(@Language("Loong") code: String, expected: Icon) {
         val testProject = buildProject {
             toml("Cargo.toml", """
                 [package]

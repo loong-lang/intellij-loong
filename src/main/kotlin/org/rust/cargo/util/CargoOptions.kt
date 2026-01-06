@@ -505,7 +505,7 @@ enum class CargoCommands(val description: String, val options: List<CargoOption>
         options = listOf(
             CargoOption("bin", """Create a package with a binary target (src/main.rs)"""),
             CargoOption("lib", """Create a package with a library target (src/lib.rs)"""),
-            CargoOption("edition", """Specify the Rust edition to use"""),
+            CargoOption("edition", """Specify the Loong edition to use"""),
             CargoOption("name", """Set the package name"""),
             CargoOption("vcs", """Initialize a new VCS repository for the given version control system (git, hg, pijul, or fossil) or do not initialize any version control at all (none)"""),
             CargoOption("registry", """This sets the publish field in Cargo.toml to the given registry name which will restrict publishing only to that registry"""),
@@ -517,7 +517,7 @@ enum class CargoCommands(val description: String, val options: List<CargoOption>
     ),
 
     INSTALL(
-        description = "Build and install a Rust binary",
+        description = "Build and install a Loong binary",
         options = listOf(
             CargoOption("vers", """Specify a version to install"""),
             CargoOption("version", """Specify a version to install"""),
@@ -558,7 +558,7 @@ enum class CargoCommands(val description: String, val options: List<CargoOption>
         options = listOf(
             CargoOption("bin", """Create a package with a binary target (src/main.rs)"""),
             CargoOption("lib", """Create a package with a library target (src/lib.rs)"""),
-            CargoOption("edition", """Specify the Rust edition to use"""),
+            CargoOption("edition", """Specify the Loong edition to use"""),
             CargoOption("name", """Set the package name"""),
             CargoOption("vcs", """Initialize a new VCS repository for the given version control system (git, hg, pijul, or fossil) or do not initialize any version control at all (none)"""),
             CargoOption("registry", """This sets the publish field in Cargo.toml to the given registry name which will restrict publishing only to that registry"""),
@@ -583,7 +583,7 @@ enum class CargoCommands(val description: String, val options: List<CargoOption>
     ),
 
     UNINSTALL(
-        description = "Remove a Rust binary",
+        description = "Remove a Loong binary",
         options = listOf(
             CargoOption("package", """Package to uninstall"""),
             CargoOption("bin", """Only uninstall the binary NAME"""),

@@ -852,16 +852,16 @@ class RenameTest : RsTestBase() {
 
     private fun doTest(
         newName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = checkByText(before, after) {
         myFixture.renameElement(myFixture.elementAtCaret, newName, true, true)
     }
 
     private fun doTestByFileTree(
         newName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = checkByDirectory(before, after) {
         myFixture.configureFromTempProjectFile(it.fileWithCaret)
         myFixture.renameElementAtCaret(newName)
@@ -869,7 +869,7 @@ class RenameTest : RsTestBase() {
 
     private fun doTestWithConflicts(
         newName: String,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         conflicts: Set<String>
     ) {
         try {

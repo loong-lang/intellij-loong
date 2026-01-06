@@ -81,7 +81,7 @@ class RsReadWriteAccessDetectorTest : RsTestBase() {
         }             //^ write
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code.trimIndent())
         val (element, data) = findElementAndDataInEditor<RsReferenceElement>()
         val reference = element.reference ?: error("Failed to get reference for `${element.text}`")

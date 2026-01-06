@@ -58,7 +58,7 @@ class RsCfgNotTestIndexTest : RsTestBase() {
         fn foo() {}
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code)
         val (item, data) = findElementAndDataInEditor<RsMetaItem>()
         assertEquals(data.toBoolean(), RsCfgNotTestIndex.isCfgNotTest(item))

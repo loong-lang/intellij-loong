@@ -264,4 +264,4 @@ abstract class AnnotationTestFixtureBase(
 
 sealed interface Preview
 object SamePreviewAsResult : Preview
-class ExplicitPreview(@Language("Rust") val text: String): Preview
+class ExplicitPreview(@Language("Loong") val text: String): Preview

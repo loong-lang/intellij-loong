@@ -150,7 +150,7 @@ class RsDuplicateInspectionTest : RsInspectionsTestBase(DuplicateInspection::cla
     """, anonymizeFunctions = true)
 
     private fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         anonymizeLiterals: Boolean = false,
         anonymizeIdentifiers: Boolean = false,
         anonymizeFunctions: Boolean = false

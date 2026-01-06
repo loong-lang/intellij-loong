@@ -34,7 +34,7 @@ import kotlin.text.Charsets.UTF_8
 fun fileTree(builder: FileTreeBuilder.() -> Unit): FileTree =
     FileTree(FileTreeBuilderImpl().apply { builder() }.intoDirectory())
 
-fun fileTreeFromText(@Language("Rust") text: String, commentPrefix: String = "//"): FileTree {
+fun fileTreeFromText(@Language("Loong") text: String, commentPrefix: String = "//"): FileTree {
     val fileSeparator = """^\s*$commentPrefix- (\S+)\s*$""".toRegex(RegexOption.MULTILINE)
     val fileNames = fileSeparator.findAll(text).map { it.groupValues[1] }.toList()
     val fileTexts = fileSeparator.split(text)
@@ -71,7 +71,7 @@ interface FileTreeBuilder {
     fun file(name: String, code: String? = null)
     fun symlink(name: String, targetPath: String)
 
-    fun rust(name: String, @Language("Rust") code: String) = file(name, code)
+    fun rust(name: String, @Language("Loong") code: String) = file(name, code)
     fun toml(name: String, @Language("TOML") code: String) = file(name, code)
 }
 

@@ -36,7 +36,7 @@ class RsExternalLinterSlowRunNotifier(val project: Project) {
             val statusBar = WindowManager.getInstance().getStatusBar(project) ?: return
             val widget = statusBar.getWidget(RsExternalLinterWidget.ID) as? RsExternalLinterWidget ?: return
             val content = buildString {
-                append("Low performance due to Rust external linter")
+                append("Low performance due to Loong external linter")
                 append(HtmlChunk.br())
                 append(HtmlChunk.link("disable", "Disable"))
                 append("&nbsp;&nbsp;&nbsp;&nbsp;")

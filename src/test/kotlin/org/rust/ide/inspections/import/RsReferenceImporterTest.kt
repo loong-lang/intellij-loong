@@ -84,9 +84,9 @@ class RsReferenceImporterTest : RsInspectionsTestBase(RsUnresolvedReferenceInspe
         }
     """, enabled = false)
 
-    private fun doTestNotChanged(@Language("Rust") code: String, enabled: Boolean = true) = doTest(code, code, enabled)
+    private fun doTestNotChanged(@Language("Loong") code: String, enabled: Boolean = true) = doTest(code, code, enabled)
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String, enabled: Boolean = true) {
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String, enabled: Boolean = true) {
         withAddUnambiguousImportsOnTheFly(enabled) {
             configureByText(before)
             // For some reason have to call highlighting twice

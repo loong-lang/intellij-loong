@@ -107,7 +107,7 @@ class CargoSyncTask(
 
         @Suppress("UnnecessaryVariable")
         val refreshedProjects = if (toolchain == null) {
-            syncProgress.fail(System.currentTimeMillis(), "Cargo project update failed:\nNo Rust toolchain")
+            syncProgress.fail(System.currentTimeMillis(), "Cargo project update failed:\nNo Loong toolchain")
             cargoProjects
         } else {
             cargoProjects.map { cargoProject ->
@@ -226,7 +226,7 @@ private class CargoProjectWithExistingStdlib(
 )
 
 /**
- * Intellij-Rust plugin currently supports only one stdlib at a time. If there are different standard libraries in
+ * Intellij-Loong plugin currently supports only one stdlib at a time. If there are different standard libraries in
  * different cargo projects, select and use the most recent of them.
  * A cargo project may have a different stdlib if there is a `rust-toolchain.toml` file,
  * or if it uses `rustup override`
@@ -309,7 +309,7 @@ private fun List<CargoProjectImpl>.deduplicateProjects(): List<CargoProjectImpl>
 private fun fetchRustcInfo(context: CargoSyncTask.SyncContext): TaskResult<RustcInfo> {
     return context.runWithChildProgress("Getting toolchain version") { childContext ->
         if (!childContext.toolchain.looksLikeValidToolchain()) {
-            return@runWithChildProgress TaskResult.Err("Invalid Rust toolchain ${childContext.toolchain.presentableLocation}")
+            return@runWithChildProgress TaskResult.Err("Invalid Loong toolchain ${childContext.toolchain.presentableLocation}")
         }
 
         val workingDirectory = childContext.oldCargoProject.workingDirectory
@@ -331,7 +331,7 @@ private fun fetchCargoWorkspace(context: CargoSyncTask.SyncContext, rustcInfo: R
 
         val toolchain = childContext.toolchain
         if (!toolchain.looksLikeValidToolchain()) {
-            return@runWithChildProgress TaskResult.Err("Invalid Rust toolchain ${toolchain.presentableLocation}")
+            return@runWithChildProgress TaskResult.Err("Invalid Loong toolchain ${toolchain.presentableLocation}")
         }
         val projectDirectory = childContext.oldCargoProject.workingDirectory
         val cargo = toolchain.cargoOrWrapper(projectDirectory)
@@ -403,7 +403,7 @@ private fun fetchCargoWorkspace(context: CargoSyncTask.SyncContext, rustcInfo: R
 }
 
 private fun fetchStdlib(context: CargoSyncTask.SyncContext, cargoProject: CargoProjectImpl, rustcInfo: RustcInfo?): TaskResult<StandardLibrary> {
-    return context.runWithChildProgress("Getting Rust stdlib") { childContext ->
+    return context.runWithChildProgress("Getting Loong stdlib") { childContext ->
 
         val workingDirectory = cargoProject.workingDirectory
         if (cargoProject.doesProjectLooksLikeRustc()) {

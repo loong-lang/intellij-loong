@@ -275,7 +275,7 @@ class RsElementFeatureProviderTest : RsTestBase() {
     ))
 
 
-    private fun doTest(feature: String, @Language("Rust") code: String, values: Map<String, Any>) {
+    private fun doTest(feature: String, @Language("Loong") code: String, values: Map<String, Any>) {
         InlineFile(code.trimIndent()).withCaret()
         myFixture.completeBasic()
         val lookup = LookupManager.getInstance(project).activeLookup as LookupImpl

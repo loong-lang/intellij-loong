@@ -31,14 +31,14 @@ class RsAttributeTest : RsTestBase() {
         check(element !is RsInnerAttributeOwner || element.innerAttrList.all { it.owner == element })
     }
 
-    private fun doTest(@Language("Rust") code: String, type: AttributeType) {
+    private fun doTest(@Language("Loong") code: String, type: AttributeType) {
         InlineFile(code)
         val element = findElementInEditor<RsElement>()
 
         doTest(element, type)
     }
 
-    private inline fun <reified T : RsElement> doTest2(@Language("Rust") code: String, type: AttributeType) {
+    private inline fun <reified T : RsElement> doTest2(@Language("Loong") code: String, type: AttributeType) {
         InlineFile(code)
         val element = findElementInEditor<T>()
 
@@ -233,7 +233,7 @@ class RsAttributeTest : RsTestBase() {
     fun `test literal expr as statement`() = doTest2<RsStmt>("""
         fn main() {
             #[outer]
-            "Hello Rust!";
+            "Hello Loong!";
             //^
         }
     """, Outer)

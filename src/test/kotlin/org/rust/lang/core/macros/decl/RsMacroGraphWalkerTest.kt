@@ -13,7 +13,7 @@ import org.rust.lang.core.psi.RsMacroCall
 import org.rust.lang.core.psi.ext.*
 
 class RsMacroGraphWalkerTest : RsTestBase() {
-    private fun check(@Language("Rust") code: String, expected: HashSet<FragmentKind>) {
+    private fun check(@Language("Loong") code: String, expected: HashSet<FragmentKind>) {
         InlineFile(code)
         val macroCall = myFixture.file.descendantsOfType<RsMacroCall>().single()
         val macro = macroCall.resolveToMacro()!!

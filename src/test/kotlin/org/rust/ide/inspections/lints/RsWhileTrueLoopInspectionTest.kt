@@ -75,8 +75,8 @@ class RsWhileTrueLoopInspectionTest : RsInspectionsTestBase(RsWhileTrueLoopInspe
     """)
 
     private fun checkFix(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = checkFixByText(
         "Use `loop`",
         before,

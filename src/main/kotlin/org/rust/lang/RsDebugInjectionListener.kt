@@ -18,6 +18,6 @@ interface RsDebugInjectionListener {
 
     companion object {
         @JvmField
-        val INJECTION_TOPIC = Topic.create("Rust Language Injected", RsDebugInjectionListener::class.java)
+        val INJECTION_TOPIC = Topic.create("Loong Language Injected", RsDebugInjectionListener::class.java)
     }
 }

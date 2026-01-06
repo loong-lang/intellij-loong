@@ -66,6 +66,6 @@ abstract class RsAsyncParameterInfoHandler<ParameterOwner : PsiElement, Paramete
 
     private companion object {
         private val executor: Executor =
-            AppExecutorUtil.createBoundedApplicationPoolExecutor("Rust async parameter info handler", 1)
+            AppExecutorUtil.createBoundedApplicationPoolExecutor("Loong async parameter info handler", 1)
     }
 }

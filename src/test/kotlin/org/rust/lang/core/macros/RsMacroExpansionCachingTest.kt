@@ -61,7 +61,7 @@ class RsMacroExpansionCachingTest : RsMacroExpansionTestBase() {
 
     private fun checkReExpanded(
         action: () -> Unit,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         vararg names: String,
         allowDumbMode: Boolean = true,
     ) {
@@ -83,7 +83,7 @@ class RsMacroExpansionCachingTest : RsMacroExpansionTestBase() {
 
     private fun checkReExpandedTree(
         action: (p: TestProject) -> Unit,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         names: List<String>,
         allowDumbMode: Boolean = true,
     ) {
@@ -109,8 +109,8 @@ class RsMacroExpansionCachingTest : RsMacroExpansionTestBase() {
 
     private fun checkExpansionAfterAction(
         action: () -> Unit,
-        @Language("Rust") code: String,
-        @Language("Rust") vararg expectedExpansions: String
+        @Language("Loong") code: String,
+        @Language("Loong") vararg expectedExpansions: String
     ) {
         InlineFile(code)
 

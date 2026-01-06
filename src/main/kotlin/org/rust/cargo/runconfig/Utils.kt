@@ -142,13 +142,13 @@ sealed class BuildResult {
         object UnsupportedMSVC : ToolchainError("MSVC toolchain is not supported. Please use GNU toolchain.")
         object UnsupportedGNU : ToolchainError("GNU toolchain is not supported. Please use MSVC toolchain.")
         object UnsupportedWSL : ToolchainError("WSL toolchain is not supported.")
-        object MSVCWithRustGNU : ToolchainError("MSVC debugger cannot be used with GNU Rust toolchain.")
-        object GNUWithRustMSVC : ToolchainError("GNU debugger cannot be used with MSVC Rust toolchain.")
+        object MSVCWithRustGNU : ToolchainError("MSVC debugger cannot be used with GNU Loong toolchain.")
+        object GNUWithRustMSVC : ToolchainError("GNU debugger cannot be used with MSVC Loong toolchain.")
         object WSLWithNonWSL : ToolchainError(
             "<html>The local debugger cannot be used with WSL.<br>" +
                 "Use the <a href='https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-product.html'>instructions</a> to configure WSL toolchain.</html>"
         )
-        object NonWSLWithWSL : ToolchainError("WSL debugger cannot be used with non-WSL Rust toolchain.")
+        object NonWSLWithWSL : ToolchainError("WSL debugger cannot be used with non-WSL Loong toolchain.")
 
         class Other(message: String) : ToolchainError(message)
     }

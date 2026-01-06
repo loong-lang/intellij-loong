@@ -135,7 +135,7 @@ class RsLanguageCodeStyleSettingsProvider : LanguageCodeStyleSettingsProvider() 
     }
 }
 
-private fun sample(@org.intellij.lang.annotations.Language("Rust") code: String) = code.trim()
+private fun sample(@org.intellij.lang.annotations.Language("Loong") code: String) = code.trim()
 
 private val INDENT_SAMPLE = sample("""
 struct Vector {

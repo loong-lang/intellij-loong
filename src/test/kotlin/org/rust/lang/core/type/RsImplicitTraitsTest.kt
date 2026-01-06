@@ -331,7 +331,7 @@ class RsImplicitTraitsTest : RsTypificationTestBase() {
         }
     }
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         val fullTestCode = """
             #[lang = "sized"]  pub trait Sized {}
             #[lang = "copy"]   pub trait Copy {}

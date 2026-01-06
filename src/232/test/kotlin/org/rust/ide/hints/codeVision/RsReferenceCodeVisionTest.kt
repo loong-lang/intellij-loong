@@ -142,7 +142,7 @@ class RsReferenceCodeVisionTest : CodeVisionTestCase() {
         fn bar(a: foo::S) {}
     """)
 
-    private fun doTest(@Language("Rust") text: String) {
+    private fun doTest(@Language("Loong") text: String) {
         testProviders(text.trimIndent(), "main.rs", RsReferenceCodeVisionProvider().groupId)
     }
 }

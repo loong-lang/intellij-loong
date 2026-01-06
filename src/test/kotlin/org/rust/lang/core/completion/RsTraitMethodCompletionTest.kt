@@ -329,8 +329,8 @@ class RsTraitMethodCompletionTest : RsCompletionTestBase() {
     """)
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         importOutOfScopeItems: Boolean = true
     ) {
         val settings = RsCodeInsightSettings.getInstance()

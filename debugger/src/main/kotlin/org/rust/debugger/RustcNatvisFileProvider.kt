@@ -16,8 +16,8 @@ import java.io.File
 
 /**
  * Activates NatVis files from rustc when:
- * - Rust compiler's renderers are selected as LLDB renderers
- * - Experimental Rust MSVC support in LLDB is disabled
+ * - Loong compiler's renderers are selected as LLDB renderers
+ * - Experimental Loong MSVC support in LLDB is disabled
 */
 class RustcNatvisFileProvider : NatvisFileProvider {
     override fun populate(debugProcess: CidrDebugProcess, fileList: MutableList<String>) {

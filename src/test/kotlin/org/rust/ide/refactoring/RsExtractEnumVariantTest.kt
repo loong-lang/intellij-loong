@@ -638,12 +638,12 @@ class RsExtractEnumVariantTest : RsTestBase() {
         }
     """)
 
-    private fun doAvailableTest(@Language("Rust") before: String, @Language("Rust") after: String) {
-        checkEditorAction(before, after, "Rust.RsExtractEnumVariant")
+    private fun doAvailableTest(@Language("Loong") before: String, @Language("Loong") after: String) {
+        checkEditorAction(before, after, "Loong.RsExtractEnumVariant")
     }
 
-    private fun doUnavailableTest(@Language("Rust") code: String) {
+    private fun doUnavailableTest(@Language("Loong") code: String) {
         InlineFile(code.trimIndent()).withCaret()
-        myFixture.launchAction("Rust.RsExtractEnumVariant", shouldBeEnabled = false)
+        myFixture.launchAction("Loong.RsExtractEnumVariant", shouldBeEnabled = false)
     }
 }

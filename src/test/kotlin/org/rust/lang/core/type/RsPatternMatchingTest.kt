@@ -150,7 +150,7 @@ class RsPatternMatchingTest : RsTypificationTestBase() {
         struct W;
 
         fn main() {
-            // Note, multiple `..` patterns are not allowed in correct Rust code
+            // Note, multiple `..` patterns are not allowed in correct Loong code
             let (s, .., u, .., w) = (S, T, U, V, W);
             (s, u, w);
           //^ (S, <unknown>, W)
@@ -219,7 +219,7 @@ class RsPatternMatchingTest : RsTypificationTestBase() {
         struct X(S, T, U, V, W);
 
         fn main() {
-            // Note, multiple `..` patterns are not allowed in correct Rust code
+            // Note, multiple `..` patterns are not allowed in correct Loong code
             let X(s, .., u, .., w) = X(S, T, U, V, W);
             (s, u, w);
           //^ (S, <unknown>, W)

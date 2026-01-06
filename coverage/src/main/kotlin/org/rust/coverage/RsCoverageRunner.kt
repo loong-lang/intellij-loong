@@ -20,7 +20,7 @@ import java.io.File
 import java.io.IOException
 
 class RsCoverageRunner : CoverageRunner() {
-    override fun getPresentableName(): String = "Rust"
+    override fun getPresentableName(): String = "Loong"
 
     override fun getDataFileExtension(): String = "info"
 

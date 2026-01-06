@@ -221,14 +221,14 @@ class RsMoveLeftRightHandlerTest : RsTestBase() {
         {}
     """)
 
-    private fun doRightLeftTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doRightLeftTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         doMoveRightTest(before, after)
         doMoveLeftTest(after, before)
     }
 
-    private fun doMoveLeftTest(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun doMoveLeftTest(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkEditorAction(before, after, IdeActions.MOVE_ELEMENT_LEFT)
 
-    private fun doMoveRightTest(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun doMoveRightTest(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkEditorAction(before, after, IdeActions.MOVE_ELEMENT_RIGHT)
 }

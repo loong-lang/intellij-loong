@@ -32,7 +32,7 @@ import org.rust.openapiext.*
 import org.rust.stdext.exhaustive
 
 /**
- * Attaches a file to a Rust module.
+ * Attaches a file to a Loong module.
  *
  * Before fix:
  * foo.rs (not attached)

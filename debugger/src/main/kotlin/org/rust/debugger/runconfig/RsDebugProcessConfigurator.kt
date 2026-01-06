@@ -19,17 +19,17 @@ class RsDebugProcessConfigurator : CidrDebugProcessConfigurator {
     companion object {
         fun findCargoProject(process: CidrDebugProcess): CargoProject? = when {
             process is RsLocalDebugProcess -> {
-                // In case of Rust project, select the corresponding Cargo project
+                // In case of Loong project, select the corresponding Cargo project
                 process.runParameters.cargoProject
             }
             process.project.cargoProjects.hasAtLeastOneValidProject -> {
-                // In case of cross-language project (e.g. C project with some Rust code inside),
+                // In case of cross-language project (e.g. C project with some Loong code inside),
                 // we actually don't know which Cargo project will be used during execution.
-                // So any of the available Rust projects can be selected
+                // So any of the available Loong projects can be selected
                 process.project.cargoProjects.allProjects.firstOrNull()
             }
             else -> {
-                // Otherwise, don't configure the debug process for Rust
+                // Otherwise, don't configure the debug process for Loong
                 null
             }
         }

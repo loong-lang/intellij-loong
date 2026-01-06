@@ -72,8 +72,8 @@ abstract class RsMoveFileTestBase : RsTestBase() {
     protected fun doTest(
         elementsToMove: Array<String>,
         targetDirectory: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         searchForReferences: Boolean = true
     ) = checkByDirectory(before, after) { testProject ->
         performMove(testProject.root, elementsToMove, targetDirectory, searchForReferences)
@@ -82,14 +82,14 @@ abstract class RsMoveFileTestBase : RsTestBase() {
     protected fun doTest(
         elementToMove: String,
         targetDirectory: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = doTest(arrayOf(elementToMove), targetDirectory, before, after)
 
     protected fun doTestExpectError(
         elementsToMove: Array<String>,
         targetDirectory: String,
-        @Language("Rust") source: String
+        @Language("Loong") source: String
     ) = checkByDirectory(source, source, expectError = true) { testProject ->
         performMove(testProject.root, elementsToMove, targetDirectory)
     }

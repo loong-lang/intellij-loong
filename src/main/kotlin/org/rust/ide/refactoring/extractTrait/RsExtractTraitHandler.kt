@@ -87,7 +87,7 @@ class RsExtractTraitDialog(
     init {
         check(!isUnitTestMode)
         super.init()
-        title = RsBundle.message("action.Rust.RsExtractTrait.dialog.title")
+        title = RsBundle.message("action.Loong.RsExtractTrait.dialog.title")
         validateButtons()
     }
 

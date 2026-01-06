@@ -54,7 +54,7 @@ abstract class RsCompletionTestFixtureBase<IN>(
     fun checkCompletion(
         lookupString: String,
         before: IN,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         completionChar: Char,
     ) {
         checkByText(before, after.trimIndent()) {

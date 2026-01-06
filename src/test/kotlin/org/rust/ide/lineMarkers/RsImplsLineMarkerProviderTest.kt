@@ -86,7 +86,7 @@ class RsImplsLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
         impl Foo for Bar {}
     """)
 
-    private fun doPopupTest(@Language("Rust") code: String, vararg expectedItems: String) {
+    private fun doPopupTest(@Language("Loong") code: String, vararg expectedItems: String) {
         InlineFile(code)
         val element = myFixture.file.findElementAt(myFixture.caretOffset)!!
 

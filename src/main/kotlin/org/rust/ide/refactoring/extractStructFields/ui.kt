@@ -47,12 +47,12 @@ private class ExtractFieldsDialog(project: Project) : DialogWrapper(project, fal
 
     init {
         super.init()
-        title = RsBundle.message("action.Rust.RsExtractStructFields.choose.name.dialog.title")
+        title = RsBundle.message("action.Loong.RsExtractStructFields.choose.name.dialog.title")
     }
 
     override fun doValidate(): ValidationInfo? {
         if (!isValidRustVariableIdentifier(input.text)) {
-            return ValidationInfo(RsBundle.message("action.Rust.RsExtractStructFields.choose.name.dialog.invalid.name"), input)
+            return ValidationInfo(RsBundle.message("action.Loong.RsExtractStructFields.choose.name.dialog.invalid.name"), input)
         }
         return null
     }

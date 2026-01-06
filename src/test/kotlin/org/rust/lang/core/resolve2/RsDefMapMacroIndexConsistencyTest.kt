@@ -64,7 +64,7 @@ class RsDefMapMacroIndexConsistencyTest : RsTestBase() {
         [1, 5] macro macro2
     """)
 
-    fun doTest(@Language("Rust") code: String, itemIndices: String) {
+    fun doTest(@Language("Loong") code: String, itemIndices: String) {
         InlineFile(code)
         val crateRoot = myFixture.findFileInTempDir("main.rs").toPsiFile(myFixture.project) as RsFile
         val info = getModInfo(crateRoot) as RsModInfo

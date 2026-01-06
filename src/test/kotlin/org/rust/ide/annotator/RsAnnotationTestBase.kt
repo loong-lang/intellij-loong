@@ -31,15 +31,15 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected abstract fun createAnnotationFixture(): RsAnnotationTestFixture<Unit>
 
-    protected fun checkHighlighting(@Language("Rust") text: String, ignoreExtraHighlighting: Boolean = true) =
+    protected fun checkHighlighting(@Language("Loong") text: String, ignoreExtraHighlighting: Boolean = true) =
         annotationFixture.checkHighlighting(text, ignoreExtraHighlighting)
 
-    protected fun checkInfo(@Language("Rust") text: String) = annotationFixture.checkInfo(text)
-    protected fun checkWarnings(@Language("Rust") text: String) = annotationFixture.checkWarnings(text)
-    protected fun checkErrors(@Language("Rust") text: String) = annotationFixture.checkErrors(text)
+    protected fun checkInfo(@Language("Loong") text: String) = annotationFixture.checkInfo(text)
+    protected fun checkWarnings(@Language("Loong") text: String) = annotationFixture.checkWarnings(text)
+    protected fun checkErrors(@Language("Loong") text: String) = annotationFixture.checkErrors(text)
 
     protected fun checkByText(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -48,8 +48,8 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixByText(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -58,13 +58,13 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixByTextWithoutHighlighting(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         preview: Preview? = SamePreviewAsResult,
     ) = annotationFixture.checkFixByTextWithoutHighlighting(fixName, before, after, preview)
 
     protected fun checkByFileTree(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -74,8 +74,8 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixByFileTree(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -85,17 +85,17 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixByFileTreeWithoutHighlighting(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         stubOnly: Boolean = true,
         preview: Preview? = SamePreviewAsResult,
     ) = annotationFixture.checkFixByFileTreeWithoutHighlighting(fixName, before, after, stubOnly, preview)
 
     protected fun checkFixByTextWithLiveTemplate(
         fixName: String,
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         toType: String,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         fileName: String = "main.rs",
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
@@ -108,7 +108,7 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixIsUnavailable(
         fixName: String,
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -117,7 +117,7 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixIsUnavailableByFileTree(
         fixName: String,
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -125,7 +125,7 @@ abstract class RsAnnotationTestBase : RsTestBase() {
         stubOnly: Boolean = true,
     ) = annotationFixture.checkFixIsUnavailableByFileTree(fixName, text, checkWarn, checkInfo, checkWeakWarn, ignoreExtraHighlighting, stubOnly)
 
-    protected fun checkDontTouchAstInOtherFiles(@Language("Rust") text: String, checkInfo: Boolean = false, filePath: String? = null) {
+    protected fun checkDontTouchAstInOtherFiles(@Language("Loong") text: String, checkInfo: Boolean = false, filePath: String? = null) {
         fileTreeFromText(text).create()
         val testFilePath = filePath ?: "main.rs"
         (myFixture as CodeInsightTestFixtureImpl) // meh
@@ -136,7 +136,7 @@ abstract class RsAnnotationTestBase : RsTestBase() {
     }
 
     protected fun checkByCodeFragment(
-        @Language("Rust") context: String,
+        @Language("Loong") context: String,
         fragment: String,
         fragmentConstructor: (Project, String, RsElement) -> RsCodeFragment,
         checkWarn: Boolean = true,
@@ -152,7 +152,7 @@ abstract class RsAnnotationTestBase : RsTestBase() {
 
     protected fun checkFixAvailableInSelectionOnly(
         fixName: String,
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,

@@ -73,5 +73,5 @@ class RsTodoTest : TodoItemsTestCase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") text: String) = testTodos(text)
+    private fun doTest(@Language("Loong") text: String) = testTodos(text)
 }

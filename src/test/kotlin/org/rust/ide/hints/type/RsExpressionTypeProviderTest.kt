@@ -116,7 +116,7 @@ class RsExpressionTypeProviderTest : RsTestBase() {
         }
     """, "fn() -> i32, i32")
 
-    private fun doTest(@Language("Rust") code: String, type: String) {
+    private fun doTest(@Language("Loong") code: String, type: String) {
         InlineFile(code).withCaret()
 
         val element = myFixture.file.findElementAt(myFixture.caretOffset)

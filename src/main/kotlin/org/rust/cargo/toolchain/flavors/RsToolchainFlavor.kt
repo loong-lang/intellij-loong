@@ -26,7 +26,7 @@ abstract class RsToolchainFlavor {
     protected open fun isApplicable(): Boolean = true
 
     /**
-     * Checks if the path is the name of a Rust toolchain of this flavor.
+     * Checks if the path is the name of a Loong toolchain of this flavor.
      *
      * @param path path to check.
      * @return true if paths points to a valid home.

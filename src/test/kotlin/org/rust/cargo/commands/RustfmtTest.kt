@@ -555,7 +555,7 @@ class RustfmtTest : RsWithToolchainTestBase() {
 
     private fun doTest(
         treeBuilder: FileTreeBuilder.() -> Unit,
-        @Language("Rust") expectedText: String,
+        @Language("Loong") expectedText: String,
         action: () -> Unit = { reformatRange(myFixture.file) }
     ) = doTest(treeBuilder, { expectedText.trimIndent() }, action)
 }

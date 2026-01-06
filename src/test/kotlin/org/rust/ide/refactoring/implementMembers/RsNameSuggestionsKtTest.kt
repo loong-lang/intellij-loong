@@ -130,7 +130,7 @@ class RsNameSuggestionsKtTest : RsTestBase() {
         emptyList()
     )
 
-    private fun doTest(@Language("Rust") before: String, expected: List<String>) {
+    private fun doTest(@Language("Loong") before: String, expected: List<String>) {
         InlineFile(before).withCaret()
         openFileInEditor("main.rs")
         val expr = findCandidateExpressionsToExtract(myFixture.editor, myFixture.file as RsFile).first()

@@ -12,7 +12,7 @@ import javax.swing.Icon
 
 object RsFileType : LanguageFileType(RsLanguage) {
 
-    override fun getName(): String = "Rust"
+    override fun getName(): String = "Loong"
 
     override fun getIcon(): Icon = RsIcons.RUST_FILE
 
@@ -20,5 +20,5 @@ object RsFileType : LanguageFileType(RsLanguage) {
 
     override fun getCharset(file: VirtualFile, content: ByteArray): String = "UTF-8"
 
-    override fun getDescription(): String = "Rust files"
+    override fun getDescription(): String = "Loong files"
 }

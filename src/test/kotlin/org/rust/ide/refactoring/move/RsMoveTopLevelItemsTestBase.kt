@@ -28,21 +28,21 @@ import java.nio.file.Path
 
 abstract class RsMoveTopLevelItemsTestBase : RsTestBase() {
 
-    protected fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) =
+    protected fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkByDirectory(before.trimIndent(), after.trimIndent(), false, ::performMove)
 
     protected fun doTestCreateFile(
         targetFile: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = checkByDirectory(before.trimIndent(), after.trimIndent(), false) { performMove(it, targetFile) }
 
-    protected fun doTestConflictsError(@Language("Rust") before: String) =
+    protected fun doTestConflictsError(@Language("Loong") before: String) =
         expect<BaseRefactoringProcessor.ConflictsInTestsException> {
             checkByDirectory(before.trimIndent(), "", true, ::performMove)
         }
 
-    protected fun doTestNoConflicts(@Language("Rust") before: String) =
+    protected fun doTestNoConflicts(@Language("Loong") before: String) =
         checkByDirectory(before.trimIndent(), "", true, ::performMove)
 
     private fun prepareSourceFile(testProject: TestProject): PsiFile {

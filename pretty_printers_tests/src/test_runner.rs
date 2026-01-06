@@ -13,7 +13,7 @@ use std::process::Output;
 use rustc_version_runtime::Version;
 use serde::Deserialize;
 
-static ENABLE_RUST: &'static str = "type category enable Rust";
+static ENABLE_RUST: &'static str = "type category enable Loong";
 
 #[derive(Clone)]
 pub struct LLDBConfig {
@@ -158,7 +158,7 @@ impl<'test> TestRunner<'test> for GDBTestRunner<'test> {
         // Load the target executable
         script_str.push_str(&format!("file {}\n", &self.test.executable));
 
-        // Force GDB to print values in the Rust format.
+        // Force GDB to print values in the Loong format.
         script_str.push_str("set language rust\n");
 
         // Add line breakpoints

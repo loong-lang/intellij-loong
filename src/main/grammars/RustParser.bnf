@@ -108,7 +108,7 @@
     consumeTokenMethod("((?!.*_with_recover).*_recover)|(.*_first)|(.*Expr)") = "consumeTokenFast"
 }
 
-// This is the grammar of the Rust language which is used by Grammar Kit
+// This is the grammar of the Loong language which is used by Grammar Kit
 // to generate the parser and the PSI classes. Rule `FooBar` corresponds
 // to `RsFooBar` PSI class.
 //
@@ -1076,7 +1076,7 @@ upper TypeAlias ::= TYPE_KW identifier TypeParameterList? TypeParamBounds? Where
 // https://doc.rust-lang.org/reference.html#operator-precedence
 // https://github.com/JetBrains/Grammar-Kit/blob/master/HOWTO.md#24-compact-expression-parsing-with-priorities
 //
-// Rust expression grammar allows or forbids struct literals depending on context.
+// Loong expression grammar allows or forbids struct literals depending on context.
 // There are `no_struct_lit_expr` and `any_expr` productions for this two cases.
 // `expr` production is an implementation detail. It passes the context information to the child expressions.
 Expr ::= RetExpr

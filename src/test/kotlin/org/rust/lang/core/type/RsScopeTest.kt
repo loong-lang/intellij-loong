@@ -149,7 +149,7 @@ class RsScopeTest : RsTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         val scopeStartOffset = findMarker(code, START_MARKER)
         val scopeEndOffset = findMarker(code, END_MARKER)
         check(scopeStartOffset < scopeEndOffset) { "`$START_MARKER` occurs before `$END_MARKER`" }

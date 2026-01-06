@@ -280,12 +280,12 @@ class RsHighlightingAnnotatorTest : RsAnnotatorTestBase(RsHighlightingAnnotator:
         }
     """)
 
-    private fun checkHighlightingWithMacro(@Language("Rust") text: String) {
+    private fun checkHighlightingWithMacro(@Language("Loong") text: String) {
         checkHighlighting(text)
         checkHighlightingInsideMacroCall(text)
     }
 
-    private fun checkHighlightingInsideMacroCall(@Language("Rust") text: String) {
+    private fun checkHighlightingInsideMacroCall(@Language("Loong") text: String) {
         checkHighlighting("""
             macro_rules! as_is {
                 ($($ t:tt)*) => {$($ t)*};

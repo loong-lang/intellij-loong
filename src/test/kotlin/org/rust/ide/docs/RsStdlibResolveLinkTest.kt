@@ -43,7 +43,7 @@ class RsStdlibResolveLinkTest : RsTestBase() {
     private fun doTest(
         link: String,
         expectedPaths: String,
-        @Language("Rust") code: String = DEFAULT_TEXT,
+        @Language("Loong") code: String = DEFAULT_TEXT,
         psiClass: Class<out PsiElement> = RsNamedElement::class.java
     ) {
         val paths = expectedPaths.split("|")
@@ -70,7 +70,7 @@ class RsStdlibResolveLinkTest : RsTestBase() {
     }
 
     companion object {
-        @Language("Rust")
+        @Language("Loong")
         private const val DEFAULT_TEXT = """
             struct Foo;
                   //^

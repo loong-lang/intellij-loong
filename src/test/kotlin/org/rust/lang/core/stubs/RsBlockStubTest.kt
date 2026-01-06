@@ -100,7 +100,7 @@ class RsBlockStubTest : RsTestBase() {
             PATH:RsPathStub
     """)
 
-    private fun doTest(@Language("Rust") code: String, expectedStubText: String) {
+    private fun doTest(@Language("Loong") code: String, expectedStubText: String) {
         InlineFile(code)
         val file = myFixture.file
         val block = file.childOfType<RsFunction>()!!.block!!

@@ -664,7 +664,7 @@ class RsTypeResolvingTest : RsTypificationTestBase() {
      * Checks the type of the element in [code] pointed to by `//^` marker.
      */
     private fun testType(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         renderMode: RenderMode = DEFAULT,
         normalize: Boolean = false
     ) {

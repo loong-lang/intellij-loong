@@ -21,7 +21,7 @@ import org.rust.lang.core.psi.RsMetaItem
 import org.rust.lang.core.psi.ext.*
 
 class ToggleFeatureIntention : RsElementBaseIntentionAction<ToggleFeatureIntention.Context>(), HighPriorityAction {
-    override fun getFamilyName() = RsBundle.message("intention.Rust.ToggleFeatureIntention.family.name")
+    override fun getFamilyName() = RsBundle.message("intention.Loong.ToggleFeatureIntention.family.name")
 
     override val attributeMacroHandlingStrategy: InvokeInside get() = InvokeInside.MACRO_CALL
     override val functionLikeMacroHandlingStrategy: InvokeInside get() = InvokeInside.MACRO_CALL
@@ -40,9 +40,9 @@ class ToggleFeatureIntention : RsElementBaseIntentionAction<ToggleFeatureIntenti
         val isEnabled = isCargoFeatureEnabled(context, featureName) ?: return null
 
         text = if (isEnabled) {
-            RsBundle.message("intention.Rust.ToggleFeatureIntention.disable", featureName)
+            RsBundle.message("intention.Loong.ToggleFeatureIntention.disable", featureName)
         } else {
-            RsBundle.message("intention.Rust.ToggleFeatureIntention.enable", featureName)
+            RsBundle.message("intention.Loong.ToggleFeatureIntention.enable", featureName)
         }
 
         return Context(featureName, context)

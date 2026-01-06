@@ -320,7 +320,7 @@ class RsItemUpDownMoverTest : RsStatementUpDownMoverTestBase() {
         """
     ).map { it.trimIndent() }
 
-    private fun doTest(@Language("Rust") _a: String, @Language("Rust") _b: String) {
+    private fun doTest(@Language("Loong") _a: String, @Language("Loong") _b: String) {
         val placeholder = "/*item*/"
         fun replacePlaceholder(_text: String, replacement: String): String {
             val text = _text.trimIndent()

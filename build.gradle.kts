@@ -399,7 +399,7 @@ project(":plugin") {
         }
     }
 
-    // Generates event scheme for Rust plugin FUS events to `plugin/build/eventScheme.json`
+    // Generates event scheme for Loong plugin FUS events to `plugin/build/eventScheme.json`
     task<RunIdeTask>("buildEventsScheme") {
         dependsOn(tasks.prepareSandbox)
         args("buildEventsScheme", "--outputFile=${buildDir.resolve("eventScheme.json").absolutePath}", "--pluginId=org.rust.lang")

@@ -15,7 +15,7 @@ import org.rust.lang.RsFileType
 import org.rust.openapiext.runWithEnabledFeatures
 
 abstract class RsSSRTestBase : RsInspectionsTestBase(SSBasedInspection::class) {
-    protected fun doTest(@Language("Rust") code: String, pattern: String) {
+    protected fun doTest(@Language("Loong") code: String, pattern: String) {
         runWithEnabledFeatures(RsExperiments.SSR) {
             val configuration = SearchConfiguration().apply {
                 matchOptions.setFileType(RsFileType)

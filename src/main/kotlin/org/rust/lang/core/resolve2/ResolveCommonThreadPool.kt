@@ -47,7 +47,7 @@ class ResolveCommonThreadPool : Disposable {
 
     companion object {
 
-        private const val THREAD_NAME_PREFIX = "Rust-resolve-thread-"
+        private const val THREAD_NAME_PREFIX = "Loong-resolve-thread-"
 
         fun get(): ExecutorService = service<ResolveCommonThreadPool>().pool
     }

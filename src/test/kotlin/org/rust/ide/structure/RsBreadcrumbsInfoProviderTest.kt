@@ -203,7 +203,7 @@ class RsBreadcrumbsInfoProviderTest : RsTestBase() {
         'one: while false
     """)
 
-    private fun doWholeFileTextTest(@Language("Rust") content: String, info: String) {
+    private fun doWholeFileTextTest(@Language("Loong") content: String, info: String) {
         InlineFile(content)
         val actual = myFixture.file.descendantsOfType<RsElement>()
             .map { it.text }
@@ -215,7 +215,7 @@ class RsBreadcrumbsInfoProviderTest : RsTestBase() {
         UsefulTestCase.assertSameLines(info.trimIndent(), actual)
     }
 
-    private fun doTextTest(@Language("Rust") content: String, info: String) {
+    private fun doTextTest(@Language("Loong") content: String, info: String) {
         InlineFile(content.trimIndent())
         val crumbs = myFixture.breadcrumbsAtCaret.joinToString(separator = "\n") { it.text }
         UsefulTestCase.assertSameLines(info.trimIndent(), crumbs)

@@ -11,7 +11,7 @@ import com.intellij.openapi.vfs.VirtualFile
 
 /**
  * Describes the project model in terms of *crates*. Should be preferred to
- * [org.rust.cargo.project.model.CargoProjectsService] in Rust analysis code
+ * [org.rust.cargo.project.model.CargoProjectsService] in Loong analysis code
  * (name resolution, type inference, most of the inspections, etc)
  *
  * Crate Graph is [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph),

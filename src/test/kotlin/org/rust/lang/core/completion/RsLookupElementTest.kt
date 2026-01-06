@@ -311,7 +311,7 @@ class RsLookupElementTest : RsTestBase() {
     """, tailText = "() of T<1>", typeText = "()")
 
     private fun check(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         tailText: String? = null,
         typeText: String? = null,
         isBold: Boolean = false,
@@ -319,7 +319,7 @@ class RsLookupElementTest : RsTestBase() {
     ) = checkInner<RsNamedElement>(code, tailText, typeText, isBold, isStrikeout)
 
     private inline fun <reified T> checkInner(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         tailText: String? = null,
         typeText: String? = null,
         isBold: Boolean = false,
@@ -347,7 +347,7 @@ class RsLookupElementTest : RsTestBase() {
     }
 
     private fun checkProvider(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         tailText: String? = null,
         typeText: String? = null,
         isBold: Boolean = false,

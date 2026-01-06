@@ -135,7 +135,7 @@ class RsPartialMacroArgumentCompletionTest : RsCompletionTestBase() {
         }
     """, setOf("iii", "i32"))
 
-    private fun doTest(@Language("Rust") code: String, contains: Set<String>, notContains: Set<String> = emptySet()) {
+    private fun doTest(@Language("Loong") code: String, contains: Set<String>, notContains: Set<String> = emptySet()) {
         RsPartialMacroArgumentCompletionProvider.Testmarks.Touched.checkHit {
             RsFullMacroArgumentCompletionProvider.Testmarks.Touched.checkNotHit {
                 if (contains.isNotEmpty()) {

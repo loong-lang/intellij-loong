@@ -6,7 +6,7 @@
 package org.rust.ide.refactoring.generate
 
 class GenerateConstructorActionTest : RsGenerateBaseTest() {
-    override val generateId: String = "Rust.GenerateConstructor"
+    override val generateId: String = "Loong.GenerateConstructor"
 
     fun `test generic struct`() = doTest("""
         struct S<T> {

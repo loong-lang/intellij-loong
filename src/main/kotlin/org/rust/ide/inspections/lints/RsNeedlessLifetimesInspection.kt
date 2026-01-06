@@ -22,7 +22,7 @@ import org.rust.stdext.chain
 
 /**
  * Checks for lifetime annotations which can be removed by relying on lifetime elision.
- * Corresponds to needless_lifetimes lint from Rust Clippy.
+ * Corresponds to needless_lifetimes lint from Loong Clippy.
  */
 class RsNeedlessLifetimesInspection : RsLintInspection() {
 

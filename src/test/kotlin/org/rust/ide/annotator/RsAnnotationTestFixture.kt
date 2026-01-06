@@ -27,7 +27,7 @@ open class RsAnnotationTestFixture<C>(
 ) : AnnotationTestFixtureBase(testCase, codeInsightFixture, annotatorClasses, inspectionClasses) {
 
     fun checkByFileTree(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -44,8 +44,8 @@ open class RsAnnotationTestFixture<C>(
 
     fun checkFixByFileTree(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,
@@ -63,8 +63,8 @@ open class RsAnnotationTestFixture<C>(
 
     fun checkFixByFileTreeWithoutHighlighting(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         stubOnly: Boolean = true,
         preview: Preview? = SamePreviewAsResult,
     ) = checkFix(
@@ -79,7 +79,7 @@ open class RsAnnotationTestFixture<C>(
 
     fun checkFixIsUnavailableByFileTree(
         fixName: String,
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkWarn: Boolean = true,
         checkInfo: Boolean = false,
         checkWeakWarn: Boolean = false,

@@ -29,7 +29,7 @@ abstract class RsInlayTypeHintsTestBase(
         super.tearDown()
     }
 
-    protected fun checkByText(@Language("Rust") code: String) {
+    protected fun checkByText(@Language("Loong") code: String) {
         InlineFile(code.trimIndent().replace(HINT_COMMENT_PATTERN, "<$1/>"))
         checkInlays()
     }

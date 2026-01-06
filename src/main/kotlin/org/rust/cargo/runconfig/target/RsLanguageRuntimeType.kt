@@ -18,10 +18,10 @@ import java.util.function.Supplier
 import javax.swing.Icon
 
 class RsLanguageRuntimeType : LanguageRuntimeType<RsLanguageRuntimeConfiguration>(TYPE_ID) {
-    override val displayName: String = "Rust"
-    override val icon: Icon = RsIcons.RUST
-    override val configurableDescription: String = "Rust Configuration"
-    override val launchDescription: String = "Run Rust Command"
+    override val displayName: String = "Loong"
+    override val icon: Icon = RsIcons.LOONG
+    override val configurableDescription: String = "Loong Configuration"
+    override val launchDescription: String = "Run Loong Command"
 
     override fun createSerializer(config: RsLanguageRuntimeConfiguration): PersistentStateComponent<*> = config
 

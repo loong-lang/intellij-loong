@@ -456,7 +456,7 @@ class RsVisibilitySorterTest : RsStructureViewToggleableActionTest(){
         |  C: bool visibility=private
     """)
 
-    private fun test(@Language("Rust") code: String, disabled: String, enabled: String) {
+    private fun test(@Language("Loong") code: String, disabled: String, enabled: String) {
         val wrapTree = { tree: String ->
             val withIndentAndMargin = tree.trimMargin().prependIndent("|  ")
             """

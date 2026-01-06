@@ -71,7 +71,7 @@ val ASTNode.isFlatBraceBlock: Boolean
     get() = elementType in FLAT_BRACE_BLOCKS
 
 /**
- * A flat block is a Rust PSI element which does not denote separate PSI
+ * A flat block is a Loong PSI element which does not denote separate PSI
  * element for its _block_ part (e.g. `{...}`), for example [MOD_ITEM].
  */
 val ASTNode.isFlatBlock: Boolean

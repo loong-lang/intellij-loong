@@ -69,11 +69,11 @@ class DoctestFixTest : RsAnnotationTestBase() {
         return RsAnnotationTestFixture(this, myFixture, annotatorClasses = annotatorClasses)
     }
 
-    fun doTest(fixName: String, @Language("Rust") before: String, @Language("Rust") after: String) {
+    fun doTest(fixName: String, @Language("Loong") before: String, @Language("Loong") after: String) {
         val template = { text: String ->
             """
                 //- lib.rs
-                /// Lorem ipsum documentali Rust epmaxle tragi. Funebar
+                /// Lorem ipsum documentali Loong epmaxle tragi. Funebar
                 /// illi _qutiden_ nekto __ulimami_.
                 ///
                 /// ```

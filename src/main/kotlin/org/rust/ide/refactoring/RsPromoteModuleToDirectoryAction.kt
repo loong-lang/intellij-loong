@@ -52,7 +52,7 @@ class RsPromoteModuleToDirectoryAction : BaseRefactoringAction() {
         override fun invoke(project: Project, elements: Array<out PsiElement>, dataContext: DataContext?) {
             val files = elements.filterIsInstance<RsFile>()
             project.runWriteCommandAction(
-                RsBundle.message("action.Rust.RsPromoteModuleToDirectoryAction.text"),
+                RsBundle.message("action.Loong.RsPromoteModuleToDirectoryAction.text"),
                 *files.toTypedArray(),
             ) {
                 for (element in files) {

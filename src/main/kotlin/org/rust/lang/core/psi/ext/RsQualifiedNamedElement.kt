@@ -96,7 +96,7 @@ data class RsQualifiedName private constructor(
         }
     }
 
-    /** It can be used for any element that can be represented as some valid Rust path unlike field */
+    /** It can be used for any element that can be represented as some valid Loong path unlike field */
     private fun resolveToPathBasedElement(crateRoot: RsFile): RsQualifiedNamedElement? {
         val itemType = itemType
         val segments = buildList {

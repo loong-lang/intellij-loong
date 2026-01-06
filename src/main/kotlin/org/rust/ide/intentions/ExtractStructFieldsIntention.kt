@@ -10,7 +10,7 @@ import org.rust.ide.refactoring.RsBaseEditorRefactoringAction
 import org.rust.ide.refactoring.extractStructFields.RsExtractStructFieldsAction
 
 class ExtractStructFieldsIntention : RsRefactoringAdaptorIntention() {
-    override fun getText(): String = RsBundle.message("action.Rust.RsExtractStructFields.intention.text")
+    override fun getText(): String = RsBundle.message("action.Loong.RsExtractStructFields.intention.text")
     override fun getFamilyName(): String = text
 
     override val refactoringAction: RsBaseEditorRefactoringAction

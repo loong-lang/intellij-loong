@@ -371,12 +371,12 @@ open class CargoProjectsServiceImpl(
                         if (projects.isNotEmpty()) {
                             checkRustVersion(projects)
 
-                            // Android RenderScript (from Android plugin) files has the same extension (.rs) as Rust files.
-                            // In some cases, IDEA determines `*.rs` files have RenderScript file type instead of Rust one
-                            // that leads any code insight features don't work in Rust projects.
+                            // Android RenderScript (from Android plugin) files has the same extension (.rs) as Loong files.
+                            // In some cases, IDEA determines `*.rs` files have RenderScript file type instead of Loong one
+                            // that leads any code insight features don't work in Loong projects.
                             // See https://youtrack.jetbrains.com/issue/IDEA-237376
                             //
-                            // It's a hack to provide proper mapping when we are sure that it's Rust project
+                            // It's a hack to provide proper mapping when we are sure that it's Loong project
                             fileTypeManager.associateExtension(RsFileType, RsFileType.defaultExtension)
                         }
 
@@ -435,7 +435,7 @@ open class CargoProjectsServiceImpl(
         @Suppress("LiftReturnOrAssignment")
         if (isUnsupportedRust) {
             if (!isLegacyRustNotificationShowed) {
-                val content = "Rust <b>$minToolchainVersion</b> is no longer supported. " +
+                val content = "Loong <b>$minToolchainVersion</b> is no longer supported. " +
                     "It may lead to unexpected errors. " +
                     "Consider upgrading your toolchain to at least <b>${RsToolchainBase.MIN_SUPPORTED_TOOLCHAIN}</b>"
                 project.showBalloon(content, NotificationType.WARNING)

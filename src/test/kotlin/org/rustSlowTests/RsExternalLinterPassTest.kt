@@ -211,7 +211,7 @@ class RsExternalLinterPassTest : RsWithToolchainTestBase() {
     """, externalLinter = ExternalLinter.CLIPPY)
 
     private fun doTest(
-        @Language("Rust") mainRs: String,
+        @Language("Loong") mainRs: String,
         externalLinter: ExternalLinter = ExternalLinter.DEFAULT
     ) {
         project.externalLinterSettings.modifyTemporary(testRootDisposable) { it.tool = externalLinter }
@@ -241,7 +241,7 @@ class RsExternalLinterPassTest : RsWithToolchainTestBase() {
 
     // BACKCOMPAT: 2021.1. Use `tooltip` attribute instead
     private fun checkTooltip(
-        @Language("Rust") mainRs: String,
+        @Language("Loong") mainRs: String,
         tooltip: String,
         externalLinter: ExternalLinter = ExternalLinter.DEFAULT
     ) {

@@ -41,8 +41,8 @@ class ConvertToSizedTypeFixTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
 
     private fun doTest(
         fixName: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
     ) = checkFixByText(
         fixName,
         "#[lang = \"sized\"] trait Sized {}\n" + before.trimIndent(),

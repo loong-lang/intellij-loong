@@ -139,7 +139,7 @@ class RsShowMacroExpansionActionsTest : RsTestBase() {
         fn foo() {}
     """)
 
-    private fun testNoExpansionHappens(@Language("Rust") code: String) {
+    private fun testNoExpansionHappens(@Language("Loong") code: String) {
         InlineFile(code)
 
         val failingAction = object : RsShowMacroExpansionActionBase(expandRecursively = true) {
@@ -151,20 +151,20 @@ class RsShowMacroExpansionActionsTest : RsTestBase() {
         failingAction.performForContext(dataContext)
     }
 
-    private fun testRecursiveExpansion(@Language("Rust") code: String, @Language("Rust") expectedRaw: String) {
+    private fun testRecursiveExpansion(@Language("Loong") code: String, @Language("Loong") expectedRaw: String) {
         testMacroExpansion(code, expectedRaw, expandRecursively = true)
     }
 
     private fun testSingleStepExpansion(
-        @Language("Rust") code: String,
-        @Language("Rust", prefix = "fn main(){", suffix = ";}") expectedRaw: String
+        @Language("Loong") code: String,
+        @Language("Loong", prefix = "fn main(){", suffix = ";}") expectedRaw: String
     ) {
         testMacroExpansion(code, expectedRaw, expandRecursively = false)
     }
 
     private fun testMacroExpansion(
-        @Language("Rust") code: String,
-        @Language("Rust") expectedRaw: String,
+        @Language("Loong") code: String,
+        @Language("Loong") expectedRaw: String,
         expandRecursively: Boolean
     ) {
         InlineFile(code)
@@ -190,7 +190,7 @@ class RsShowMacroExpansionActionsTest : RsTestBase() {
     }
 
     private fun testMacroExpansionFail(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expandRecursively: Boolean
     ) {
         InlineFile(code)

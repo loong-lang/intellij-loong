@@ -229,7 +229,7 @@ class RsGenericParameterInfoHandlerTest
         impl<P> Trait</*caret*/> for S<P> { }
     """, "T", "", 0)
 
-    private fun checkByText(@Language("Rust") code: String, hint: String, where: String, index: Int) {
+    private fun checkByText(@Language("Loong") code: String, hint: String, where: String, index: Int) {
         val hints = if (where.isEmpty()) {
             arrayOf(hint to index)
         } else {

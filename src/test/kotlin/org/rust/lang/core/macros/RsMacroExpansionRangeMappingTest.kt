@@ -202,7 +202,7 @@ class RsMacroExpansionRangeMappingTest : RsTestBase() {
         }/*</selection>*/
     """)
 
-    private fun checkOffset(@Language("Rust") code: String, refiner: (RsElement) -> PsiElement = { it }) {
+    private fun checkOffset(@Language("Loong") code: String, refiner: (RsElement) -> PsiElement = { it }) {
         InlineFile(code).withCaret()
         val ref = findElementInEditor<RsReferenceElement>("^")
         val resolved = ref.reference?.resolve() ?: error("Failed to resolve ${ref.text}")
@@ -221,7 +221,7 @@ class RsMacroExpansionRangeMappingTest : RsTestBase() {
         check(recoveredElementInExpansion is LeafPsiElement)
     }
 
-    private fun checkNotFound(@Language("Rust") code: String, refiner: (RsElement) -> PsiElement = { it }) {
+    private fun checkNotFound(@Language("Loong") code: String, refiner: (RsElement) -> PsiElement = { it }) {
         InlineFile(code)
         val ref = findElementInEditor<RsReferenceElement>("^")
         val resolved = ref.reference?.resolve() ?: error("Failed to resolve ${ref.text}")
@@ -231,7 +231,7 @@ class RsMacroExpansionRangeMappingTest : RsTestBase() {
         assertNull(elementInCallBody)
     }
 
-    private fun checkFullyMapped(@Language("Rust") code: String) {
+    private fun checkFullyMapped(@Language("Loong") code: String) {
         val preparedCode = code.trimIndent()
             .replace("/*<selection>*/", "<selection><caret>")
             .replace("/*</selection>*/", "</selection>")

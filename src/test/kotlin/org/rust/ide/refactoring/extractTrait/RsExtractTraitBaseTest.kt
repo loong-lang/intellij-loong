@@ -13,8 +13,8 @@ import org.rust.lang.core.psi.ext.ancestorOrSelf
 abstract class RsExtractTraitBaseTest : RsTestBase() {
 
     protected fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) {
         check("/*caret*/" in before)
         checkByText(before.trimIndent(), after.trimIndent()) {
@@ -23,7 +23,7 @@ abstract class RsExtractTraitBaseTest : RsTestBase() {
         }
     }
 
-    protected fun doUnavailableTest(@Language("Rust") before: String) {
+    protected fun doUnavailableTest(@Language("Loong") before: String) {
         check("/*caret*/" in before)
         checkByText(before.trimIndent(), before.trimIndent()) {
             markItemsUnderCarets()
@@ -40,4 +40,4 @@ abstract class RsExtractTraitBaseTest : RsTestBase() {
     }
 }
 
-private const val ACTION_ID: String = "Rust.RsExtractTrait"
+private const val ACTION_ID: String = "Loong.RsExtractTrait"

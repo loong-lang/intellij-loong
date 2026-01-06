@@ -120,7 +120,7 @@ class RsLivenessTest : RsTestBase() {
         }
     """)
 
-    private fun check(@Language("Rust") code: String) {
+    private fun check(@Language("Loong") code: String) {
         InlineFile(code)
 
         val expectedLastUsages = findElementsWithDataAndOffsetInEditor<RsPathExpr>().mapToSet { it.first }

@@ -34,7 +34,7 @@ import javax.swing.JComponent
 
 class RsExternalLinterWidgetFactory : StatusBarWidgetFactory {
     override fun getId(): String = RsExternalLinterWidget.ID
-    override fun getDisplayName(): String = "Rust External Linter"
+    override fun getDisplayName(): String = "Loong External Linter"
     override fun isAvailable(project: Project): Boolean = project.hasCargoProject
     override fun createWidget(project: Project): StatusBarWidget = RsExternalLinterWidget(project)
     override fun disposeWidget(widget: StatusBarWidget) = Disposer.dispose(widget)

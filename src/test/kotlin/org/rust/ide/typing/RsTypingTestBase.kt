@@ -14,8 +14,8 @@ abstract class RsTypingTestBase : RsTestBase() {
     }
 
     protected fun doTestByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         c: Char = '\n',
         fileName: String = "main.rs",
     ) =

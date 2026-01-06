@@ -22,7 +22,7 @@ import java.nio.file.Path
 import java.nio.file.Paths
 
 class RsNewProjectWizard : LanguageNewProjectWizard {
-    override val name: String = "Rust" // TODO: replace with `NewProjectWizardConstants.Language.RUST`
+    override val name: String = "Loong" // TODO: replace with `NewProjectWizardConstants.Language.LOONG`
 
     override val ordinal: Int = 900
 

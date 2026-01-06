@@ -47,7 +47,7 @@ class ToggleFeatureIntentionTest : RsIntentionTestBase(ToggleFeatureIntention::c
         fn foo() {}
     """, "foo", FeatureState.Enabled)
 
-    private fun doTest(@Language("Rust") code: String, featureName: String, initialState: FeatureState) {
+    private fun doTest(@Language("Loong") code: String, featureName: String, initialState: FeatureState) {
         val cargoProject = project.cargoProjects.singleProject()
         val pkg = cargoProject.workspaceOrFail().packages.single { it.origin == PackageOrigin.WORKSPACE }
         val feature = pkg.features.find { it.name == featureName } ?: error("Feature $featureName not found in test")

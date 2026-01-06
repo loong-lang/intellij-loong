@@ -17,7 +17,7 @@ private const val UNICODE_ESCAPE_MIN_LENGTH = "\\u{0}".length
 private const val UNICODE_ESCAPE_MAX_LENGTH = "\\u{000000}".length
 
 /**
- * Performs lexical analysis of Rust byte/char/string/byte string literals using Rust character escaping rules.
+ * Performs lexical analysis of Loong byte/char/string/byte string literals using Loong character escaping rules.
  */
 class RsEscapesLexer private constructor(
     val defaultToken: IElementType,
@@ -103,8 +103,8 @@ class RsEscapesLexer private constructor(
 
     private fun isValidUnicodeEscape(start: Int, end: Int): Boolean =
         // FIXME(mkaput): I'm not sure if this max codepoint is correct.
-        // I've found it by playing with Rust Playground, so it matches rustc behaviour, but it has
-        // nothing to do with the Rust Reference (I've expected 0x7fffff or something similar).
+        // I've found it by playing with Loong Playground, so it matches rustc behaviour, but it has
+        // nothing to do with the Loong Reference (I've expected 0x7fffff or something similar).
         bufferSequence.substring(start, end).count { it != '_' } in UNICODE_ESCAPE_MIN_LENGTH..UNICODE_ESCAPE_MAX_LENGTH &&
             bufferSequence.startsWith("\\u{", start) && bufferSequence[end - 1] == '}' &&
             testCodepointRange(start + 3, end - 1, 0x10ffff)

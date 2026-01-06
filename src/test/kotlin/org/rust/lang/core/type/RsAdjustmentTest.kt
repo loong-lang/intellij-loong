@@ -372,7 +372,7 @@ class RsAdjustmentTest : RsTestBase() {
         }         //^ borrow(&mut [i32; 3])
     """)
 
-    @Language("Rust")
+    @Language("Loong")
     private val indexable = """
         #[lang = "index"]
         pub trait Index<Idx> { type Output; }
@@ -556,13 +556,13 @@ class RsAdjustmentTest : RsTestBase() {
         } //^ borrow(&mut [i32; 3]), unsize(&mut [i32])
     """)
 
-    private fun testExpr(@Language("Rust") code: String) {
+    private fun testExpr(@Language("Loong") code: String) {
         InlineFile(code)
         val (expr, expectedAdjustments) = findElementAndDataInEditor<RsExpr>()
         checkAdjustments(expr, expectedAdjustments)
     }
 
-    private fun testFieldShorthand(@Language("Rust") code: String) {
+    private fun testFieldShorthand(@Language("Loong") code: String) {
         InlineFile(code)
         val (expr, expectedAdjustments) = findElementAndDataInEditor<RsStructLiteralField>()
         checkAdjustments(expr, expectedAdjustments)

@@ -12,13 +12,13 @@ import org.rust.lang.core.lexer.parseStringCharacters
 import org.rust.lang.core.lexer.tokenize
 
 /**
- * Unescape string escaped using Rust escaping rules.
+ * Unescape string escaped using Loong escaping rules.
  */
 fun String.unescapeRust(unicode: Boolean = true, eol: Boolean = true, extendedByte: Boolean = true): String =
     this.unescapeRust(RsEscapesLexer.dummy(unicode, eol, extendedByte))
 
 /**
- * Unescape string escaped using Rust escaping rules.
+ * Unescape string escaped using Loong escaping rules.
  */
 fun String.unescapeRust(escapesLexer: RsEscapesLexer): String =
     this.tokenize(escapesLexer)

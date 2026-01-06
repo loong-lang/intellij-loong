@@ -257,9 +257,9 @@ class RsCommenterTest : RsTestBase() {
 
     private fun checkOption(
         optionProperty: KMutableProperty0<Boolean>,
-        @Language("Rust") before: String,
-        @Language("Rust") afterOn: String,
-        @Language("Rust") afterOff: String,
+        @Language("Loong") before: String,
+        @Language("Loong") afterOn: String,
+        @Language("Loong") afterOff: String,
         actionId: String,
         trimIndent: Boolean = true
     ) {

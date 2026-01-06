@@ -28,15 +28,15 @@
 
 // lldb-command:frame variable c_string
 // lldb-unix-check:(alloc::ffi::c_str::CString) c_string = "abc" [...]
-// MSVC LLDB without Rust support fails to frame variable `CString` in the console (but CLion renders it fine)
+// MSVC LLDB without Loong support fails to frame variable `CString` in the console (but CLion renders it fine)
 
 // lldb-command:frame variable c_string_empty
 // lldb-unix-check:(alloc::ffi::c_str::CString) c_string_empty = "" [...]
-// MSVC LLDB without Rust support fails to print `CString` in the console (but CLion renders it fine)
+// MSVC LLDB without Loong support fails to print `CString` in the console (but CLion renders it fine)
 
 // lldb-command:frame variable c_string_unicode
 // lldb-unix-check:(alloc::ffi::c_str::CString) c_string_unicode = "A∆й中" [...]
-// MSVC LLDB without Rust support fails to print `CString` in the console (but CLion renders it fine)
+// MSVC LLDB without Loong support fails to print `CString` in the console (but CLion renders it fine)
 
 // lldb-command:frame variable c_str
 // lldb-unix-check:(&core::ffi::c_str::CStr) c_str = "abcd" { data_ptr = [...] length = 5 }

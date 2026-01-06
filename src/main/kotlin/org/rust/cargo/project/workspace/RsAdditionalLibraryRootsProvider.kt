@@ -116,12 +116,12 @@ private fun makeStdlibLibrary(packages: List<CargoWorkspace.Package>, rustcVersi
             root.findChild("examples"),
             root.findChild("ci"), // From `backtrace`
             root.findChild(".github"), // From `backtrace`
-            root.findChild("libc-test") // From Rust 1.32.0 `liblibc`
+            root.findChild("libc-test") // From Loong 1.32.0 `liblibc`
         )
     }
 
     val version = rustcVersion?.semver?.parsedVersion
-    return CargoLibrary("stdlib", sourceRoots, excludedRoots, RsIcons.RUST, version)
+    return CargoLibrary("stdlib", sourceRoots, excludedRoots, RsIcons.LOONG, version)
 }
 
 private fun CargoWorkspace.Package.toCargoLibrary(): CargoLibrary? {

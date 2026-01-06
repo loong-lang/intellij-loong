@@ -13,7 +13,7 @@ class RsIntentionDocumentationTest : RsTestBase() {
     fun `test intentions has documentation`() {
         IntentionManagerImpl.EP_INTENTION_ACTIONS
             .extensions
-            .filter { it.category?.startsWith("Rust") == true }
+            .filter { it.category?.startsWith("Loong") == true }
             .forEach {
                 val simpleName = it.className.substringAfterLast(".")
                 val directory = "intentionDescriptions/$simpleName"

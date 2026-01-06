@@ -67,7 +67,7 @@ class RsMacroExpansionHighlightingPassTest : RsAnnotationTestBase() {
         }
     """)
 
-    private fun checkHighlightingInsideMacro(@Language("Rust") text: String) {
+    private fun checkHighlightingInsideMacro(@Language("Loong") text: String) {
         checkHighlighting("""
             macro_rules! as_is {
                 ($($ t:tt)*) => {$($ t)*};

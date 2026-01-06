@@ -136,7 +136,7 @@ class RsNavBarTest : RsTestBase() {
         impl/*caret*/ S {}
     """, "impl S")
 
-    fun doTest(@Language("Rust") code: String, vararg items: String) {
+    fun doTest(@Language("Loong") code: String, vararg items: String) {
         InlineFile(code).withCaret()
 
         val model = NavBarModel(myFixture.project)

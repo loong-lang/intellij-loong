@@ -230,9 +230,9 @@ class ConvertToNamedFieldsRefactoringTest : RsTestBase() {
         }
     """)
 
-    private fun doAvailableTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doAvailableTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         InlineFile(before.trimIndent()).withCaret()
-        myFixture.launchAction("Rust.RsConvertToNamedFields")
+        myFixture.launchAction("Loong.RsConvertToNamedFields")
         myFixture.checkResult(replaceCaretMarker(after.trimIndent()))
     }
 }

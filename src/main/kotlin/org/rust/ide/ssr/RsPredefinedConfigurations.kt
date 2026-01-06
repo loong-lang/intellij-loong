@@ -12,8 +12,8 @@ import org.jetbrains.annotations.NonNls
 import org.rust.lang.RsFileType
 
 object RsPredefinedConfigurations {
-    private val STRUCT_TYPE get() = "Rust/Structs"
-    private val DECLARATIONS_TYPE get() = "Rust/Declarations"
+    private val STRUCT_TYPE get() = "Loong/Structs"
+    private val DECLARATIONS_TYPE get() = "Loong/Declarations"
 
     private fun searchTemplate(
         @Nls name: String,

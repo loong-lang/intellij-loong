@@ -230,10 +230,10 @@ class RsIntroduceConstantTest : RsTestBase() {
     """, replaceAll = true)
 
     private fun doTest(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         candidate: List<String>,
         targetCandidate: Int,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         expression: String? = null,
         replaceAll: Boolean = false
     ) {

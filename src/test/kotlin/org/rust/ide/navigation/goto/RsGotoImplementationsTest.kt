@@ -208,10 +208,10 @@ class RsGotoImplementationsTest : RsTestBase() {
         }
     """)
 
-    private fun doSingleTargetTest(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun doSingleTargetTest(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkEditorAction(before, after, IdeActions.ACTION_GOTO_IMPLEMENTATION)
 
-    private fun doMultipleTargetsTest(@Language("Rust") before: String, vararg expected: String) {
+    private fun doMultipleTargetsTest(@Language("Loong") before: String, vararg expected: String) {
         InlineFile(before).withCaret()
         val actual = doGoToImplementation()
         assertEquals(expected.toList(), actual)

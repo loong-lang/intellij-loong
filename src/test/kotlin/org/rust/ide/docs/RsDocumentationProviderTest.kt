@@ -12,7 +12,7 @@ import org.rust.RsTestBase
 abstract class RsDocumentationProviderTest : RsTestBase() {
 
     protected fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         @Language("Html") expected: String?,
         findElement: () -> Pair<PsiElement, Int> = { findElementAndOffsetInEditor() },
         block: RsDocumentationProvider.(PsiElement, PsiElement?) -> String?
@@ -24,7 +24,7 @@ abstract class RsDocumentationProviderTest : RsTestBase() {
     }
 
     protected fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expected: Regex?,
         findElement: () -> Pair<PsiElement, Int> = { findElementAndOffsetInEditor() },
         block: RsDocumentationProvider.(PsiElement, PsiElement?) -> String?
@@ -36,7 +36,7 @@ abstract class RsDocumentationProviderTest : RsTestBase() {
     }
 
     protected fun <T> doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expected: T?,
         findElement: () -> Pair<PsiElement, Int> = { findElementAndOffsetInEditor() },
         block: RsDocumentationProvider.(PsiElement, PsiElement?) -> String?,
@@ -58,14 +58,14 @@ abstract class RsDocumentationProviderTest : RsTestBase() {
         }
     }
 
-    protected fun doUrlTestByText(@Language("Rust") text: String, expectedUrl: String?) =
+    protected fun doUrlTestByText(@Language("Loong") text: String, expectedUrl: String?) =
         doUrlTest(text, expectedUrl, this::configureByText)
 
-    protected fun doUrlTestByFileTree(@Language("Rust") text: String, expectedUrl: String?) =
+    protected fun doUrlTestByFileTree(@Language("Loong") text: String, expectedUrl: String?) =
         doUrlTest(text, expectedUrl) { configureByFileTree(it) }
 
     private fun doUrlTest(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         expectedUrl: String?,
         configure: (String) -> Unit
     ) {

@@ -430,7 +430,7 @@ class ProcMacroAttributeTest : RsTestBase() {
         """, Derive)
     }
 
-    private fun doTest(@Language("Rust") code: String, expectedAttr: TestProcMacroAttribute) {
+    private fun doTest(@Language("Loong") code: String, expectedAttr: TestProcMacroAttribute) {
         InlineFile(code)
         val item = findItemWithAttrs()
 
@@ -451,7 +451,7 @@ class ProcMacroAttributeTest : RsTestBase() {
         }
     }
 
-    private fun checkNotAProcMacroOwner(@Language("Rust") code: String) {
+    private fun checkNotAProcMacroOwner(@Language("Loong") code: String) {
         InlineFile(code)
         val item = findItemWithAttrs()
         check(item !is RsAttrProcMacroOwner) { "${item.javaClass} must NOT implement `RsAttrProcMacroOwner`" }

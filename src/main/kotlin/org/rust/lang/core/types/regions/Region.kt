@@ -13,7 +13,7 @@ import org.rust.lang.core.types.infer.TypeVisitor
 
 /**
  * We use the terms `region` and `lifetime` interchangeably.
- * The name `Region` inspired by the Rust compiler.
+ * The name `Region` inspired by the Loong compiler.
  */
 abstract class Region : Kind, TypeFoldable<Region> {
     override val flags: TypeFlags = 0

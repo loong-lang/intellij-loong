@@ -70,7 +70,7 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
         """, TestDialog.OK) {
             MockResponse().setResponseCode(404)
         }
-        assertEquals(notificationContent, RsBundle.message("action.Rust.ShareInPlayground.notification.error"))
+        assertEquals(notificationContent, RsBundle.message("action.Loong.ShareInPlayground.notification.error"))
     }
 
     fun `test do not perform network request without user confirmation`() {
@@ -85,8 +85,8 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
 
     private fun doTest(
         edition: Edition,
-        @Language("Rust") code: String,
-        @Language("Rust") codeToShare: String
+        @Language("Loong") code: String,
+        @Language("Loong") codeToShare: String
     ) {
         configure(code, edition)
         val channel = rustupFixture.toolchain?.rustc()?.queryVersion()?.channel?.channel
@@ -96,7 +96,7 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
 
     private fun launchAction(
         edition: Edition,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         testDialog: TestDialog,
         handler: ResponseHandler
     ): String? {
@@ -104,7 +104,7 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
         return launchAction(project, mockServerFixture, testDialog, ::actionLauncher, handler)
     }
 
-    private fun configure(@Language("Rust") code: String, edition: Edition) {
+    private fun configure(@Language("Loong") code: String, edition: Edition) {
         val testProject = fileTree {
             toml("Cargo.toml", """
                 [package]
@@ -123,7 +123,7 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
     }
 
     private fun actionLauncher() {
-        myFixture.launchAction("Rust.ShareInPlayground")
+        myFixture.launchAction("Loong.ShareInPlayground")
     }
 
     companion object {
@@ -133,7 +133,7 @@ class ShareInPlaygroundActionTest : RsWithToolchainTestBase() {
         fun doTest(
             project: Project,
             mockServerFixture: MockServerFixture,
-            @Language("Rust") codeToShare: String,
+            @Language("Loong") codeToShare: String,
             expectedEdition: Edition,
             expectedChannel: String,
             actionLauncher: () -> Unit

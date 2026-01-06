@@ -6,10 +6,10 @@
     <xi:include href="/META-INF/experiments.xml" xpointer="xpointer(/idea-plugin/*)"/>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Rust -->
+        <!-- Loong -->
 
         <!-- Modules -->
-        <!-- although Rust module type is only created by IDEA, we need it in other IDEs as well
+        <!-- although Loong module type is only created by IDEA, we need it in other IDEs as well
         to be able to open a project created in IDEA without errors -->
         <moduleType id="RUST_MODULE" implementationClass="org.rust.ide.module.RsModuleType"/>
         <moduleBuilder builderClass="org.rust.ide.module.RsModuleBuilder"/>
@@ -22,16 +22,16 @@
 
         <!-- File-type Factory -->
 
-        <fileType name="Rust"
-                  language="Rust"
+        <fileType name="Loong"
+                  language="Loong"
                   implementationClass="org.rust.lang.RsFileType"
                   extensions="rs"
                   fieldName="INSTANCE"/>
-        <internalFileTemplate name="Rust File"/>
+        <internalFileTemplate name="Loong File"/>
 
         <!-- Parser -->
 
-        <lang.parserDefinition language="Rust" implementationClass="org.rust.lang.core.parser.RustParserDefinition"/>
+        <lang.parserDefinition language="Loong" implementationClass="org.rust.lang.core.parser.RustParserDefinition"/>
         <stubElementTypeHolder class="org.rust.lang.core.psi.RsElementTypes" externalIdPrefix="rust."/>
 
         <!-- Sources -->
@@ -64,14 +64,14 @@
 
         <!-- Syntax Highlighter -->
 
-        <lang.syntaxHighlighter language="Rust"
+        <lang.syntaxHighlighter language="Loong"
                                 implementationClass="org.rust.ide.highlight.RsHighlighter"/>
         <highlightUsagesHandlerFactory implementation="org.rust.ide.highlight.RsHighlightExitPointsHandlerFactory"/>
         <highlightUsagesHandlerFactory implementation="org.rust.ide.highlight.RsHighlightAwaitHandlerFactory"/>
 
         <!-- Formatter -->
 
-        <lang.formatter language="Rust" implementationClass="org.rust.ide.formatter.RsFormattingModelBuilder"/>
+        <lang.formatter language="Loong" implementationClass="org.rust.ide.formatter.RsFormattingModelBuilder"/>
         <formattingService implementation="org.rust.ide.formatter.RustfmtFormattingService"/>
         <preFormatProcessor implementation="org.rust.ide.formatter.processors.RsMatchArmCommaFormatProcessor"/>
         <preFormatProcessor implementation="org.rust.ide.formatter.processors.RsStatementSemicolonFormatProcessor"/>
@@ -82,31 +82,31 @@
 
         <!-- Refactoring support -->
 
-        <lang.refactoringSupport language="Rust"
+        <lang.refactoringSupport language="Loong"
                                  implementationClass="org.rust.ide.refactoring.RsRefactoringSupportProvider"/>
-        <suggestedRefactoringSupport language="Rust" implementationClass="org.rust.ide.refactoring.suggested.RsSuggestedRefactoringSupport"/>
+        <suggestedRefactoringSupport language="Loong" implementationClass="org.rust.ide.refactoring.suggested.RsSuggestedRefactoringSupport"/>
 
         <refactoring.changeSignatureUsageProcessor implementation="org.rust.ide.refactoring.changeSignature.RsChangeSignatureUsageProcessor"
-                                                   id="Rust"/>
+                                                   id="Loong"/>
 
         <!-- Commenter -->
 
-        <lang.commenter language="Rust" implementationClass="org.rust.ide.commenter.RsCommenter"/>
+        <lang.commenter language="Loong" implementationClass="org.rust.ide.commenter.RsCommenter"/>
 
         <!-- Matchers -->
 
-        <lang.braceMatcher language="Rust" implementationClass="org.rust.ide.typing.RsBraceMatcher"/>
-        <lang.quoteHandler language="Rust" implementationClass="org.rust.ide.typing.RsQuoteHandler"/>
+        <lang.braceMatcher language="Loong" implementationClass="org.rust.ide.typing.RsBraceMatcher"/>
+        <lang.quoteHandler language="Loong" implementationClass="org.rust.ide.typing.RsQuoteHandler"/>
 
         <!-- Doc-Provider -->
 
-        <lang.documentationProvider language="Rust" implementationClass="org.rust.ide.docs.RsDocumentationProvider"/>
+        <lang.documentationProvider language="Loong" implementationClass="org.rust.ide.docs.RsDocumentationProvider"/>
 
-        <lang.implementationTextSelectioner language="Rust"
+        <lang.implementationTextSelectioner language="Loong"
                                             implementationClass="org.rust.ide.hints.RsImplementationTextSelectioner"/>
 
         <!-- Code Vision -->
-        <vcs.codeVisionLanguageContext language="Rust"
+        <vcs.codeVisionLanguageContext language="Loong"
                                        implementationClass="org.rust.ide.hints.codeVision.RsVcsCodeVisionContext"/>
         <codeInsight.daemonBoundCodeVisionProvider
             implementation="org.rust.ide.hints.codeVision.RsReferenceCodeVisionProvider"/>
@@ -117,14 +117,14 @@
 
         <!-- Structure View -->
 
-        <lang.psiStructureViewFactory language="Rust"
+        <lang.psiStructureViewFactory language="Loong"
                                       implementationClass="org.rust.ide.structure.RsPsiStructureViewFactory"/>
 
         <treeStructureProvider implementation="org.rust.ide.projectView.RsTreeStructureProvider"/>
 
         <!-- Usages Provider -->
 
-        <lang.findUsagesProvider language="Rust" implementationClass="org.rust.ide.search.RsFindUsagesProvider"/>
+        <lang.findUsagesProvider language="Loong" implementationClass="org.rust.ide.search.RsFindUsagesProvider"/>
         <findUsagesHandlerFactory implementation="org.rust.ide.search.RsFindUsagesHandlerFactory"/>
         <usageTypeProvider implementation="org.rust.ide.search.RsUsageTypeProvider"/>
         <readWriteAccessDetector implementation="org.rust.ide.search.RsReadWriteAccessDetector" id="rust"/>
@@ -137,14 +137,14 @@
         <!-- Todos -->
 
         <indexPatternBuilder implementation="org.rust.ide.todo.RsTodoIndexPatternBuilder"/>
-        <todoIndexer filetype="Rust" implementationClass="org.rust.ide.todo.RsTodoIndexer"/>
+        <todoIndexer filetype="Loong" implementationClass="org.rust.ide.todo.RsTodoIndexer"/>
         <indexPatternSearch
             id="RsTodoSearcher"
             implementation="org.rust.ide.todo.RsTodoSearcher"/>
 
         <!-- Smart Enter Processor -->
 
-        <lang.smartEnterProcessor language="Rust"
+        <lang.smartEnterProcessor language="Loong"
                                   implementationClass="org.rust.ide.typing.assist.RsSmartEnterProcessor"/>
 
         <!-- Copy paste processors -->
@@ -153,7 +153,7 @@
 
         <!-- Imports -->
 
-        <lang.importOptimizer language="Rust" implementationClass="org.rust.ide.refactoring.RsImportOptimizer"/>
+        <lang.importOptimizer language="Loong" implementationClass="org.rust.ide.refactoring.RsImportOptimizer"/>
         <referenceImporter implementation="org.rust.ide.inspections.import.RsReferenceImporter"/>
         <autoImportOptionsProvider instance="org.rust.ide.settings.RsAutoImportOptions"/>
 
@@ -161,29 +161,29 @@
 
         <gotoClassContributor implementation="org.rust.ide.navigation.goto.RsClassNavigationContributor"/>
         <gotoSymbolContributor implementation="org.rust.ide.navigation.goto.RsSymbolNavigationContributor"/>
-        <codeInsight.gotoSuper language="Rust" implementationClass="org.rust.ide.navigation.goto.RsGotoSuperHandler"/>
+        <codeInsight.gotoSuper language="Loong" implementationClass="org.rust.ide.navigation.goto.RsGotoSuperHandler"/>
         // `ctrl+alt+b`
         <definitionsScopedSearch implementation="org.rust.ide.navigation.goto.RsImplsSearch"/>
         <gotoTargetRendererProvider implementation="org.rust.ide.navigation.goto.RsGotoTargetRendererProvider"/>
         // `ctrl+shift+b`
         <typeDeclarationProvider implementation="org.rust.ide.navigation.goto.RsTypeDeclarationProvider"/>
 
-        <targetElementEvaluator language="Rust"
+        <targetElementEvaluator language="Loong"
                                 implementationClass="org.rust.ide.navigation.goto.RsTargetElementEvaluator"/>
 
         <!-- Focus mode -->
-        <focusModeProvider language="Rust" implementationClass="org.rust.ide.focusMode.RsFocusModeProvider"/>
+        <focusModeProvider language="Loong" implementationClass="org.rust.ide.focusMode.RsFocusModeProvider"/>
 
         <!-- Hints -->
 
-        <codeInsight.typeInfo language="Rust" implementationClass="org.rust.ide.hints.type.RsExpressionTypeProvider"/>
-        <codeInsight.parameterInfo language="Rust" implementationClass="org.rust.ide.hints.parameter.RsParameterInfoHandler"/>
-        <codeInsight.parameterInfo language="Rust"
+        <codeInsight.typeInfo language="Loong" implementationClass="org.rust.ide.hints.type.RsExpressionTypeProvider"/>
+        <codeInsight.parameterInfo language="Loong" implementationClass="org.rust.ide.hints.parameter.RsParameterInfoHandler"/>
+        <codeInsight.parameterInfo language="Loong"
                                    implementationClass="org.rust.ide.hints.parameter.RsGenericParameterInfoHandler"/>
-        <codeInsight.parameterNameHints language="Rust"
+        <codeInsight.parameterNameHints language="Loong"
                                         implementationClass="org.rust.ide.hints.parameter.RsInlayParameterHintsProvider"/>
-        <codeInsight.inlayProvider language="Rust" implementationClass="org.rust.ide.hints.type.RsInlayTypeHintsProvider"/>
-        <codeInsight.inlayProvider language="Rust" implementationClass="org.rust.ide.hints.type.RsChainMethodTypeHintsProvider"/>
+        <codeInsight.inlayProvider language="Loong" implementationClass="org.rust.ide.hints.type.RsInlayTypeHintsProvider"/>
+        <codeInsight.inlayProvider language="Loong" implementationClass="org.rust.ide.hints.type.RsChainMethodTypeHintsProvider"/>
 
         <declarationRangeHandler key="org.rust.lang.core.psi.RsStructItem"
                                  implementationClass="org.rust.ide.hints.RsStructItemDeclarationRangeHandler"/>
@@ -202,40 +202,40 @@
 
         <!-- Annotator -->
 
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsDoctestAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsAttrErrorAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsDocHighlightingAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsSyntaxErrorsAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsEdition2018KeywordsAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsLiteralAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.format.RsFormatMacroAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsAttrHighlightingAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsHighlightingAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsHighlightingMutableAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsExpressionAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsErrorAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsUnsafeExpressionAnnotator"/>
-        <annotator language="Rust" implementationClass="org.rust.ide.annotator.RsCfgDisabledCodeAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsDoctestAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsAttrErrorAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsDocHighlightingAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsSyntaxErrorsAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsEdition2018KeywordsAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsLiteralAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.format.RsFormatMacroAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsAttrHighlightingAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsHighlightingAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsHighlightingMutableAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsExpressionAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsErrorAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsUnsafeExpressionAnnotator"/>
+        <annotator language="Loong" implementationClass="org.rust.ide.annotator.RsCfgDisabledCodeAnnotator"/>
         <highlightRangeExtension implementation="org.rust.ide.annotator.RsErrorAnnotator"/>
 
         <highlightingPassFactory implementation="org.rust.ide.annotator.RsHighlightingPassFactoryRegistrar"/>
 
         <!-- Line Marker Providers -->
 
-        <codeInsight.lineMarkerProvider language="Rust"
+        <codeInsight.lineMarkerProvider language="Loong"
                                         implementationClass="org.rust.ide.lineMarkers.RsImplsLineMarkerProvider"/>
-        <codeInsight.lineMarkerProvider language="Rust"
+        <codeInsight.lineMarkerProvider language="Loong"
                                         implementationClass="org.rust.ide.lineMarkers.RsRecursiveCallLineMarkerProvider"/>
-        <codeInsight.lineMarkerProvider language="Rust"
+        <codeInsight.lineMarkerProvider language="Loong"
                                         implementationClass="org.rust.ide.lineMarkers.RsTraitItemImplLineMarkerProvider"/>
-        <codeInsight.lineMarkerProvider language="Rust"
+        <codeInsight.lineMarkerProvider language="Loong"
                                         implementationClass="org.rust.ide.lineMarkers.RsCrateDocLineMarkerProvider"/>
-        <codeInsight.lineMarkerProvider language="Rust"
+        <codeInsight.lineMarkerProvider language="Loong"
                                         implementationClass="org.rust.ide.lineMarkers.RsMethodLineSeparatorProvider"/>
 
-        <runLineMarkerContributor language="Rust"
+        <runLineMarkerContributor language="Loong"
                                   implementationClass="org.rust.ide.lineMarkers.CargoExecutableRunLineMarkerContributor"/>
-        <runLineMarkerContributor language="Rust"
+        <runLineMarkerContributor language="Loong"
                                   implementationClass="org.rust.ide.lineMarkers.CargoTestRunLineMarkerContributor"/>
 
         <!-- Rename Processor -->
@@ -247,12 +247,12 @@
 
         <!-- Implement methods -->
 
-        <codeInsight.implementMethod language="Rust"
+        <codeInsight.implementMethod language="Loong"
                                      implementationClass="org.rust.ide.refactoring.implementMembers.ImplementMembersHandler"/>
 
         <!-- Resolve -->
 
-        <psi.referenceContributor language="Rust"
+        <psi.referenceContributor language="Loong"
                                   implementation="org.rust.lang.core.resolve.ref.RsLitExprReferenceContributor"/>
         <referencesSearch implementation="org.rust.lang.core.resolve.ref.RsReferencesSearchExtensionImpl"/>
 
@@ -260,14 +260,14 @@
 
         <codeCompletionConfigurable instance="org.rust.ide.settings.RsCodeCompletionConfigurable"/>
 
-        <completion.confidence language="Rust"
+        <completion.confidence language="Loong"
                                implementationClass="org.rust.lang.core.completion.RsCompletionConfidence"/>
 
-        <completion.contributor language="Rust"
+        <completion.contributor language="Loong"
                                 implementationClass="org.rust.lang.core.completion.RsKeywordCompletionContributor"
                                 id="RsKeywordCompletionContributor"
                                 order="first"/>
-        <completion.contributor language="Rust"
+        <completion.contributor language="Loong"
                                 implementationClass="org.rust.lang.core.completion.RsCompletionContributor"
                                 id="RsCompletionContributor"
                                 order="after RsKeywordCompletionContributor"/>
@@ -281,7 +281,7 @@
 
         <!-- Spell-checker -->
 
-        <spellchecker.support language="Rust" implementationClass="org.rust.ide.spelling.RsSpellcheckingStrategy"/>
+        <spellchecker.support language="Loong" implementationClass="org.rust.ide.spelling.RsSpellcheckingStrategy"/>
         <spellchecker.bundledDictionaryProvider implementation="org.rust.ide.spelling.RsBundledDictionaryProvider"/>
 
         <!-- Handlers -->
@@ -292,7 +292,7 @@
         <enterHandlerDelegate implementation="org.rust.ide.typing.RsEnterInStringLiteralHandler"
                               id="RustEnterInStringLiterals"/>
 
-        <enterBetweenBracesDelegate language="Rust"
+        <enterBetweenBracesDelegate language="Loong"
                                     implementationClass="com.intellij.codeInsight.editorActions.enter.EnterBetweenBracesAndBracketsDelegate"/>
 
         <typedHandler implementation="org.rust.ide.typing.RsRawLiteralHashesInserter"
@@ -327,386 +327,386 @@
 
         <!-- Inspections -->
 
-        <lang.inspectionSuppressor language="Rust"
+        <lang.inspectionSuppressor language="Loong"
                                    implementationClass="org.rust.ide.inspections.RsInspectionSuppressor"/>
         <commandLineInspectionProjectConfigurator
             implementation="org.rust.ide.inspections.CargoCommandLineInspectionProjectConfigurator"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Implicit trait objects are deprecated"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsBareTraitObjectsInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Deprecated element"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsDeprecationInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Approximate Constants"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsApproxConstantInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Unsafe CString pointer"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsCStringPointerInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Unresolved reference"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsUnresolvedReferenceInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Double negation"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsDoubleNegInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Suspicious assignment"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsSuspiciousAssignmentInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Dangling else"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsDanglingElseInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Missing else"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsMissingElseInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Redundant else"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsRedundantElseInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Dropping reference"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsDropRefInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Argument naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsArgumentNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Associated type naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsAssocTypeNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Constant naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsConstNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Enum naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsEnumNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Enum variant naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsEnumVariantNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Function naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsFunctionNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Lifetime naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsLifetimeNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Macro naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsMacroNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Method naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsMethodNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Module naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsModuleNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Static constant naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsStaticConstNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Self convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsSelfConventionInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Struct naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsStructNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Field naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsFieldNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Trait naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsTraitNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Type alias naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsTypeAliasNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Type parameter naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsTypeParameterNamingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust,Lints" groupName="Naming conventions"
+        <localInspection language="Loong" groupPath="Loong,Lints" groupName="Naming conventions"
                          displayName="Variable naming convention"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsVariableNamingInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Extra semicolon"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsExtraSemicolonInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="try! macro usage"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsTryMacroInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Unnecessary cast"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsUnnecessaryCastInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="While true loop"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsWhileTrueLoopInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="println!(&quot;&quot;) usage"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsSimplifyPrintInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Simplify boolean expression"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsSimplifyBooleanExpressionInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Condition of 'if' expression is constant"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsConstantConditionIfInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="No mutable required"
                          enabledByDefault="false" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsVariableMutableInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Wrong generic arguments number"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsWrongGenericArgumentsNumberInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Wrong generic arguments order"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsWrongGenericArgumentsOrderInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Wrong lifetime parameters number"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsWrongLifetimeParametersNumberInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Wrong type or const parameters number"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsWrongGenericParametersNumberInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Re-assign immutable variable"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsReassignImmutableInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Borrow checker"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsBorrowCheckerInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Field initialization shorthand"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsFieldInitShorthandInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Non-shorthand field patterns"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsNonShorthandFieldPatternsInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unused must_use"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsUnusedMustUseInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Double must_use"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsDoubleMustUseInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Redundant semicolons"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsRedundantSemicolonsInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Path statements"
                          enabledByDefault="false" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsPathStatementsInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Assert Equal"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsAssertEqualInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Experimental checks"
                          enabledByDefault="false" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsExperimentalChecksInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Type checker"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsTypeCheckInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Different impl member order from the trait"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsSortImplTraitMembersInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Needless lifetimes"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsNeedlessLifetimesInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Assign to immutable"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsAssignToImmutableInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Trait implementation"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsTraitImplementationInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Cast to bool"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsCastToBoolInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Constant refers to statics"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsConstReferStaticInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Attribute without parentheses"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsAttrWithoutParenthesesInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unreachable patterns"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.checkMatch.RsUnreachablePatternsInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Non-exhaustive match"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.checkMatch.RsNonExhaustiveMatchInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Return can be lifted out"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsLiftInspection"/>
 
-        <globalInspection language="Rust" groupName="Rust"
+        <globalInspection language="Loong" groupName="Loong"
                           displayName="External Linter"
                           enabledByDefault="true" level="ERROR"
                           implementationClass="org.rust.ide.inspections.RsExternalLinterInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Liveness analysis"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsLivenessInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Main function not found"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsMainFunctionNotFoundInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Detached file"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.RsDetachedFileInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Duplicate trait method parameter name"
                          enabledByDefault="true" level="WEAK WARNING"
                          implementationClass="org.rust.ide.inspections.RsDuplicatedTraitMethodBindingInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unreachable code"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsUnreachableCodeInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unknown crate types"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.lints.RsUnknownCrateTypesInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unused import"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsUnusedImportInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unnecessarily qualified path"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsUnnecessaryQualificationsInspection"/>
 
-        <localInspection language="Rust" groupName="Rust"
+        <localInspection language="Loong" groupName="Loong"
                          displayName="Wrong associated type arguments"
                          enabledByDefault="true" level="ERROR"
                          implementationClass="org.rust.ide.inspections.RsWrongAssocTypeArgumentsInspection"/>
 
-        <localInspection language="Rust" groupPath="Rust" groupName="Lints"
+        <localInspection language="Loong" groupPath="Loong" groupName="Lints"
                          displayName="Unused labels"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.ide.inspections.lints.RsUnusedLabelsInspection"/>
 
         <!-- Surrounders -->
 
-        <lang.surroundDescriptor language="Rust"
+        <lang.surroundDescriptor language="Loong"
                                  implementationClass="org.rust.ide.surroundWith.expression.RsExpressionSurroundDescriptor"/>
-        <lang.surroundDescriptor language="Rust"
+        <lang.surroundDescriptor language="Loong"
                                  implementationClass="org.rust.ide.surroundWith.statement.RsStatementsSurroundDescriptor"/>
 
         <!-- Folding -->
 
-        <lang.foldingBuilder language="Rust" implementationClass="org.rust.ide.folding.RsFoldingBuilder"/>
+        <lang.foldingBuilder language="Loong" implementationClass="org.rust.ide.folding.RsFoldingBuilder"/>
         <codeFoldingOptionsProvider instance="org.rust.ide.folding.RsCodeFoldingOptionsProvider"/>
         <applicationService serviceInterface="org.rust.ide.folding.RsCodeFoldingSettings"
                             serviceImplementation="org.rust.ide.folding.impl.RsCodeFoldingSettingsImpl"/>
@@ -732,388 +732,388 @@
 
         <intentionAction>
             <className>org.rust.ide.intentions.ImplTraitToTypeParamIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ExtractInlineModuleIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddDeriveIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.RemoveCurlyBracesIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ReplaceLineCommentWithBlockCommentIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ReplaceBlockCommentWithLineCommentIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddCurlyBracesIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.RemoveDbgIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.WrapLambdaExprIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.UnwrapSingleExprIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.DemorgansLawIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SimplifyBooleanExpressionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.UnwrapToMatchIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.UnwrapToTryIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddElseIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.MoveTypeConstraintToWhereClauseIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.MatchToIfLetIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.MoveGuardToMatchArmIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SetMutableIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SetImmutableIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddImplIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.UnElideLifetimesIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.IfLetToMatchIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SpecifyTypeExplicitlyIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinWildcardsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ToggleIgnoreTestIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.MoveTypeConstraintToParameterListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.FlipBinaryExpressionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SplitIfIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.MergeIfsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.RsShowRecursiveMacroExpansionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.RsShowSingleStepMacroExpansionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.RunCargoExpandIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.GenerateDocStubIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.NestUseStatementsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.FlattenUseStatementsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ChopParameterListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinParameterListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ChopArgumentListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinArgumentListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ChopFieldListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinFieldListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ChopLiteralFieldListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinLiteralFieldListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ChopVariantListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.JoinVariantListIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.InvertIfIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.DestructureIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.addFmtStringArgument.AddFmtStringArgumentIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertToStructIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertToTupleIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddStructFieldsPatIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddStructFieldsLiteralIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddStructFieldsLiteralRecursiveIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ExtractEnumVariantIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.IntroduceLocalVariableIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertUFCSToMethodCallIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertMethodCallToUFCSIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddImportIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddImportForPatternIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.SubstituteTypeAliasIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.createFromUsage.CreateFunctionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertClosureToFunctionIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ConvertFunctionToClosureIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddRemainingArmsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddWildcardArmIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.visibility.MakePubIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.visibility.MakePubCrateIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.visibility.MakePrivateIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ShareInPlaygroundIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ToggleFeatureIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.createFromUsage.CreateStructIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.createFromUsage.CreateTupleStructIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.createFromUsage.CreateEnumVariantIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.AddImplTraitIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.ExtractStructFieldsIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
         <intentionAction>
             <className>org.rust.ide.intentions.UnwrapConstructorIntention</className>
-            <category>Rust</category>
-            <language>Rust</language>
+            <category>Loong</category>
+            <language>Loong</language>
         </intentionAction>
 
         <!-- Run Configurations -->
@@ -1223,8 +1223,8 @@
         <editorNotificationProvider implementation="org.rust.ide.notifications.MissingToolchainNotificationProvider"/>
         <editorNotificationProvider implementation="org.rust.ide.notifications.NoCargoProjectNotificationProvider"/>
 
-        <notificationGroup id="Rust Plugin" displayType="BALLOON"/>
-        <notificationGroup id="Rust Build Log" displayType="NONE"/>
+        <notificationGroup id="Loong Plugin" displayType="BALLOON"/>
+        <notificationGroup id="Loong Build Log" displayType="NONE"/>
 
         <!-- Editor Tab Title Providers -->
 
@@ -1232,7 +1232,7 @@
 
         <!-- Refactoring -->
 
-        <lang.namesValidator language="Rust" implementationClass="org.rust.ide.refactoring.RsNamesValidator"/>
+        <lang.namesValidator language="Loong" implementationClass="org.rust.ide.refactoring.RsNamesValidator"/>
 
         <inlineActionHandler implementation="org.rust.ide.refactoring.inlineFunction.RsInlineFunctionHandler"/>
         <inlineActionHandler implementation="org.rust.ide.refactoring.inlineValue.RsInlineValueHandler"/>
@@ -1241,7 +1241,7 @@
         <structuralsearch.profile implementation="org.rust.ide.ssr.RsStructuralSearchProfile"/>
 
         <!-- Postfix templates -->
-        <codeInsight.template.postfixTemplateProvider language="Rust"
+        <codeInsight.template.postfixTemplateProvider language="Loong"
                                                       implementationClass="org.rust.ide.template.postfix.RsPostfixTemplateProvider"/>
 
         <!-- Highlight Visitor -->
@@ -1250,7 +1250,7 @@
 
         <!-- Move Actions -->
 
-        <moveLeftRightHandler language="Rust" implementationClass="org.rust.ide.actions.RsMoveLeftRightHandler"/>
+        <moveLeftRightHandler language="Loong" implementationClass="org.rust.ide.actions.RsMoveLeftRightHandler"/>
         <!--NB: order is important here-->
         <statementUpDownMover implementation="org.rust.ide.actions.mover.RsCommaListElementUpDownMover"/>
         <statementUpDownMover implementation="org.rust.ide.actions.mover.RsMatchArmUpDownMover"/>
@@ -1281,7 +1281,7 @@
         <virtualFileSystem key="rust-macros" implementationClass="org.rust.lang.core.macros.MacroExpansionFileSystem"/>
         <fileTypeOverrider implementation="org.rust.lang.core.macros.RsFileTypeOverriderForMacroExpansionFileSystem"/>
         <globalIndexFilter implementation="org.rust.lang.core.macros.RsGlobalIndexFilterForMacroExpansionFileSystem"/>
-        <filetype.prebuiltStubsProvider filetype="Rust"
+        <filetype.prebuiltStubsProvider filetype="Loong"
                                         implementationClass="org.rust.lang.core.macros.MacroExpansionStubsProvider"/>
 
         <!-- REPL Console -->
@@ -1316,9 +1316,9 @@
         <registryKey key="org.rust.lang.type.alias.threshold.new.resolve" defaultValue="2147483647" restartRequired="false"
                      description="Maximum number of type aliases to take into account during `impl`s search (new resolve)"/>
         <registryKey key="org.rust.lang.cfg.attributes" defaultValue="true" restartRequired="false"
-                     description="Enable Rust cfg attributes support"/>
+                     description="Enable Loong cfg attributes support"/>
         <registryKey key="org.rust.lang.highlight.macro.body" defaultValue="true" restartRequired="false"
-                     description="Highlight Rust macro call bodies"/>
+                     description="Highlight Loong macro call bodies"/>
         <registryKey key="org.rust.cargo.lock.update.delay.threshold" defaultValue="5000" restartRequired="false"
                      description="Delay in ms between Cargo metadata call and changes in Cargo.lock
                      when automatic project structure reload doesn't occur"/>
@@ -1337,13 +1337,13 @@
                      description="Enable new Cargo project model reloading"
                      restartRequired="true"/>
         <registryKey key="org.rust.debugger.lldb.rust.msvc" defaultValue="true" restartRequired="false"
-                     description="Enable Rust MSVC support in LLDB (Windows-only)"/>
+                     description="Enable Loong MSVC support in LLDB (Windows-only)"/>
         <registryKey key="org.rust.code.vision.author"
                      defaultValue="false"
-                     description="Enable version control author Code Vision hints for Rust" />
+                     description="Enable version control author Code Vision hints for Loong" />
         <registryKey key="org.rust.code.vision.usage"
                      defaultValue="false"
-                     description="Enable reference usage Code Vision hints for Rust" />
+                     description="Enable reference usage Code Vision hints for Loong" />
 
         <!-- Move refactoring -->
 
@@ -1369,7 +1369,7 @@
             <description>Show settings gutter icon near [features] section in `Cargo.toml` where you can enable or disable all features</description>
         </experimentalFeature>
         <experimentalFeature id="org.rust.ssr" percentOfUsers="0">
-            <description>Enable experimental support for structural search and replace in Rust (requires restart)</description>
+            <description>Enable experimental support for structural search and replace in Loong (requires restart)</description>
         </experimentalFeature>
 
         <advancedSetting
@@ -1454,18 +1454,18 @@
     </projectListeners>
 
     <actions>
-        <action id="Rust.NewRustFile"
+        <action id="Loong.NewRustFile"
                 class="org.rust.ide.actions.RsCreateFileAction">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
 
-        <action id="Rust.NewCargoCrate"
+        <action id="Loong.NewCargoCrate"
                 class="org.rust.ide.actions.RsCreateCrateAction"
                 icon="/icons/cargo.svg">
             <add-to-group group-id="NewGroup" anchor="before" relative-to-action="NewFile"/>
         </action>
 
-        <action id="Rust.Build"
+        <action id="Loong.Build"
                 class="org.rust.ide.actions.RsBuildAction"
                 icon="AllIcons.Actions.Compile"
                 use-shortcut-of="CompileDirty">
@@ -1473,82 +1473,82 @@
             <add-to-group group-id="TouchBarDefault" relative-to-action="RunConfiguration" anchor="before"/>
         </action>
 
-        <action id="Rust.RsPromoteModuleToDirectoryAction"
+        <action id="Loong.RsPromoteModuleToDirectoryAction"
                 class="org.rust.ide.refactoring.RsPromoteModuleToDirectoryAction">
             <add-to-group group-id="RefactoringMenu"/>
         </action>
 
-        <action id="Rust.RsDowngradeModuleToFile"
+        <action id="Loong.RsDowngradeModuleToFile"
                 class="org.rust.ide.refactoring.RsDowngradeModuleToFile">
             <add-to-group group-id="RefactoringMenu"/>
         </action>
 
-        <action id="Rust.RsConvertToNamedFields"
+        <action id="Loong.RsConvertToNamedFields"
                 class="org.rust.ide.refactoring.convertStruct.RsConvertToNamedFieldsAction">
             <add-to-group group-id="RefactoringMenu"/>
         </action>
 
-        <action id="Rust.RsConvertToTuple"
+        <action id="Loong.RsConvertToTuple"
                 class="org.rust.ide.refactoring.convertStruct.RsConvertToTupleAction">
             <add-to-group group-id="RefactoringMenu"/>
         </action>
 
-        <action id="Rust.RsExtractEnumVariant"
+        <action id="Loong.RsExtractEnumVariant"
                 class="org.rust.ide.refactoring.extractEnumVariant.RsExtractEnumVariantAction">
             <add-to-group group-id="IntroduceActionsGroup" anchor="after" relative-to-action="ExtractMethod"/>
         </action>
 
-        <action id="Rust.RsExtractStructFields"
+        <action id="Loong.RsExtractStructFields"
                 class="org.rust.ide.refactoring.extractStructFields.RsExtractStructFieldsAction">
-            <add-to-group group-id="IntroduceActionsGroup" anchor="after" relative-to-action="Rust.RsExtractEnumVariant"/>
+            <add-to-group group-id="IntroduceActionsGroup" anchor="after" relative-to-action="Loong.RsExtractEnumVariant"/>
         </action>
 
-        <action id="Rust.RsExtractTrait"
+        <action id="Loong.RsExtractTrait"
                 class="org.rust.ide.refactoring.extractTrait.RsExtractTraitAction">
             <add-to-group group-id="IntroduceActionsGroup" anchor="before" relative-to-action="ExtractInterface"/>
         </action>
 
-        <action id="Rust.ShowSingleStepMacroExpansionAction"
+        <action id="Loong.ShowSingleStepMacroExpansionAction"
                 class="org.rust.ide.actions.macroExpansion.RsShowSingleStepMacroExpansionAction">
         </action>
-        <action id="Rust.ShowRecursiveMacroExpansionAction"
+        <action id="Loong.ShowRecursiveMacroExpansionAction"
                 class="org.rust.ide.actions.macroExpansion.RsShowRecursiveMacroExpansionAction">
         </action>
 
         <action class="org.rust.ide.refactoring.generate.constructor.GenerateConstructorAction"
-                id="Rust.GenerateConstructor">
+                id="Loong.GenerateConstructor">
             <add-to-group group-id="GenerateGroup"/>
         </action>
 
         <action class="org.rust.ide.refactoring.generate.getter.GenerateGetterAction"
-                id="Rust.GenerateGetter">
+                id="Loong.GenerateGetter">
             <add-to-group group-id="GenerateGroup"/>
         </action>
 
         <action class="org.rust.ide.refactoring.generate.setter.GenerateSetterAction"
-                id="Rust.GenerateSetter">
+                id="Loong.GenerateSetter">
             <add-to-group group-id="GenerateGroup"/>
         </action>
 
-        <action id="Rust.ReexpandMacrosAction"
+        <action id="Loong.ReexpandMacrosAction"
                 class="org.rust.lang.core.macros.ReexpandMacrosAction">
         </action>
 
-        <action id="Rust.RebuildAllDefMaps"
+        <action id="Loong.RebuildAllDefMaps"
                 class="org.rust.lang.core.resolve2.actions.RsRebuildAllDefMapsAction">
         </action>
 
-        <action id="Rust.RebuildCurrentDefMap"
+        <action id="Loong.RebuildCurrentDefMap"
                 class="org.rust.lang.core.resolve2.actions.RsRebuildCurrentDefMapAction">
         </action>
 
-        <action id="Rust.CreateNewGithubIssue"
+        <action id="Loong.CreateNewGithubIssue"
                 class="org.rust.ide.actions.diagnostic.CreateNewGithubIssue"
                 icon="/icons/rust.svg">
             <add-to-group group-id="HelpMenu" anchor="after" relative-to-action="ReportProblem"/>
         </action>
 
-        <action id="Rust.ShareInPlayground"
+        <action id="Loong.ShareInPlayground"
                 class="org.rust.ide.actions.ShareInPlaygroundAction"/>
 
         <!-- Cargo-->
@@ -1594,7 +1594,7 @@
                 icon="AllIcons.General.Settings">
         </action>
 
-        <group id="Rust.Cargo">
+        <group id="Loong.Cargo">
             <reference id="Cargo.RefreshCargoProject"/>
             <reference id="Cargo.AttachCargoProject"/>
             <reference id="Cargo.DetachCargoProject"/>
@@ -1609,31 +1609,31 @@
             <reference id="Cargo.ShowSettings"/>
         </group>
 
-        <group id="Rust.ProjectView">
+        <group id="Loong.ProjectView">
             <reference id="Cargo.AttachCargoProject"/>
             <add-to-group group-id="ProjectViewPopupMenu"/>
         </group>
 
-        <action id="Rust.ConsoleREPL"
+        <action id="Loong.ConsoleREPL"
                 class="org.rust.ide.console.RunRustConsoleAction"
                 icon="/icons/rustRepl.svg">
         </action>
 
-        <group id="Rust.Tools"
+        <group id="Loong.Tools"
                class="org.rust.ide.actions.RsToolsActionGroup"
                icon="/icons/rust.svg"
                popup="true">
-            <group id="Rust.MacroExpansionActions"
+            <group id="Loong.MacroExpansionActions"
                    class="org.rust.ide.actions.macroExpansion.RsShowMacroExpansionGroup">
-                <reference id="Rust.ShowRecursiveMacroExpansionAction"/>
-                <reference id="Rust.ShowSingleStepMacroExpansionAction"/>
+                <reference id="Loong.ShowRecursiveMacroExpansionAction"/>
+                <reference id="Loong.ShowSingleStepMacroExpansionAction"/>
                 <separator/>
             </group>
 
             <reference id="Cargo.RustfmtFile"/>
             <reference id="Cargo.RustfmtCargoProject"/>
-            <reference id="Rust.ConsoleREPL"/>
-            <reference id="Rust.ShareInPlayground"/>
+            <reference id="Loong.ConsoleREPL"/>
+            <reference id="Loong.ShareInPlayground"/>
 
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
@@ -1643,7 +1643,7 @@
 
         <!-- Internal -->
 
-        <action id="Rust.GenerateDictionaries"
+        <action id="Loong.GenerateDictionaries"
                 class="org.rust.ide.spelling.RsSpellCheckerGenerateDictionariesAction"
                 internal="true">
             <add-to-group group-id="Internal"/>

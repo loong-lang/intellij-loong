@@ -173,8 +173,8 @@ class DocsLoweringTest : RsTestBase() {
     """)
 
     private fun doTest(
-        @Language("Rust") code: String,
-        @Language("Rust", suffix = "fn foo() {}") expected: String
+        @Language("Loong") code: String,
+        @Language("Loong", suffix = "fn foo() {}") expected: String
     ) {
         val (expanded, _) = project.createRustPsiBuilder(code.trimIndent()).lowerDocComments()
             ?: error("No doc comments in the source")

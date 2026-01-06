@@ -174,13 +174,13 @@ class RsLambdaExprCompletionTest : RsCompletionTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         checkByText(before.trimIndent(), after.trimIndent()) {
             checkCompletion()
         }
     }
 
-    private fun doTestWithTemplate(@Language("Rust") before: String, toType: String, @Language("Rust") after: String) {
+    private fun doTestWithTemplate(@Language("Loong") before: String, toType: String, @Language("Loong") after: String) {
         checkByTextWithLiveTemplate(before.trimIndent(), after.trimIndent(), toType) {
             checkCompletion()
         }

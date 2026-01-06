@@ -6,7 +6,7 @@
 package org.rust.ide.inspections.lints
 
 /**
- * Rust lint warning levels.
+ * Loong lint warning levels.
  */
 enum class RsLintLevel(
     val id: String

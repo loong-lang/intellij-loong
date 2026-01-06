@@ -53,7 +53,7 @@ abstract class RsLocalInspectionTool : LocalInspectionTool() {
      * - belong to a workspace
      * - are included in module tree, i.e. have a crate root
      * - are not disabled with a `cfg` attribute
-     * - belong to a project with a configured and valid Rust toolchain
+     * - belong to a project with a configured and valid Loong toolchain
      */
     private fun isApplicableTo(file: RsFile): Boolean {
         if (isSyntaxOnly) return true

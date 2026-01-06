@@ -11,26 +11,26 @@ import org.rust.RsTestBase
 
 abstract class RsStatementUpDownMoverTestBase : RsTestBase() {
     fun moveDown(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String = before,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String = before,
     ) = doTest(before, after, IdeActions.ACTION_MOVE_STATEMENT_DOWN_ACTION)
 
     fun moveUp(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String = before,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String = before,
     ) = doTest(before, after, IdeActions.ACTION_MOVE_STATEMENT_UP_ACTION)
 
     fun moveDownAndBackUp(
-        @Language("Rust") down: String,
-        @Language("Rust") up: String = down,
+        @Language("Loong") down: String,
+        @Language("Loong") up: String = down,
     ) {
         moveDown(down, up)
         moveUp(up, down)
     }
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String = before,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String = before,
         actionId: String,
     ) {
         checkEditorAction(before.trimIndent() + "\n", after.trimIndent() + "\n", actionId, false)

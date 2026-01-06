@@ -24,14 +24,14 @@ import org.rust.stdext.unwrapOrElse
 import kotlin.math.min
 
 abstract class RsMacroExpansionTestBase : RsTestBase() {
-    protected fun doTest(@Language("Rust") code: String, @Language("Rust") vararg expectedExpansions: Pair<String, Testmark?>) {
+    protected fun doTest(@Language("Loong") code: String, @Language("Loong") vararg expectedExpansions: Pair<String, Testmark?>) {
         InlineFile(code)
         checkAllMacroExpansionsInFile(myFixture.file, expectedExpansions)
     }
 
     protected fun doTest(
-        @Language("Rust") code: String,
-        @Language("Rust") vararg expectedExpansions: String
+        @Language("Loong") code: String,
+        @Language("Loong") vararg expectedExpansions: String
     ) {
         doTest(code, *expectedExpansions.map { Pair<String, Testmark?>(it, null) }.toTypedArray())
     }
@@ -55,19 +55,19 @@ abstract class RsMacroExpansionTestBase : RsTestBase() {
             }
     }
 
-    protected fun checkSingleMacro(@Language("Rust") code: String, @Language("Rust") expectedExpansion: String) {
+    protected fun checkSingleMacro(@Language("Loong") code: String, @Language("Loong") expectedExpansion: String) {
         InlineFile(code)
         val call = findElementInEditor<RsMacroCall>("^")
         checkMacroExpansion(call, expectedExpansion, "Macro comparison failed")
     }
 
-    protected fun checkSingleMacroByTree(@Language("Rust") code: String, @Language("Rust") expectedExpansion: String) {
+    protected fun checkSingleMacroByTree(@Language("Loong") code: String, @Language("Loong") expectedExpansion: String) {
         fileTreeFromText(code).createAndOpenFileWithCaretMarker()
         val call = findElementInEditor<RsMacroCall>("^")
         checkMacroExpansion(call, expectedExpansion, "Macro comparison failed")
     }
 
-    protected fun doErrorTest(@Language("Rust") code: String) {
+    protected fun doErrorTest(@Language("Loong") code: String) {
         InlineFile(code)
         val call = findElementInEditor<RsMacroCall>("^")
         val def = call.resolveToMacroWithoutPsi().ok() ?: error("Failed to resolve macro ${call.path.text}")

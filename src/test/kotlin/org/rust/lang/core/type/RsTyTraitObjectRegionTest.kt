@@ -77,7 +77,7 @@ class RsTyTraitObjectRegionTest : RsTestBase() {
     """)
 
     /** Checks the region of the trait object in [code] pointed to by `//^` marker. */
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code)
         val (typeAtCaret, expectedRegion) = findElementAndDataInEditor<RsTypeReference>()
         val ty = typeAtCaret.rawType

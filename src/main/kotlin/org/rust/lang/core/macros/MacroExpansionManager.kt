@@ -556,13 +556,13 @@ private class MacroExpansionServiceImplInner(
                 MACRO_LOG.debug("Loading MacroExpansionManager finished - no events fired")
             }
             !cargoProjects.hasAtLeastOneValidProject -> {
-                // `CargoProjectService` is already initialized, but there are no Rust projects.
+                // `CargoProjectService` is already initialized, but there are no Loong projects.
                 // No projects - no macros
                 cleanMacrosDirectoryAndStorage()
                 MACRO_LOG.debug("Loading MacroExpansionManager finished - no rust projects")
             }
             else -> {
-                // `CargoProjectService` is already initialized and there are Rust projects.
+                // `CargoProjectService` is already initialized and there are Loong projects.
                 // Make roots change in order to refresh [RsIndexableSetContributor]
                 // which value is changed after `inner` assigning
                 ProjectRootManagerEx.getInstanceEx(project)

@@ -12,14 +12,14 @@ import org.rust.launchAction
 
 abstract class RsInlineTestBase : RsTestBase() {
 
-    protected fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    protected fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         check(hasCaretMarker(before))
         checkByText(before.trimIndent(), after.trimIndent()) {
             myFixture.performEditorAction("Inline")
         }
     }
 
-    protected fun doUnavailableTest(@Language("Rust") code: String) {
+    protected fun doUnavailableTest(@Language("Loong") code: String) {
         InlineFile(code.trimIndent()).withCaret()
         myFixture.launchAction("Inline", shouldBeEnabled = false)
     }

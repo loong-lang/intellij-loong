@@ -14,13 +14,13 @@ def __lldb_init_module(debugger, _dict):
         if summary:
             func_name = summary.__name__
             debugger.HandleCommand(
-                'type summary add -F lldb_formatters.lldb_providers.{} -e -x -h "{}" --category Rust'.format(func_name,
+                'type summary add -F lldb_formatters.lldb_providers.{} -e -x -h "{}" --category Loong'.format(func_name,
                                                                                                              regex)
             )
         if synth:
             class_name = synth.__name__
             debugger.HandleCommand(
-                'type synthetic add -l lldb_formatters.lldb_providers.{} -x "{}" --category Rust'.format(class_name,
+                'type synthetic add -l lldb_formatters.lldb_providers.{} -x "{}" --category Loong'.format(class_name,
                                                                                                          regex)
             )
 
@@ -63,4 +63,4 @@ def __lldb_init_module(debugger, _dict):
     register_providers(RustType.RANGE_TO, summary=StdRangeToSummaryProvider)
     register_providers(RustType.RANGE_TO_INCLUSIVE, summary=StdRangeToInclusiveSummaryProvider)
 
-    debugger.HandleCommand('type category enable Rust')
+    debugger.HandleCommand('type category enable Loong')

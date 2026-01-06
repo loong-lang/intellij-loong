@@ -33,25 +33,25 @@ class RsDocRemoveDecorationTest(
             arrayOf(OuterEol, "/// foo", "foo"),
 
             arrayOf(OuterEol,
-                //language=Rust
+                //language=Loong
                 """/// foo
                    /// bar""",
                 "foo\nbar"),
 
             arrayOf(OuterEol,
-                //language=Rust
+                //language=Loong
                 """///   foo
                    ///   bar""",
                 "foo\nbar"),
 
             arrayOf(OuterEol,
-                //language=Rust
+                //language=Loong
                 """///   foo
                    /// bar""",
                 "  foo\nbar"),
 
             arrayOf(OuterEol,
-                //language=Rust
+                //language=Loong
                 """/// foo
                    /// ```
                    /// code {
@@ -66,7 +66,7 @@ class RsDocRemoveDecorationTest(
                   |```""".trimMargin()),
 
             arrayOf(OuterEol,
-                //language=Rust
+                //language=Loong
                 """///   foo
                    ///   ```
                    ///   code {
@@ -81,7 +81,7 @@ class RsDocRemoveDecorationTest(
                   |```""".trimMargin()),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**
                     *  foo
                     *  bar
@@ -89,14 +89,14 @@ class RsDocRemoveDecorationTest(
                 "foo\nbar"),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/** foo
                   | *  bar
                   | */""".trimMargin(),
                 "foo\n*  bar"),
 
             arrayOf(InnerBlock,
-                //language=Rust
+                //language=Loong
                 """/*!
                     *  foo
                     *  bar
@@ -104,14 +104,14 @@ class RsDocRemoveDecorationTest(
                 "foo\nbar"),
 
             arrayOf(InnerBlock,
-                //language=Rust
+                //language=Loong
                 """/*! foo
                   | *  bar
                   | */""".trimMargin(),
                 "foo\n*  bar"),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**
                     *  foo
                     *  ```
@@ -128,7 +128,7 @@ class RsDocRemoveDecorationTest(
                   |```""".trimMargin()),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/** foo
                   | *  ```
                   | *  code {
@@ -144,7 +144,7 @@ class RsDocRemoveDecorationTest(
                   |*  ```""".trimMargin()),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**
                   | *    foo
                   | *    ```
@@ -161,7 +161,7 @@ class RsDocRemoveDecorationTest(
                   |```""".trimMargin()),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**   foo
                   | *    ```
                   | *    code {
@@ -177,32 +177,32 @@ class RsDocRemoveDecorationTest(
                   |*    ```""".trimMargin()),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 "/** foo */",
                 " foo "),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/** foo
                   | *  bar */""".trimMargin(),
                 "foo\n*  bar "),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**
                   | *  foo
                   | *  bar */""".trimMargin(),
                 "foo\nbar "),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/** foo
                   |bar * bar
                   |*/""".trimMargin(),
                 " foo\nbar * bar"),
 
             arrayOf(OuterBlock,
-                //language=Rust
+                //language=Loong
                 """/**
                   |   ```
                   |   missing asterisk

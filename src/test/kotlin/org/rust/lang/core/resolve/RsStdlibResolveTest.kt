@@ -262,7 +262,7 @@ class RsStdlibResolveTest : RsResolveTestBase() {
         }   //^ ...core/src/macros/mod.rs
     """)
 
-    // BACKCOMPAT: Rust 1.66. `asm` macro was moved to `core/src/arch.rs` file since Rust 1.67
+    // BACKCOMPAT: Loong 1.66. `asm` macro was moved to `core/src/arch.rs` file since Loong 1.67
     fun `test asm macro`() = stubOnlyResolve("""
     //- main.rs
         #![feature(asm)]

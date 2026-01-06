@@ -72,7 +72,7 @@ class RsDowngradeModuleToFileTest : RsTestBase() {
 
     private fun testActionOnElement(element: PsiElement, shouldBeEnabled: Boolean) {
         myFixture.launchAction(
-            "Rust.RsDowngradeModuleToFile",
+            "Loong.RsDowngradeModuleToFile",
             CommonDataKeys.PSI_ELEMENT to element,
             shouldBeEnabled = shouldBeEnabled
         )

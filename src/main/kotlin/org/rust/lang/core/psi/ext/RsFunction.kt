@@ -80,7 +80,7 @@ val RsFunction.literalAbiName: String?
     }
 
 val RsFunction.actualAbiName: String
-    get() = literalAbiName ?: abi?.let { "C" } ?: "Rust"
+    get() = literalAbiName ?: abi?.let { "C" } ?: "Loong"
 
 val RsFunction.isCOrCdeclAbi
     get() = actualAbiName == "C" || actualAbiName == "cdecl"
@@ -168,7 +168,7 @@ val RsFunction.isActuallyUnsafe: Boolean
                 // extern block, so all function inside it become safe.
                 // See https://github.com/rustwasm/wasm-bindgen
                 context.queryAttributes.hasAttribute("wasm_bindgen") -> false
-                // Some Rust intrinsics are safe. This info is hardcoded in compiler
+                // Some Loong intrinsics are safe. This info is hardcoded in compiler
                 context.externAbi.litExpr?.stringValue == "rust-intrinsic" -> name !in SAFE_INTRINSICS
                 else -> true
             }

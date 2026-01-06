@@ -146,7 +146,7 @@ class AddImportForPatternIntentionTest : RsIntentionTestBase(AddImportForPattern
     """)
 
     private fun checkAutoImportVariantsByText(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         expectedElements: List<String>
     ) = checkAutoImportWithMultipleChoice(expectedElements, choice = null) {
         InlineFile(before.trimIndent()).withCaret()

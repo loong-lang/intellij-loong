@@ -11,7 +11,7 @@ import com.intellij.codeInsight.completion.CompletionType.BASIC
 import org.rust.lang.core.completion.RsCompletionProvider
 import org.rust.toml.tomlPluginIsAbiCompatible
 
-/** Provides completion in **Rust** files for elements that points to TOML elements, e.g. for cargo features */
+/** Provides completion in **Loong** files for elements that points to TOML elements, e.g. for cargo features */
 class RsCargoTomlIntegrationCompletionContributor : CompletionContributor() {
     init {
         if (tomlPluginIsAbiCompatible()) {

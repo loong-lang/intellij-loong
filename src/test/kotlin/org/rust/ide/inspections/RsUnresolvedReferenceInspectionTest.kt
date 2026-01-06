@@ -348,11 +348,11 @@ class RsUnresolvedReferenceInspectionTest : RsInspectionsTestBase(RsUnresolvedRe
         }
     """)
 
-    private fun checkByText(@Language("Rust") text: String, ignoreWithoutQuickFix: Boolean) {
+    private fun checkByText(@Language("Loong") text: String, ignoreWithoutQuickFix: Boolean) {
         withIgnoreWithoutQuickFix(ignoreWithoutQuickFix) { checkByText(text) }
     }
 
-    private fun checkByFileTree(@Language("Rust") text: String, ignoreWithoutQuickFix: Boolean) {
+    private fun checkByFileTree(@Language("Loong") text: String, ignoreWithoutQuickFix: Boolean) {
         withIgnoreWithoutQuickFix(ignoreWithoutQuickFix) { checkByFileTree(text) }
     }
 

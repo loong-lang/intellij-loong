@@ -625,22 +625,22 @@ class RsOutOfScopeItemsCompletionTest : RsCompletionTestBase() {
     """)
 
     private fun doTestByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         suggestOutOfScopeItems: Boolean = true,
         importOutOfScopeItems: Boolean = true
     ) = doTest(before, after, suggestOutOfScopeItems, importOutOfScopeItems, ::doSingleCompletion)
 
     private fun doTestByFileTree(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         suggestOutOfScopeItems: Boolean = true,
         importOutOfScopeItems: Boolean = true
     ) = doTest(before, after, suggestOutOfScopeItems, importOutOfScopeItems, ::doSingleCompletionByFileTree)
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         suggestOutOfScopeItems: Boolean = true,
         importOutOfScopeItems: Boolean = true,
         check: (String, String) -> Unit
@@ -648,13 +648,13 @@ class RsOutOfScopeItemsCompletionTest : RsCompletionTestBase() {
 
     private fun doTestContainsCompletion(
         variant: String,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         suggestOutOfScopeItems: Boolean = true,
         importOutOfScopeItems: Boolean = true
     ) = withOutOfScopeSettings(suggestOutOfScopeItems, importOutOfScopeItems) { checkContainsCompletion(variant, code) }
 
     private fun doTestNoCompletion(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         suggestOutOfScopeItems: Boolean = true,
         importOutOfScopeItems: Boolean = true
     ) = withOutOfScopeSettings(suggestOutOfScopeItems, importOutOfScopeItems) { checkNoCompletion(code) }
@@ -677,7 +677,7 @@ class RsOutOfScopeItemsCompletionTest : RsCompletionTestBase() {
         }
     }
 
-    private fun doTest(@Language("Rust") text: String, testmark: Testmark) {
+    private fun doTest(@Language("Loong") text: String, testmark: Testmark) {
         check(hasCaretMarker(text)) {
             "Please add `/*caret*/` marker"
         }

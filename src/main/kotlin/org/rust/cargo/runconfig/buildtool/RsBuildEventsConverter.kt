@@ -277,7 +277,7 @@ class RsBuildEventsConverter(private val context: CargoBuildContextBase) : Build
 
     companion object {
         @VisibleForTesting
-        const val RUSTC_MESSAGE_GROUP: String = "Rust compiler"
+        const val RUSTC_MESSAGE_GROUP: String = "Loong compiler"
 
         private val PROGRESS_TOTAL_RE: Regex = """(\d+)/(\d+)""".toRegex()
 

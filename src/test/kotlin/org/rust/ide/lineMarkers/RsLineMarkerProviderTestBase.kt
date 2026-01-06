@@ -19,7 +19,7 @@ abstract class RsLineMarkerProviderTestBase : RsTestBase() {
         lineMarkerTestHelper = LineMarkerTestHelper(myFixture)
     }
 
-    protected fun doTestByText(@Language("Rust") source: String) {
+    protected fun doTestByText(@Language("Loong") source: String) {
         lineMarkerTestHelper.doTestByText("lib.rs", source)
     }
 

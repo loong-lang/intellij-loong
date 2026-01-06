@@ -460,14 +460,14 @@ class RsInlineValueTest : RsTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String,
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String,
                        mode: InlineValueMode = InlineValueMode.InlineAllAndRemoveOriginal) {
         withMockInlineValueMode(mode) {
             checkEditorAction(before, after, "Inline")
         }
     }
 
-    private fun checkError(@Language("Rust") code: String, errorMessage: String) {
+    private fun checkError(@Language("Loong") code: String, errorMessage: String) {
         try {
             checkEditorAction(code, code, "Inline")
             error("no error found, expected $errorMessage")

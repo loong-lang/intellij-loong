@@ -260,7 +260,7 @@ open class CargoCommandConfiguration(
         }
 
         val toolchain = project.toolchain
-            ?: return CleanConfiguration.error("No Rust toolchain specified")
+            ?: return CleanConfiguration.error("No Loong toolchain specified")
 
         if (!toolchain.looksLikeValidToolchain()) {
             return CleanConfiguration.error("Invalid toolchain: ${toolchain.presentableLocation}")

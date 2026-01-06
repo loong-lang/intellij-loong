@@ -204,7 +204,7 @@ class RsExternalDocUrlTest : RsDocumentationProviderTest() {
         }
     """, "file:///mydoc", "file:///mydoc/dep-lib/0.0.1/dep_lib_target/macro.foo.html")
 
-    private fun doCustomUrlTestByFileTree(@Language("Rust") text: String, docBaseUrl: String, expectedUrl: String) {
+    private fun doCustomUrlTestByFileTree(@Language("Loong") text: String, docBaseUrl: String, expectedUrl: String) {
         withExternalDocumentationBaseUrl(docBaseUrl) {
             doUrlTestByFileTree(text, expectedUrl)
         }

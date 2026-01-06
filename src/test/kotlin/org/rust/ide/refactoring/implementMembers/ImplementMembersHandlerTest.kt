@@ -1922,9 +1922,9 @@ class ImplementMembersHandlerTest : RsTestBase() {
     private data class ImplementMemberSelection(val member: String, val byDefault: Boolean, val isSelected: Boolean = byDefault)
 
     private fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         chooser: List<ImplementMemberSelection>,
-        @Language("Rust") expected: String
+        @Language("Loong") expected: String
     ) {
 
         checkByText(code.trimIndent(), expected.trimIndent()) {

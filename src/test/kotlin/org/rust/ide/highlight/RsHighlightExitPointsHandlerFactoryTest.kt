@@ -445,7 +445,7 @@ class RsHighlightExitPointsHandlerFactoryTest : RsTestBase() {
         }
     """, "return 1")
 
-    private fun doTest(@Language("Rust") check: String, vararg usages: String) {
+    private fun doTest(@Language("Loong") check: String, vararg usages: String) {
         InlineFile(check)
         HighlightUsagesHandler.invoke(myFixture.project, myFixture.editor, myFixture.file)
         val highlighters = myFixture.editor.markupModel.allHighlighters

@@ -132,16 +132,16 @@ class RsCompletionTabOutTest : RsTestBase() {
         myFixture.performEditorAction(IdeActions.ACTION_BRACE_OR_QUOTE_OUT)
     }
 
-    override fun configureByText(@Language("Rust") text: String) {
+    override fun configureByText(@Language("Loong") text: String) {
         InlineFile(text.trimIndent()).withCaret()
     }
 
-    private fun checkResult(@Language("Rust") code: String) {
+    private fun checkResult(@Language("Loong") code: String) {
         check("/*caret*/" in code)
         myFixture.checkResult(replaceCaretMarker(code.trimIndent()))
     }
 
-    private fun doTestCompleteTabOut(@Language("Rust") before: String, @Language("Rust") after: String) {
+    private fun doTestCompleteTabOut(@Language("Loong") before: String, @Language("Loong") after: String) {
         configureByText(before)
         complete()
         tabOut()

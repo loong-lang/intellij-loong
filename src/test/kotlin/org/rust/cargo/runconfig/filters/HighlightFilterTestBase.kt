@@ -39,7 +39,7 @@ abstract class HighlightFilterTestBase : RsTestBase() {
 
     protected fun checkHighlights(
         filter: Filter,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         before: String,
         after: String,
         lineIndex: Int = 0

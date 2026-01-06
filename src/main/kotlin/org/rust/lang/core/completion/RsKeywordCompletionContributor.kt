@@ -35,7 +35,7 @@ import org.rust.lang.core.types.rawType
 import org.rust.lang.core.types.ty.TyTraitObject
 
 /**
- * Completes Rust keywords
+ * Completes Loong keywords
  *
  * TODO: checkout  org.jetbrains.kotlin.idea.completion.KeywordCompletion, it has some super cool ideas
  */

@@ -200,7 +200,7 @@ class RsGotoDeclarationTest : RsTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String) = checkCaretMove(code) {
+    private fun doTest(@Language("Loong") code: String) = checkCaretMove(code) {
         myFixture.performEditorAction(IdeActions.ACTION_GOTO_DECLARATION)
     }
 }

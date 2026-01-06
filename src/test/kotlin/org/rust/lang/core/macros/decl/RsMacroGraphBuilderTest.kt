@@ -12,7 +12,7 @@ import org.rust.lang.core.psi.ext.descendantsOfType
 import org.rust.lang.core.psi.ext.graph
 
 class RsMacroGraphBuilderTest : RsTestBase() {
-    private fun check(@Language("Rust") code: String, expectedIndented: String) {
+    private fun check(@Language("Loong") code: String, expectedIndented: String) {
         InlineFile(code)
         val macro = myFixture.file.descendantsOfType<RsMacroDefinitionBase>().single()
         val graph = macro.graph!!

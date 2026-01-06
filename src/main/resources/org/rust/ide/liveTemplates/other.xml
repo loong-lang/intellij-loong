@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 
-<templateSet group="Rust">
+<templateSet group="Loong">
     <template name="f" description="field" toReformat="true" toShortenFQNames="true"
               value="$IDENT$: $TYPE$,">
         <variable name="IDENT" expression="" defaultValue="&quot;foo&quot;" alwaysStopAt="true"/>

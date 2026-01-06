@@ -20,7 +20,7 @@ class RsPrimitiveTypeCompletionTest : RsCompletionTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") text: String) {
+    private fun doTest(@Language("Loong") text: String) {
         val primitiveTypes = TyInteger.VALUES + TyFloat.VALUES + TyBool.INSTANCE + TyStr.INSTANCE + TyChar.INSTANCE
         val primitiveTypeNames = primitiveTypes.map { it.name }
         checkContainsCompletion(primitiveTypeNames, text)

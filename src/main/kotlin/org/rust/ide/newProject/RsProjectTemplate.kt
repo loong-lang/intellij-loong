@@ -13,7 +13,7 @@ sealed class RsProjectTemplate(@Suppress("UnstableApiUsage") @ListItem val name:
     fun validateProjectName(crateName: String): String? = RsPackageNameValidator.validate(crateName, isBinary)
 }
 
-sealed class RsGenericTemplate(@Suppress("UnstableApiUsage") @ListItem name: String, isBinary: Boolean) : RsProjectTemplate(name, isBinary, RsIcons.RUST) {
+sealed class RsGenericTemplate(@Suppress("UnstableApiUsage") @ListItem name: String, isBinary: Boolean) : RsProjectTemplate(name, isBinary, RsIcons.LOONG) {
     object CargoBinaryTemplate : RsGenericTemplate("Binary (application)", true)
     object CargoLibraryTemplate : RsGenericTemplate("Library", false)
 }

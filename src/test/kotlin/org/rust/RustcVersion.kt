@@ -58,12 +58,12 @@ fun TestCase.checkRustcVersionRequirements(rustcVersionSupplier: () -> RsResult<
 
     if (minRustVersion != null) {
         val requiredVersion = minRustVersion.semver
-        if (rustcVersion < requiredVersion) return "At least $requiredVersion Rust version required, $rustcVersion found"
+        if (rustcVersion < requiredVersion) return "At least $requiredVersion Loong version required, $rustcVersion found"
     }
 
     if (maxRustVersion != null) {
         val requiredVersion = maxRustVersion.semver
-        if (rustcVersion > requiredVersion) return "At most $requiredVersion Rust version required, $rustcVersion found"
+        if (rustcVersion > requiredVersion) return "At most $requiredVersion Loong version required, $rustcVersion found"
     }
     return null
 }

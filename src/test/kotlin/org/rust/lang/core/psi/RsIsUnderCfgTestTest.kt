@@ -72,12 +72,12 @@ class RsIsUnderCfgTestTest : RsTestBase() {
           //^ true
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code)
         doTest()
     }
 
-    private fun doTestByTree(@Language("Rust") code: String) {
+    private fun doTestByTree(@Language("Loong") code: String) {
         fileTreeFromText(code).createAndOpenFileWithCaretMarker()
         doTest()
     }

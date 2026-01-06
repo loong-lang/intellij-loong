@@ -15,39 +15,39 @@ import org.rust.lang.core.psi.RsFile
 
 abstract class AutoImportFixTestBase : RsInspectionsTestBase(RsUnresolvedReferenceInspection::class) {
 
-    protected fun checkAutoImportFixIsUnavailable(@Language("Rust") text: String) =
+    protected fun checkAutoImportFixIsUnavailable(@Language("Loong") text: String) =
         doTest(checkOptimizeImports = false) { checkFixIsUnavailable(AutoImportFix.NAME, text) }
 
-    protected fun checkAutoImportFixIsUnavailableByFileTree(@Language("Rust") text: String) =
+    protected fun checkAutoImportFixIsUnavailableByFileTree(@Language("Loong") text: String) =
         doTest(checkOptimizeImports = false) { checkFixIsUnavailableByFileTree(AutoImportFix.NAME, text) }
 
     protected fun checkAutoImportFixByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkOptimizeImports: Boolean = true,
     ) = doTest(checkOptimizeImports) { checkFixByText(AutoImportFix.NAME, before, after, preview = null) }
 
     protected fun checkAutoImportFixByTextWithoutHighlighting(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = doTest { checkFixByTextWithoutHighlighting(AutoImportFix.NAME, before, after, preview = null) }
 
     protected fun checkAutoImportFixByFileTree(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         checkOptimizeImports: Boolean = true,
     ) = doTest(checkOptimizeImports) { checkFixByFileTree(AutoImportFix.NAME, before, after, preview = null) }
 
     protected fun checkAutoImportFixByFileTreeWithoutHighlighting(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
     ) = doTest { checkFixByFileTreeWithoutHighlighting(AutoImportFix.NAME, before, after, preview = null) }
 
     protected fun checkAutoImportFixByTextWithMultipleChoice(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         expectedElements: List<String>,
         choice: String,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
     ) = doTest {
         checkAutoImportWithMultipleChoice(expectedElements, choice) {
             checkFixByText(AutoImportFix.NAME, before, after, preview = null)
@@ -55,10 +55,10 @@ abstract class AutoImportFixTestBase : RsInspectionsTestBase(RsUnresolvedReferen
     }
 
     protected fun checkAutoImportFixByFileTreeWithMultipleChoice(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         expectedElements: List<String>,
         choice: String,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
     ) = doTest {
         checkAutoImportWithMultipleChoice(expectedElements, choice) {
             checkFixByFileTree(AutoImportFix.NAME, before, after, preview = null)
@@ -66,7 +66,7 @@ abstract class AutoImportFixTestBase : RsInspectionsTestBase(RsUnresolvedReferen
     }
 
     protected fun checkAutoImportVariantsByText(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         expectedElements: List<String>
     ) = doTest {
         checkAutoImportWithMultipleChoice(expectedElements, choice = null) {

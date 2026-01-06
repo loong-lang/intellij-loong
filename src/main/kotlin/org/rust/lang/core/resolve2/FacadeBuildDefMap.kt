@@ -177,7 +177,7 @@ private fun injectPrelude(defMap: CrateDefMap) {
 }
 
 private fun createExternCrateStdImport(defMap: CrateDefMap): Import? {
-    // Rust injects implicit `extern crate std` in every crate root module unless it is
+    // Loong injects implicit `extern crate std` in every crate root module unless it is
     // a `#![no_std]` crate, in which case `extern crate core` is injected. However, if
     // there is a (unstable?) `#![no_core]` attribute, nothing is injected.
     //

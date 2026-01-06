@@ -123,19 +123,19 @@ class RsGotoSuperHandlerTest : RsTestBase() {
 
     // Navigation from a crate root to Cargo.toml is tested in `CargoTomlGotoSuperHandlerTest`
 
-    private fun checkNavigationInFiles(@Language("Rust") fileTreeText: String, expected: String) {
+    private fun checkNavigationInFiles(@Language("Loong") fileTreeText: String, expected: String) {
         checkMultiNavigationInFiles(fileTreeText, expected)
     }
 
-    private fun checkMultiNavigationInFiles(@Language("Rust") fileTreeText: String, vararg expected: String) {
+    private fun checkMultiNavigationInFiles(@Language("Loong") fileTreeText: String, vararg expected: String) {
         fileTreeFromText(fileTreeText).createAndOpenFileWithCaretMarker()
         val targets = gotoSuperTargets(myFixture.file)
         assertEquals(expected.toList().map { it.trimIndent() }.sorted(), targets.map { it.text }.sorted())
     }
 
-    private fun checkNavigation(@Language("Rust") code: String) = checkCaretMove(code) {
+    private fun checkNavigation(@Language("Loong") code: String) = checkCaretMove(code) {
         val handler = CodeInsightActions.GOTO_SUPER.forLanguage(RsLanguage)
-            ?: error("GotoSuperHandler for Rust was not found.")
+            ?: error("GotoSuperHandler for Loong was not found.")
         handler.invoke(project, myFixture.editor, myFixture.file)
     }
 }

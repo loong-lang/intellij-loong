@@ -4173,7 +4173,7 @@ class RsErrorAnnotatorTest : RsAnnotatorTestBase(RsErrorAnnotator::class) {
 
     @MockRustcVersion("1.54.0")
     fun `test experimental ABI E0658`() = checkErrors("""
-        extern "Rust" fn fn1() {}
+        extern "Loong" fn fn1() {}
         extern "C" fn fn2() {}
         extern <error descr="C-unwind ABI is experimental [E0658]">"C-unwind"</error> fn fn3() {}
         extern "cdecl" fn fn4() {}

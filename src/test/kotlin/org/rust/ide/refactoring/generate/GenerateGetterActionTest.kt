@@ -9,7 +9,7 @@ import org.rust.ProjectDescriptor
 import org.rust.WithStdlibRustProjectDescriptor
 
 class GenerateGetterActionTest : RsGenerateBaseTest() {
-    override val generateId: String = "Rust.GenerateGetter"
+    override val generateId: String = "Loong.GenerateGetter"
 
     fun `test not available on impl trait block`() = doUnavailableTest("""
         trait T {}

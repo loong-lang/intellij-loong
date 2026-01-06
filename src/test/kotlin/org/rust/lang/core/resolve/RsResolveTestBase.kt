@@ -17,14 +17,14 @@ import org.rust.lang.core.psi.ext.RsReferenceElementBase
 import org.rust.lang.core.psi.ext.contextualFile
 
 abstract class RsResolveTestBase : RsTestBase() {
-    protected open fun checkByCode(@Language("Rust") code: String) =
+    protected open fun checkByCode(@Language("Loong") code: String) =
         checkByCode(code, "main.rs")
 
-    protected open fun checkByCode(@Language("Rust") code: String, fileName: String) =
+    protected open fun checkByCode(@Language("Loong") code: String, fileName: String) =
         checkByCodeGeneric<RsNamedElement>(code, fileName)
 
     protected inline fun <reified T : PsiElement> checkByCodeGeneric(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         fileName: String = "main.rs"
     ) = checkByCodeGeneric2<RsReferenceElementBase, T>(code, fileName)
 
@@ -36,7 +36,7 @@ abstract class RsResolveTestBase : RsTestBase() {
     protected fun <R : PsiElement, T : PsiElement> checkByCodeGeneric2(
         referenceClass: Class<R>,
         targetPsiClass: Class<T>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         fileName: String = "main.rs"
     ) {
         InlineFile(code, fileName)
@@ -60,7 +60,7 @@ abstract class RsResolveTestBase : RsTestBase() {
     }
 
     protected fun stubOnlyResolve(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         resolveFileProducer: (PsiElement) -> VirtualFile = this::getActualResolveFile
     ) = stubOnlyResolve<RsReferenceElement>(fileTreeFromText(code), resolveFileProducer)
 

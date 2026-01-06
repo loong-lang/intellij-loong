@@ -97,7 +97,7 @@ class RsHighlightAwaitHandlerFactoryTest : RsTestBase() {
         }
     """, 3, 5, 7)
 
-    private fun doTest(@Language("Rust") check: String, vararg lines: Int) {
+    private fun doTest(@Language("Loong") check: String, vararg lines: Int) {
         InlineFile(check)
         HighlightUsagesHandler.invoke(myFixture.project, myFixture.editor, myFixture.file)
         val highlighters = myFixture.editor.markupModel.allHighlighters

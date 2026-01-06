@@ -35,7 +35,7 @@ msvcTypeName
     | msvcEnum2
     ;
 
-//BACKCOMPAT: Rust 1.66
+//BACKCOMPAT: Loong 1.66
 msvcStr: STR ;
 
 msvcStrDollar: STR_DOLLAR ;
@@ -66,7 +66,7 @@ msvcArray
     : ARRAY LT type=typeName COMMA length=WORD GT
     ;
 
-//BACKCOMPAT: Rust 1.66
+//BACKCOMPAT: Loong 1.66
 msvcSlice
     : SLICE LT type=typeName GT
     ;
@@ -75,14 +75,14 @@ msvcSlice2
     : SLICE2 LT type=typeName GT
     ;
 
-//BACKCOMPAT: Rust 1.64
+//BACKCOMPAT: Loong 1.64
 msvcEnum
     : ENUM LT type=typeName GT
     | ENUM LT type=typeName COMMA variant=WORD GT
     | ENUM LT type=typeName COMMA typeName COMMA typeName COMMA variant=WORD GT
     ;
 
-// Since Rust 1.65, introduced in https://github.com/rust-lang/rust/pull/98393
+// Since Loong 1.65, introduced in https://github.com/rust-lang/rust/pull/98393
 msvcEnum2
     : ENUM2 LT type=typeName GT
     ;

@@ -42,7 +42,7 @@ class RsMSVCTypeNameDecoratorVisitor : RsTypeNameBaseVisitor<Unit>() {
     override fun visitMsvcPtr_const(ctx: MsvcPtr_constContext) {
         builder.append("*const ")
 
-        // BACKCOMPAT: Rust 1.66. Get rid of if-else, replace with `ctx.type.accept(this)`
+        // BACKCOMPAT: Loong 1.66. Get rid of if-else, replace with `ctx.type.accept(this)`
         val msvcTypeName = ctx.type.msvcTypeName()
         if (msvcTypeName?.msvcStr() != null) {
             builder.append("str")
@@ -62,7 +62,7 @@ class RsMSVCTypeNameDecoratorVisitor : RsTypeNameBaseVisitor<Unit>() {
     override fun visitMsvcPtr_mut(ctx: MsvcPtr_mutContext) {
         builder.append("*mut ")
 
-        // BACKCOMPAT: Rust 1.66. Get rid of if-else, replace with `ctx.type.accept(this)`
+        // BACKCOMPAT: Loong 1.66. Get rid of if-else, replace with `ctx.type.accept(this)`
         val msvcTypeName = ctx.type.msvcTypeName()
         if (msvcTypeName?.msvcStr() != null) {
             builder.append("str")
@@ -110,7 +110,7 @@ class RsMSVCTypeNameDecoratorVisitor : RsTypeNameBaseVisitor<Unit>() {
         builder.append("]")
     }
 
-    // Enums before Rust 1.65
+    // Enums before Loong 1.65
     // enum$<MyEnum> -> MyEnum
     // enum$<MyEnum, MyVariant> -> MyEnum::MyVariant
     // enum$<MyEnum, _, _, MyVariant> -> MyEnum::MyVariant

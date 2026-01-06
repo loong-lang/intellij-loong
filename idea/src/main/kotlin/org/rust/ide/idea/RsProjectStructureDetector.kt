@@ -27,7 +27,7 @@ class RsProjectStructureDetector : ProjectStructureDetector() {
     ): DirectoryProcessingResult {
         if (children.any { it.name == CargoConstants.MANIFEST_FILE }) {
             result.add(object : DetectedProjectRoot(dir) {
-                override fun getRootTypeName(): String = "Rust"
+                override fun getRootTypeName(): String = "Loong"
             })
         }
 

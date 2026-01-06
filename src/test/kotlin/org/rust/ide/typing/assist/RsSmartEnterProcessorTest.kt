@@ -366,7 +366,7 @@ class RsSmartEnterProcessorTest : RsTestBase() {
     """, """
         fn main() {
             let a = 123;
-            
+
             /*caret*/
         }
     """)
@@ -452,6 +452,6 @@ class RsSmartEnterProcessorTest : RsTestBase() {
         /*caret*/
     """)
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) =
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) =
         checkEditorAction(before, after, IdeActions.ACTION_EDITOR_COMPLETE_STATEMENT)
 }

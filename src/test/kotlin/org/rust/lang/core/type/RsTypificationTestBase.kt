@@ -22,14 +22,14 @@ import org.rust.lang.core.types.type
 import org.rust.lang.utils.Severity
 
 abstract class RsTypificationTestBase : RsTestBase() {
-    protected fun testExpr(@Language("Rust") code: String, description: String = "", allowErrors: Boolean = false) {
+    protected fun testExpr(@Language("Loong") code: String, description: String = "", allowErrors: Boolean = false) {
         InlineFile(code)
         check(description)
         if (!allowErrors) checkNoInferenceErrors()
         checkAllExpressionsTypified()
     }
 
-    protected fun stubOnlyTypeInfer(@Language("Rust") code: String, description: String = "", allowErrors: Boolean = false) {
+    protected fun stubOnlyTypeInfer(@Language("Loong") code: String, description: String = "", allowErrors: Boolean = false) {
         val testProject = fileTreeFromText(code)
             .createAndOpenFileWithCaretMarker()
 

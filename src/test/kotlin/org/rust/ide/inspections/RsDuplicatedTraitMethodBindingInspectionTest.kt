@@ -36,5 +36,5 @@ class RsDuplicatedTraitMethodBindingInspectionTest : RsInspectionsTestBase(RsDup
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String) = checkByText(code, checkWeakWarn = true)
+    private fun doTest(@Language("Loong") code: String) = checkByText(code, checkWeakWarn = true)
 }

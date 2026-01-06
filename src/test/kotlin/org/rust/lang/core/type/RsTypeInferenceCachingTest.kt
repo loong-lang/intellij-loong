@@ -20,7 +20,7 @@ class RsTypeInferenceCachingTest : RsTestBase() {
         associate { it.name!! to it.selfInferenceResult.getTimestamp() }
 
 
-    private fun checkReinferred(action: () -> Unit, @Language("Rust") code: String, vararg names: String) {
+    private fun checkReinferred(action: () -> Unit, @Language("Loong") code: String, vararg names: String) {
         InlineFile(code).withCaret()
         val fns = myFixture.file.childrenOfType<RsFunction>()
         val oldStamps = fns.collectStamps()

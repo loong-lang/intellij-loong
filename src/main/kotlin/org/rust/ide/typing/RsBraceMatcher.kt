@@ -41,7 +41,7 @@ class RsBraceMatcher : PairedBraceMatcherAdapter(RsBaseBraceMatcher(), RsLanguag
         // comparison operators. Another complication is that
         // we don't have access to tree here, and can use only
         // the lexical structure. Luckily, chained comparisons
-        // are forbidden in Rust.
+        // are forbidden in Loong.
         //
         // So let's run a standard stack-based brace matching
         // algorithm with a twist that we try to bail out early

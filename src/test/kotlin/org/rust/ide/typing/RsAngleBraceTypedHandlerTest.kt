@@ -48,7 +48,7 @@ class RsAngleBraceTypedHandlerTest : RsTypingTestBase() {
     fun `test empty close`() =
         doTestByText("<caret>", "><caret>", '>')
 
-    private fun doComplexTest(@Language("Rust") before: String) {
+    private fun doComplexTest(@Language("Loong") before: String) {
         val afterWithGT = before.replace("<caret>", "<<caret>>")
         // check completion at the end of file
         doTypeDeleteTest(before, afterWithGT)
@@ -62,7 +62,7 @@ class RsAngleBraceTypedHandlerTest : RsTypingTestBase() {
         doTypeDeleteTest(before, afterWithoutGT, """fn main() { /* <code> */ }""")
     }
 
-    private fun doTypeDeleteTest(@Language("Rust") before: String, @Language("Rust") after: String, @Language("Rust") surroundings: String) = doTypeDeleteTest(
+    private fun doTypeDeleteTest(@Language("Loong") before: String, @Language("Loong") after: String, @Language("Loong") surroundings: String) = doTypeDeleteTest(
         surroundings.replace("<code>", before),
         surroundings.replace("<code>", after)
     )

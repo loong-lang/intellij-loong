@@ -43,7 +43,7 @@ fn run_rustc(rustc_executable: OsString, args: Vec<OsString>) -> io::Result<Exit
         .stdout(Stdio::inherit())
         .stderr(Stdio::inherit());
 
-    // IntelliJ Rust plugin may add `RUSTC_BOOTSTRAP=1` environment variable to `cargo check` call
+    // IntelliJ Loong plugin may add `RUSTC_BOOTSTRAP=1` environment variable to `cargo check` call
     // during build script execution.
     // But we need it only to use experimental `cargo` feature
     // and don't want to propagate it to `rustc` call because it may produce different results.

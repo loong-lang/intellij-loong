@@ -28,7 +28,7 @@ import org.rust.toml.resolve.allFeatures
 import org.toml.lang.psi.TomlKeySegment
 
 /**
- * Provides completion for cargo features in Rust cfg attributes:
+ * Provides completion for cargo features in Loong cfg attributes:
  * ```
  * #[cfg(feature = "<caret>")]
  * fn foo() {}    //^ Provides completion here

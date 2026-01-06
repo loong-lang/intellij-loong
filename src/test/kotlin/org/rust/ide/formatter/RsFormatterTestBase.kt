@@ -42,20 +42,20 @@ abstract class RsFormatterTestBase : FormatterTestCase() {
         return super.runTestRunnable(testRunnable)
     }
 
-    override fun doTextTest(@Language("Rust") text: String, @Language("Rust") textAfter: String) {
+    override fun doTextTest(@Language("Loong") text: String, @Language("Loong") textAfter: String) {
         check(text.trimIndent() != textAfter.trimIndent())
         super.doTextTest(text.trimIndent(), textAfter.trimIndent())
     }
 
-    fun checkNotChanged(@Language("Rust") text: String) {
+    fun checkNotChanged(@Language("Loong") text: String) {
         super.doTextTest(text.trimIndent(), text.trimIndent())
     }
 
     fun doTextTest(
         optionProperty: KMutableProperty0<Boolean>,
-        @Language("Rust") before: String,
-        @Language("Rust") afterOn: String = before,
-        @Language("Rust") afterOff: String = before
+        @Language("Loong") before: String,
+        @Language("Loong") afterOn: String = before,
+        @Language("Loong") afterOff: String = before
     ) {
         val initialValue = optionProperty.get()
         optionProperty.set(true)

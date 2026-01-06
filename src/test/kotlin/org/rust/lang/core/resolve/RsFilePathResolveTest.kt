@@ -103,7 +103,7 @@ class RsFilePathResolveTest : RsResolveTestBase() {
         fn bar() {}
     """)
 
-    private fun checkResolve(@Language("Rust") code: String) {
+    private fun checkResolve(@Language("Loong") code: String) {
         stubOnlyResolve<RsLitExpr>(fileTreeFromText(code)) { it is PsiFileSystemItem }
     }
 }

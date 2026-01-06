@@ -9,8 +9,8 @@ import org.intellij.lang.annotations.Language
 
 abstract class RsAttributeCompletionTestBase : RsCompletionTestBase() {
     protected fun doSingleAttributeCompletion(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) {
         doSingleCompletion(before, after)
         doSingleCompletion(withCfgAttr(before), withCfgAttr(after))
@@ -18,7 +18,7 @@ abstract class RsAttributeCompletionTestBase : RsCompletionTestBase() {
 
     protected fun checkAttributeCompletionByFileTree(
         variants: List<String>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
     ) {
         checkContainsCompletionByFileTree(variants, code)
         checkContainsCompletionByFileTree(variants, withCfgAttr(code))

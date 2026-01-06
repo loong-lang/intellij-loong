@@ -13,7 +13,7 @@ import com.intellij.util.indexing.GlobalIndexFilter
 import com.intellij.util.indexing.IndexId
 
 /**
- * Disables some indexes for Rust macro expansions (i.e. for files in [MacroExpansionFileSystem])
+ * Disables some indexes for Loong macro expansions (i.e. for files in [MacroExpansionFileSystem])
  */
 @Suppress("UnstableApiUsage")
 class RsGlobalIndexFilterForMacroExpansionFileSystem : GlobalIndexFilter {

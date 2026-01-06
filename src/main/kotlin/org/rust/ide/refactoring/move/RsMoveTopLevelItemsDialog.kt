@@ -170,18 +170,18 @@ class RsMoveTopLevelItemsDialog(
             return if (targetFile != null) {
                 targetFile.toPsiFile(project) as? RsMod
                     ?: run {
-                        project.showErrorMessage("Target file must be a Rust file")
+                        project.showErrorMessage("Target file must be a Loong file")
                         null
                     }
             } else {
                 try {
                     createNewRustFile(targetFilePath, project, crateRoot, this)
                         ?: run {
-                            project.showErrorMessage("Can't create new Rust file or attach it to module tree")
+                            project.showErrorMessage("Can't create new Loong file or attach it to module tree")
                             null
                         }
                 } catch (e: Exception) {
-                    project.showErrorMessage("Error during creating new Rust file: ${e.message}")
+                    project.showErrorMessage("Error during creating new Loong file: ${e.message}")
                     null
                 }
             }

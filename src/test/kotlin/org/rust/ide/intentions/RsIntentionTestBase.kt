@@ -66,9 +66,9 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
         ?: error("No ${PathUtil.getFileName(path)} found for $intentionClass ($path)")
 
     protected fun doAvailableTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
-        @Language("Rust") preview: String? = null,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
+        @Language("Loong") preview: String? = null,
         fileName: String = "main.rs"
     ) {
         InlineFile(before.trimIndent(), fileName).withCaret()
@@ -78,17 +78,17 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
     }
 
     protected fun doAvailableSymmetricTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
     ) {
         doAvailableTest(before, after.replace("/*caret*/", ""))
         doAvailableTest(after, before.replace("/*caret*/", ""))
     }
 
     protected fun doAvailableTestWithLiveTemplate(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         toType: String,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         fileName: String = "main.rs"
     ) {
         TemplateManagerImpl.setTemplateTesting(testRootDisposable)
@@ -103,8 +103,8 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
 
     @Suppress("unused")
     protected fun doAvailableTestWithFileTree(
-        @Language("Rust") fileStructureBefore: String,
-        @Language("Rust") openedFileAfter: String
+        @Language("Loong") fileStructureBefore: String,
+        @Language("Loong") openedFileAfter: String
     ) {
         fileTreeFromText(fileStructureBefore).createAndOpenFileWithCaretMarker()
         launchAction()
@@ -113,8 +113,8 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
     }
 
     protected fun doAvailableTestWithFileTreeComplete(
-        @Language("Rust") fileStructureBefore: String,
-        @Language("Rust") fileStructureAfter: String
+        @Language("Loong") fileStructureBefore: String,
+        @Language("Loong") fileStructureAfter: String
     ) {
         fileTreeFromText(fileStructureBefore).createAndOpenFileWithCaretMarker()
         launchAction()
@@ -122,9 +122,9 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
         fileTreeFromText(replaceCaretMarker(fileStructureAfter)).check(myFixture)
     }
 
-    protected fun launchAction(@Language("Rust") preview: String? = null) {
+    protected fun launchAction(@Language("Loong") preview: String? = null) {
         UIUtil.dispatchAllInvocationEvents()
-        // Check preview only for intentions from Rust plugin
+        // Check preview only for intentions from Loong plugin
         if (intentionClass.isSubclassOf(RsElementBaseIntentionAction::class)) {
             if (previewExpected) {
                 val isWrappingActive = testWrappingUnwrapper != null
@@ -138,7 +138,7 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
         }
     }
 
-    protected fun doUnavailableTest(@Language("Rust") before: String, fileName: String = "main.rs") {
+    protected fun doUnavailableTest(@Language("Loong") before: String, fileName: String = "main.rs") {
         InlineFile(before, fileName).withCaret()
         val intention = findIntention()
         check(intention == null) {
@@ -153,7 +153,7 @@ abstract class RsIntentionTestBase(private val intentionClass: KClass<out Intent
         }?.takeIf { it.isAvailable(project, myFixture.editor, myFixture.file) }
     }
 
-    protected fun checkAvailableInSelectionOnly(@Language("Rust") code: String, fileName: String = "main.rs") {
+    protected fun checkAvailableInSelectionOnly(@Language("Loong") code: String, fileName: String = "main.rs") {
         InlineFile(code.replace("<selection>", "<selection><caret>"), fileName)
         val selections = myFixture.editor.selectionModel.let { model ->
             model.blockSelectionStarts.zip(model.blockSelectionEnds)

@@ -413,19 +413,19 @@ class RsDefMapUpdateChangeSingleFileTest : RsDefMapUpdateTestBase() {
         PsiDocumentManager.getInstance(project).commitAllDocuments()
     }
 
-    private fun doTestChanged(action: () -> Unit, @Language("Rust") code: String) {
+    private fun doTestChanged(action: () -> Unit, @Language("Loong") code: String) {
         InlineFile(code).withCaret()
         doTest(action, shouldChange = true)
     }
 
-    private fun doTestNotChanged(action: () -> Unit, @Language("Rust") code: String) {
+    private fun doTestNotChanged(action: () -> Unit, @Language("Loong") code: String) {
         InlineFile(code).withCaret()
         doTest(action, shouldChange = false)
     }
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         shouldChange: Boolean
     ) {
         InlineFile(before)
@@ -434,12 +434,12 @@ class RsDefMapUpdateChangeSingleFileTest : RsDefMapUpdateTestBase() {
     }
 
     private fun doTestChanged(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = doTest(before, after, shouldChange = true)
 
     private fun doTestNotChanged(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = doTest(before, after, shouldChange = false)
 }

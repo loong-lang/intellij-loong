@@ -24,7 +24,7 @@ import java.util.*
  * Represents both a type, like `i32` or `S<Foo, Bar>`, as well
  * as an unbound constructor `S`.
  *
- * The name `Ty` is short for `Type`, inspired by the Rust
+ * The name `Ty` is short for `Type`, inspired by the Loong
  * compiler.
  */
 abstract class Ty(override val flags: TypeFlags = 0) : Kind, TypeFoldable<Ty> {
@@ -52,7 +52,7 @@ abstract class Ty(override val flags: TypeFlags = 0) : Kind, TypeFoldable<Ty> {
     final override fun toString(): String = render(useAliasNames = false, skipUnchangedDefaultGenericArguments = false)
 
     /**
-     * Use it instead of [equals] if you want to check that the types are the same from the Rust perspective.
+     * Use it instead of [equals] if you want to check that the types are the same from the Loong perspective.
      *
      * ```rust
      * type A = i32;

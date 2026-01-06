@@ -29,7 +29,7 @@ class RsResolveCacheCompletionTest : RsCompletionTestBase() {
         }
     """, "::", "::")
 
-    private fun doTest(@Language("Rust") before: String, @Language("Rust") after: String, vararg toType: String) {
+    private fun doTest(@Language("Loong") before: String, @Language("Loong") after: String, vararg toType: String) {
         InlineFile(before).withCaret()
 
         toType.forEach {

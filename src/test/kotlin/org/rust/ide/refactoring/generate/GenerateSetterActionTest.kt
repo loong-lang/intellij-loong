@@ -6,7 +6,7 @@
 package org.rust.ide.refactoring.generate
 
 class GenerateSetterActionTest : RsGenerateBaseTest() {
-    override val generateId: String = "Rust.GenerateSetter"
+    override val generateId: String = "Loong.GenerateSetter"
 
     fun `test primitive fields`() = doTest("""
         struct S {

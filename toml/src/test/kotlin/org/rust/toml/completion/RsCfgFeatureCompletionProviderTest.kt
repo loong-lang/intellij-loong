@@ -71,7 +71,7 @@ class RsCfgFeatureCompletionProviderTest : RsCompletionTestBase() {
         fn foo() {}
     """)
 
-    private fun doSingleCompletionByFileTree(builder: FileTreeBuilder.() -> Unit, @Language("Rust") after: String) {
+    private fun doSingleCompletionByFileTree(builder: FileTreeBuilder.() -> Unit, @Language("Loong") after: String) {
         completionFixture.doSingleCompletionByFileTree(fileTree(builder), after, forbidAstLoading = false)
     }
 }

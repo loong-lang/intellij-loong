@@ -64,14 +64,14 @@ class InjectLanguageIntentionTest : RsIntentionTestBase(InjectLanguageAction::cl
         |</inject>    }
     """.trimMargin())
 
-    private fun checkAvailable(@Language("Rust") code: String) {
+    private fun checkAvailable(@Language("Loong") code: String) {
         InlineFile(code.trimIndent()).withCaret()
         check(intention.isAvailable(project, myFixture.editor, myFixture.file)) {
             "Intention is not available"
         }
     }
 
-    private fun doTest(lang: String, @Language("Rust") code: String) {
+    private fun doTest(lang: String, @Language("Loong") code: String) {
         InlineFile(code.trimIndent()).withCaret()
         val language = InjectedLanguage.findLanguageById(lang)
         val injectable = Injectable.fromLanguage(language)

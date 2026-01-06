@@ -11,7 +11,7 @@ import org.rust.ide.inspections.lints.RsLintLevel.WARN
 import org.rust.lang.core.psi.ext.*
 
 /**
- * Rust lints.
+ * Loong lints.
  */
 sealed class RsLint(
     val id: String,

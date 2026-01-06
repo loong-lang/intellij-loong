@@ -34,7 +34,7 @@ class RsEnterInLineCommentHandler : EnterHandlerDelegateAdapter() {
         dataContext: DataContext,
         originalHandler: EditorActionHandler?
     ): Result {
-        // return if this is not a Rust file
+        // return if this is not a Loong file
         if (file !is RsFile) {
             return Result.Continue
         }

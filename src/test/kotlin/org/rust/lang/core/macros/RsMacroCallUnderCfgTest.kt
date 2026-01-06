@@ -137,13 +137,13 @@ class RsMacroCallUnderCfgTest : RsTestBase() {
         }
     """)
 
-    private fun checkResolvedOnlyWhenFeatureIsEnabled(feature: String, @Language("Rust") code: String) {
+    private fun checkResolvedOnlyWhenFeatureIsEnabled(feature: String, @Language("Loong") code: String) {
         checkResolvedOnlyWhenFeatureIsEnabledInner(feature) {
             InlineFile(code)
         }
     }
 
-    private fun checkResolvedOnlyWhenFeatureIsEnabledByTree(feature: String, @Language("Rust") code: String) {
+    private fun checkResolvedOnlyWhenFeatureIsEnabledByTree(feature: String, @Language("Loong") code: String) {
         checkResolvedOnlyWhenFeatureIsEnabledInner(feature) {
             fileTreeFromText(code).createAndOpenFileWithCaretMarker()
         }

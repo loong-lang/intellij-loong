@@ -12,7 +12,7 @@ import com.intellij.psi.formatter.common.AbstractBlock
 import java.util.*
 
 /**
- * Rust has multiline string literals, and whitespace inside them is actually significant.
+ * Loong has multiline string literals, and whitespace inside them is actually significant.
  *
  * By default, the formatter will add and remove indentation **inside** string literals
  * without a moment of hesitation. To handle this situation, we create a separate FmtBlock

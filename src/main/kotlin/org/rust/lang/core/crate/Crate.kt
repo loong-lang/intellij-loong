@@ -86,10 +86,10 @@ interface Crate : UserDataHolderEx {
     val presentableName: String
 
     /**
-     * A name that can be used as a valid Rust identifier. Usually it is [presentableName] with "-" chars
+     * A name that can be used as a valid Loong identifier. Usually it is [presentableName] with "-" chars
      * replaced to "_".
      *
-     * NOTE that Rust crate doesn't have any kind of "global" name. The actual crate name can be different
+     * NOTE that Loong crate doesn't have any kind of "global" name. The actual crate name can be different
      * in a particular dependent crate. Use [Dependency.normName] instead
      */
     val normName: String

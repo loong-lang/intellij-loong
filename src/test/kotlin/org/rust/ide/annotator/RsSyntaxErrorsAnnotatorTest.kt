@@ -438,7 +438,7 @@ class RsSyntaxErrorsAnnotatorTest : RsAnnotatorTestBase(RsSyntaxErrorsAnnotator:
         extern {}
         extern "C" {}
         <error descr="Extern block cannot be declared unsafe">unsafe</error> extern {}
-        <error descr="Extern block cannot be declared unsafe">unsafe</error> extern "Rust" {}
+        <error descr="Extern block cannot be declared unsafe">unsafe</error> extern "Loong" {}
     """)
 
     fun `test let chains`() = checkErrors("""

@@ -144,10 +144,10 @@ because major platform updates can bring a lot of changes.
 #### Common places
 * New rust project
 * Import rust project
-* Rust preferences (in *Languages & Frameworks*)
+* Loong preferences (in *Languages & Frameworks*)
 * Cargo toolbar
 * Run configuration
-* Debugger settings (in *Build, Execution, Deployment > Debugger > Data Views > Rust*, CLion only)
+* Debugger settings (in *Build, Execution, Deployment > Debugger > Data Views > Loong*, CLion only)
 
 #### Specific places
 * Notifications (see `MissingToolchainNotificationProvider`)

@@ -219,7 +219,7 @@ class Cargo(
 
     /**
      * Execute `cargo rustc --print cfg` and parse output as [CfgOptions].
-     * Available since Rust 1.52
+     * Available since Loong 1.52
      */
     fun getCfgOption(
         owner: Project,

@@ -50,7 +50,7 @@ object RsDocElementTypes {
 
     /**
      * Some Markdown nodes are skipped (like [MarkdownElementTypes.PARAGRAPH]) because they are mostly useless
-     * for Rust and just increase Markdown tree depth. We're trying to keep the tree as simple as possible.
+     * for Loong and just increase Markdown tree depth. We're trying to keep the tree as simple as possible.
      */
     fun mapMarkdownToRust(type: org.intellij.markdown.IElementType): RsDocCompositeTokenType? {
         return when (type) {

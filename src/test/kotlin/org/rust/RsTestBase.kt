@@ -348,8 +348,8 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     }
 
     protected fun checkByDirectory(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         expectError: Boolean = false,
         action: (TestProject) -> Unit
     ) {
@@ -361,8 +361,8 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     }
 
     protected fun checkByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         fileName: String = "main.rs",
         action: () -> Unit
     ) {
@@ -373,8 +373,8 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     }
 
     protected fun checkByTextWithLiveTemplate(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         toType: String,
         fileName: String = "main.rs",
         action: () -> Unit
@@ -390,7 +390,7 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     }
 
     protected fun checkCaretMove(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         action: () -> Unit
     ) {
         InlineFile(code.replace("/*caret_before*/", "<caret>").replace("/*caret_after*/", ""))
@@ -399,8 +399,8 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     }
 
     protected open fun checkEditorAction(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         actionId: String,
         trimIndent: Boolean = true,
     ) {
@@ -428,7 +428,7 @@ abstract class RsTestBase : BasePlatformTestCase(), RsTestCase {
     protected inline fun <reified X : Throwable> expect(f: () -> Unit) = org.rust.expect<X>(f)
 
         @Suppress("TestFunctionName")
-    protected fun InlineFile(@Language("Rust") code: String, name: String = "main.rs"): InlineFile {
+    protected fun InlineFile(@Language("Loong") code: String, name: String = "main.rs"): InlineFile {
         val (code2, unwrapper) = testWrapping.wrapCode(project, code)
         val inlineFile = InlineFile(myFixture, code2, name)
         unwrapper?.init(myFixture.file)

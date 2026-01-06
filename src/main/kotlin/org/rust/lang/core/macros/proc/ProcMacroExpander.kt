@@ -146,7 +146,7 @@ class ProcMacroExpander private constructor(
     }
 
     /**
-     * Attribute proc macros usually expect a correct Rust syntax passed as an input, but in an IDE
+     * Attribute proc macros usually expect a correct Loong syntax passed as an input, but in an IDE
      * a user usually has invalid syntax, especially during typing.
      * This function tries to fix up the syntax in the input
      */

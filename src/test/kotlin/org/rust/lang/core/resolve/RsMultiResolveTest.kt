@@ -156,7 +156,7 @@ class RsMultiResolveTest : RsResolveTestBase() {
         }        //^
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         InlineFile(code)
         val element = findElementInEditor<RsReferenceElement>()
         val ref = element.reference ?: error("Failed to get reference for `${element.text}`")

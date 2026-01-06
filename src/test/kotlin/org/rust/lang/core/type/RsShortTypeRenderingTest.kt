@@ -70,7 +70,7 @@ class RsShortTypeRenderingTest : RsTestBase() {
         } //^ Foo<i32>
     """)
 
-    private fun testShortTypeExpr(@Language("Rust") code: String) {
+    private fun testShortTypeExpr(@Language("Loong") code: String) {
         InlineFile(code)
         val (expr, expectedType) = findElementAndDataInEditor<RsExpr>()
         val actualType = expr.type.shortPresentableText

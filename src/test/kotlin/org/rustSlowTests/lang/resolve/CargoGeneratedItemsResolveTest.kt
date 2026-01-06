@@ -1060,7 +1060,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
     }
 
     companion object {
-        @Language("Rust")
+        @Language("Loong")
         private const val MAIN_RS = """
             include!(concat!(env!("OUT_DIR"), "/hello.rs"));
             fn main() {
@@ -1069,7 +1069,7 @@ class CargoGeneratedItemsResolveTest : RunConfigurationTestBase() {
             }
         """
 
-        @Language("Rust")
+        @Language("Loong")
         private const val BUILD_RS = """
             use std::env;
             use std::fs::File;

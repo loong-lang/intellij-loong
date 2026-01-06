@@ -2163,8 +2163,8 @@ class RsExtractFunctionTest : RsTestBase() {
     """, "test")
 
     private fun doTest(
-        @Language("Rust") code: String,
-        @Language("Rust") excepted: String,
+        @Language("Loong") code: String,
+        @Language("Loong") excepted: String,
         name: String,
         pub: Boolean = false,
         noSelected: List<String> = emptyList(),

@@ -69,7 +69,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Checking hello v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -113,13 +113,13 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Checking crate1 v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
               -Sync crate2 project
                Getting toolchain version
                -Updating workspace info
                 -Build scripts evaluation
                  Checking crate2 v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -165,13 +165,13 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Checking crate1 v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
               -Sync crate2 project
                Getting toolchain version
                -Updating workspace info
                 -Build scripts evaluation
                  Checking crate2 v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -197,7 +197,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                Getting toolchain version
                -Updating workspace info
                 Failed to run Cargo
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -234,7 +234,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Checking crate v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -264,7 +264,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Compiling hello v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -299,7 +299,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                   -build.rs
                    Mismatched types
                 Build scripts evaluation failed
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -334,7 +334,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                  -${project.root.name}
                   Failed to run custom build command for `hello v0.1.0 (${FileUtil.toSystemDependentName(project.root.path)})`
                 Build scripts evaluation failed
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -408,7 +408,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                  -${project.root.name}
                   Failed to run custom build command for `with-build-script v0.1.0 (${FileUtil.toSystemDependentName(project.root.path)}/with-build-script)`
                 Build scripts evaluation failed
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -438,7 +438,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Checking hello v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 
@@ -477,7 +477,7 @@ class SyncToolWindowTest : RsWithToolchainTestBase() {
                -Updating workspace info
                 -Build scripts evaluation
                  Compiling hello v0.1.0
-               Getting Rust stdlib
+               Getting Loong stdlib
         """)
     }
 

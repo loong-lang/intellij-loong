@@ -27,7 +27,7 @@ import java.nio.file.Paths
 import java.util.*
 
 /**
- * Rust project model represented roughly in the same way as in Cargo itself.
+ * Loong project model represented roughly in the same way as in Cargo itself.
  *
  * [CargoProjectsService] manages workspaces.
  */
@@ -127,7 +127,7 @@ interface CargoWorkspace {
     interface Target {
         val name: String
 
-        // target name must be a valid Rust identifier, so normalize it by mapping `-` to `_`
+        // target name must be a valid Loong identifier, so normalize it by mapping `-` to `_`
         // https://github.com/rust-lang/cargo/blob/ece4e963a3054cdd078a46449ef0270b88f74d45/src/cargo/core/manifest.rs#L299
         val normName: String get() = name.replace('-', '_')
 

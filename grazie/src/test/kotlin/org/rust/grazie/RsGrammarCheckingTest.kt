@@ -106,7 +106,7 @@ class RsGrammarCheckingTest : RsInspectionsTestBase(GrazieInspection::class) {
         }
     """, checkInDocumentation = true)
 
-    fun `test check injected Rust code in doc comments`() = doTest("""
+    fun `test check injected Loong code in doc comments`() = doTest("""
         ///
         /// ```
         /// let literal = "It is <TYPO>friend</TYPO> of human";
@@ -115,7 +115,7 @@ class RsGrammarCheckingTest : RsInspectionsTestBase(GrazieInspection::class) {
         pub fn foo() {}
     """, checkInStringLiterals = true)
 
-    fun `test no typos in injected Rust code in doc comments`() = doTest("""
+    fun `test no typos in injected Loong code in doc comments`() = doTest("""
         ///
         /// ```
         /// foo!(There is two apples);
@@ -124,7 +124,7 @@ class RsGrammarCheckingTest : RsInspectionsTestBase(GrazieInspection::class) {
     """, checkInDocumentation = true)
 
     private fun doTest(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         checkInStringLiterals: Boolean = false,
         checkInComments: Boolean = false,
         checkInDocumentation: Boolean = false

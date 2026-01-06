@@ -584,10 +584,10 @@ class RsExtractStructFieldsTest : RsTestBase() {
     """)
 
     private fun doAvailableTest(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         structName: String,
         selected: List<String>,
-        @Language("Rust") after: String
+        @Language("Loong") after: String
     ) {
         withMockStructMemberChooserUi(object : StructMemberChooserUi {
             override fun selectMembers(
@@ -600,13 +600,13 @@ class RsExtractStructFieldsTest : RsTestBase() {
             withMockExtractFieldsUi(object : ExtractFieldsUi {
                 override fun selectStructName(project: Project): String = structName
             }) {
-                checkEditorAction(before, after, "Rust.RsExtractStructFields")
+                checkEditorAction(before, after, "Loong.RsExtractStructFields")
             }
         }
     }
 
-    private fun doUnavailableTest(@Language("Rust") code: String) {
+    private fun doUnavailableTest(@Language("Loong") code: String) {
         InlineFile(code.trimIndent()).withCaret()
-        myFixture.launchAction("Rust.RsExtractStructFields", shouldBeEnabled = false)
+        myFixture.launchAction("Loong.RsExtractStructFields", shouldBeEnabled = false)
     }
 }

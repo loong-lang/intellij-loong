@@ -69,7 +69,7 @@ abstract class RsWithToolchainTestBase : CodeInsightFixtureTestCase<ModuleFixtur
 
         val reason = checkRustcVersionRequirements {
             val rustcVersion = rustupFixture.toolchain!!.rustc().queryVersion()?.semver
-            if (rustcVersion != null) RsResult.Ok(rustcVersion) else RsResult.Err("\"$name\": failed to query Rust version")
+            if (rustcVersion != null) RsResult.Ok(rustcVersion) else RsResult.Err("\"$name\": failed to query Loong version")
         }
         if (reason != null) {
             System.err.println("SKIP $reason")

@@ -11,7 +11,7 @@ import org.rust.WithProcMacroRustProjectDescriptor
 import org.rust.ide.experiments.RsExperiments
 
 /**
- * Tests for Rust Recursive Call Line Marker Provider
+ * Tests for Loong Recursive Call Line Marker Provider
  */
 class RsRecursiveCallLineMarkerProviderTest : RsLineMarkerProviderTestBase() {
 

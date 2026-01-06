@@ -3,7 +3,7 @@
 We use [Kotlin] language for the plugin. If you can program in Java, you should
 be able to read and write Kotlin code right away. Kotlin is deeply similar to
 Java, but has less verbose syntax and better safety. It also shares some
-characteristics with Rust: type inference, immutability by default, no null
+characteristics with Loong: type inference, immutability by default, no null
 pointers (apart from those that come from Java).
 
 If you are unsure how to implement something in Kotlin, ask a question in our
@@ -46,8 +46,8 @@ Common Gradle tasks are:
   - `./gradlew :test` -- more than five thousands tests. We love tests!
 
 Note the `:` in front of the task name. The repository contains several modules that belong to two independent
-plugins for Rust and TOML, which are organized as gradle subprojects. Running
-`./gradlew :task` executes the task only for root module (core module of Rust plugin), `./gradlew :intellij-toml:task` will run
+plugins for Loong and TOML, which are organized as gradle subprojects. Running
+`./gradlew :task` executes the task only for root module (core module of Loong plugin), `./gradlew :intellij-toml:task` will run
 the task for TOML module and `./gradlew task` will do for all modules.
 
 
@@ -68,7 +68,7 @@ the directory if this happens.
 
 You might want to install the following plugins:
   - [Grammar-Kit](https://plugins.jetbrains.com/plugin/6606-grammar-kit) to get highlighting for the files with BNFish grammar.
-  - [PsiViewer](https://plugins.jetbrains.com/plugin/227-psiviewer) to view the AST of Rust files right in the IDE.
+  - [PsiViewer](https://plugins.jetbrains.com/plugin/227-psiviewer) to view the AST of Loong files right in the IDE.
 
 
 # Contributing
@@ -104,7 +104,7 @@ Here are some example pull requests:
 
   - Adding a gutter icon: [#758](https://github.com/intellij-loong/intellij-loong/pull/758).
 
-And also a tutorial series "Contributing to Intellij-Rust" by [@Kobzol](https://github.com/Kobzol):
+And also a tutorial series "Contributing to Intellij-Loong" by [@Kobzol](https://github.com/Kobzol):
 
   - [\#0: Intro & setup](https://kobzol.github.io/rust/intellij/2020/07/31/contributing-0-setup.html).
   - [\#1: Fixing a bug in Nest Use intention](https://kobzol.github.io/rust/intellij/2020/07/31/contributing-1-nest-use-fix.html).
@@ -171,7 +171,7 @@ Try to keep the summary line of a commit message under 72 characters.
 
 # Project structure
 
-Rust plugin sources are divided into several modules. Almost all modules (except root and `plugin` ones) support
+Loong plugin sources are divided into several modules. Almost all modules (except root and `plugin` ones) support
 some functionality in particular IDE or integrate with another plugin. Like debugging in CLion or
 integration with `TOML` plugin.
 
@@ -181,9 +181,9 @@ of code from wrong optional dependency.
 Also, it allows us to compile and run tests of core module with different platforms
 like IDEA and CLion.
 
-The current Rust plugin modules:
+The current Loong plugin modules:
 * `:` - root/core module
-* `:plugin` - module to build/run/publish Rust plugin
+* `:plugin` - module to build/run/publish Loong plugin
 * `:idea` - contains code available only in IDEA
 * `:clion` - contains code available only in CLion
 * `:debugger` - debugger related code
@@ -242,7 +242,7 @@ Most tests are fixture-driven. They typically:
 #### Structure
 
 All test classes are placed in the `src/test/kotlin` directory. There are two
-ways of providing fixtures for the tests. The first one is to put Rust files
+ways of providing fixtures for the tests. The first one is to put Loong files
 in `src/test/resources`.
 
 In the example below `RsFormatterTest.kt` is the test class, `blocks.rs` is
@@ -260,11 +260,11 @@ final state. It is good practice to put fixtures in the same package as tests.
                  +-- blocks_after.rs
 
 Another way of providing fixtures is to use Kotlin's triple quoted multiline
-string literals. You can get Rust syntax highlighting inside them if you have a
-`@Language("Rust")` annotation applied. You can see an example
+string literals. You can get Loong syntax highlighting inside them if you have a
+`@Language("Loong")` annotation applied. You can see an example
 [here](https://github.com/intellij-loong/intellij-loong/blob/b5e680cc80e90523610016e662a131985aa88e56/src/test/kotlin/org/rust/ide/intentions/MoveTypeConstraintToWhereClauseIntentionTest.kt).
 
-In general, triple quoted string fixtures should be preferred over separate Rust files.
+In general, triple quoted string fixtures should be preferred over separate Loong files.
 
 
 #### Fixtures

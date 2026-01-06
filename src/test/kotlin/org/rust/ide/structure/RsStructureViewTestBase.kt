@@ -16,7 +16,7 @@ import javax.swing.tree.TreePath
 
 abstract class RsStructureViewTestBase : RsTestBase() {
     protected fun doTestSingleAction(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         expected: String,
         fileName: String = "main.rs",
         actions: StructureViewComponent.() -> Unit,
@@ -27,7 +27,7 @@ abstract class RsStructureViewTestBase : RsTestBase() {
     }
 
     protected fun doTestStructureView(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         fileName: String = "main.rs",
         actions: StructureViewComponent.() -> Unit,
     ) {

@@ -9,7 +9,7 @@ on:
                 description: 'Available values: `beta` and `stable`'
             update_changelog:
                 required: false
-                description: 'Enables/disables Rust changelog update'
+                description: 'Enables/disables Loong changelog update'
     schedule:
         - cron: '0 3 * * *'
 

@@ -16,9 +16,9 @@ abstract class RsGenerateBaseTest : RsTestBase() {
     protected data class MemberSelection(val member: String, val isSelected: Boolean = true)
 
     protected fun doTest(
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         chooser: List<MemberSelection>,
-        @Language("Rust") expected: String
+        @Language("Loong") expected: String
     ) {
         withMockStructMemberChooserUi(object : StructMemberChooserUi {
             override fun selectMembers(
@@ -34,7 +34,7 @@ abstract class RsGenerateBaseTest : RsTestBase() {
         }
     }
 
-    protected fun doUnavailableTest(@Language("Rust") code: String) {
+    protected fun doUnavailableTest(@Language("Loong") code: String) {
         InlineFile(code)
 
         withMockStructMemberChooserUi(object : StructMemberChooserUi {

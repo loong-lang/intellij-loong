@@ -8,11 +8,11 @@
     <extensions defaultExtensionNs="com.intellij">
         <psi.referenceContributor language="TOML"
                                   implementation="org.rust.toml.resolve.CargoTomlReferenceContributor"/>
-        <psi.referenceContributor language="Rust"
+        <psi.referenceContributor language="Loong"
                                   implementation="org.rust.toml.resolve.RsCargoTomlIntegrationReferenceContributor"/>
         <completion.contributor language="TOML"
                                 implementationClass="org.rust.toml.completion.CargoTomlCompletionContributor"/>
-        <completion.contributor language="Rust"
+        <completion.contributor language="Loong"
                                 implementationClass="org.rust.toml.completion.RsCargoTomlIntegrationCompletionContributor"/>
         <codeInsight.lineMarkerProvider language="TOML"
                                         implementationClass="org.rust.toml.CargoCrateDocLineMarkerProvider"/>
@@ -25,13 +25,13 @@
         <elementDescriptionProvider implementation="org.rust.toml.CargoTomlElementDescriptionProvider"/>
 
         <!--suppress PluginXmlExtensionRegistration -->
-        <localInspection groupName="Rust"
+        <localInspection groupName="Loong"
                          displayName="Missing features"
                          enabledByDefault="true" level="WARNING"
                          implementationClass="org.rust.toml.inspections.MissingFeaturesInspection"/>
 
         <localInspection language="TOML"
-                         groupPath="Rust"
+                         groupPath="Loong"
                          groupName="Cargo.toml"
                          displayName="Cyclic feature dependency"
                          enabledByDefault="true"
@@ -39,7 +39,7 @@
                          implementationClass="org.rust.toml.inspections.CargoTomlCyclicFeatureInspection"/>
         <localInspection language="TOML"
                          displayName="Crate not found"
-                         groupPath="Rust"
+                         groupPath="Loong"
                          groupName="Cargo.toml"
                          enabledByDefault="true"
                          level="WARNING"
@@ -47,14 +47,14 @@
 
         <localInspection language="TOML"
                          displayName="Invalid crate version"
-                         groupPath="Rust"
+                         groupPath="Loong"
                          groupName="Cargo.toml"
                          enabledByDefault="true"
                          level="WARNING"
                          implementationClass="org.rust.toml.inspections.CrateVersionInvalidInspection"/>
         <localInspection language="TOML"
                          displayName="New crate version available"
-                         groupPath="Rust"
+                         groupPath="Loong"
                          groupName="Cargo.toml"
                          enabledByDefault="true"
                          level="WARNING"
@@ -62,13 +62,13 @@
 
         <intentionAction>
             <className>org.rust.toml.intentions.ExpandDependencySpecificationIntention</className>
-            <category>Rust/Cargo.toml</category>
+            <category>Loong/Cargo.toml</category>
             <language>TOML</language>
         </intentionAction>
 
         <intentionAction>
             <className>org.rust.toml.intentions.SimplifyDependencySpecificationIntention</className>
-            <category>Rust/Cargo.toml</category>
+            <category>Loong/Cargo.toml</category>
             <language>TOML</language>
         </intentionAction>
 

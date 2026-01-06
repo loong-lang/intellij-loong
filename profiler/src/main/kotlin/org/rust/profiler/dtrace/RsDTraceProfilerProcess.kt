@@ -74,7 +74,7 @@ class RsDTraceProfilerProcess private constructor(
             val settings = DTraceProfilerSettings.instance.state
 
             // WARNING: Do not use such solution for other needs!
-            // We want to always use -xmangled option because DTrace cannot demangle Rust symbols correctly
+            // We want to always use -xmangled option because DTrace cannot demangle Loong symbols correctly
             val element = XmlSerializer.serialize(settings)
             val settingsCopy = XmlSerializer.deserialize(element, SimpleProfilerSettingsState::class.java)
             settingsCopy.defaultCmdArgs.add("-xmangled")

@@ -19,7 +19,7 @@ import java.util.*
 import java.util.function.Function
 
 /**
- * This class aggregates other Rust run configuration [producers] and manages the search & creation of run
+ * This class aggregates other Loong run configuration [producers] and manages the search & creation of run
  * configurations, taking into account configurations that other [producers] can create.
  * The problem with the previous approach is that if there is an existing configuration that matches the context, the
  * platform does not compare this configuration with those that can be created by other producers, even if these

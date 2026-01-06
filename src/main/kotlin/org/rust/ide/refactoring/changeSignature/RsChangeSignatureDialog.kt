@@ -328,7 +328,7 @@ private class ChangeSignatureDialog(project: Project, descriptor: SignatureDescr
             val functionName = myNameField.text
             if (validateName(functionName)) {
                 config.name = functionName
-            } else return "Function name must be a valid Rust identifier"
+            } else return "Function name must be a valid Loong identifier"
         }
 
         if (myReturnTypeField != null) {
@@ -341,7 +341,7 @@ private class ChangeSignatureDialog(project: Project, descriptor: SignatureDescr
             if (returnType != null) {
                 config.returnTypeDisplay = returnType
             } else {
-                return "Function return type must be a valid Rust type"
+                return "Function return type must be a valid Loong type"
             }
         }
 

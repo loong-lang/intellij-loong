@@ -17,7 +17,7 @@ class CargoCommandConfigurationType : ConfigurationTypeBase(
     "CargoCommandRunConfiguration",
     "Cargo",
     "Cargo command run configuration",
-    RsIcons.RUST
+    RsIcons.LOONG
 ) {
     init {
         addFactory(CargoConfigurationFactory(this))
@@ -26,7 +26,7 @@ class CargoCommandConfigurationType : ConfigurationTypeBase(
     val factory: ConfigurationFactory get() = configurationFactories.single()
 
     override fun getHelpTopic(): String? =
-        // Only IDEA and CLion have special page about IntelliJ Rust in their help
+        // Only IDEA and CLion have special page about IntelliJ Loong in their help
         if (PlatformUtils.isIntelliJ() || PlatformUtils.isCLion()) "rundebugconfigs.cargocommand" else null
 
     companion object {

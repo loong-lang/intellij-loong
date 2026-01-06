@@ -159,12 +159,12 @@ class RsCompletionAutoPopupTest : RsCompletionTestBase() {
 
     override fun runInDispatchThread(): Boolean = false
 
-    private fun checkPopupIsShownAfterTyping(@Language("Rust") code: String, toType: String) {
+    private fun checkPopupIsShownAfterTyping(@Language("Loong") code: String, toType: String) {
         configureAndType(code, toType)
         assertNotNull(tester.lookup)
     }
 
-    private fun checkPopupIsNotShownAfterTyping(@Language("Rust") code: String, toType: String) {
+    private fun checkPopupIsNotShownAfterTyping(@Language("Loong") code: String, toType: String) {
         configureAndType(code, toType)
         assertNull(tester.lookup)
     }

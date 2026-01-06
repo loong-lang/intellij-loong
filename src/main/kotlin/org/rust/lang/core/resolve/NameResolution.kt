@@ -54,7 +54,7 @@ import org.rust.openapiext.*
 import org.rust.stdext.buildList
 import org.rust.stdext.withPrevious
 
-// IntelliJ Rust name resolution algorithm.
+// IntelliJ Loong name resolution algorithm.
 // Collapse all methods (`ctrl shift -`) to get a bird's eye view.
 //
 // The entry point is
@@ -83,7 +83,7 @@ import org.rust.stdext.withPrevious
 //   * The results of name resolution are cached and invalidated on every code change.
 //     Caching also is handled by `RsReferenceCached`.
 //   * Ideally, all of the methods except for `processLexicalDeclarations` should operate on stubs only.
-//   * Rust uses two namespaces for declarations ("types" and "values"). The necessary namespace is
+//   * Loong uses two namespaces for declarations ("types" and "values"). The necessary namespace is
 //     determined by the syntactic position of the reference in `processResolveVariants` function and
 //     is passed down to the `processDeclarations` functions.
 //   * Instead of `getParent` we use `getContext` here. This trick allows for funny things like creating
@@ -1373,7 +1373,7 @@ private fun processAssociatedItems(
         for ((name, member) in traitOrImpl.implAndTraitExpandedMembers.entriesWithNames(processor.names)) {
             if (!nsFilter(member)) continue
 
-            // In Rust, inherent impl members (`impl Foo {}`) wins over trait impl members (`impl T for Foo {}`).
+            // In Loong, inherent impl members (`impl Foo {}`) wins over trait impl members (`impl T for Foo {}`).
             // Note that `findImplsAndTraits` returns ordered sequence: inherent impls are placed to the head
             if (isInherent) {
                 visitedInherent[name] = member
@@ -1472,7 +1472,7 @@ private fun processLexicalDeclarations(
 
         val alreadyProcessedNames = hashSetOf<String>()
 
-        // Rust allows to defined several bindings in single pattern to the same name,
+        // Loong allows to defined several bindings in single pattern to the same name,
         // but they all must bind the same variables, hence we can inspect only the first one.
         // See https://github.com/rust-lang/rfcs/blob/master/text/2535-or-patterns.md
         val patternProcessor = processor.wrapWithFilter { e ->

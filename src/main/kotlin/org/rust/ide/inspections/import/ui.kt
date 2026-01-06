@@ -130,7 +130,7 @@ private class RsImportCandidateCellRenderer : DefaultPsiElementCellRenderer() {
     override fun getItemLocation(value: Any?): TextWithIcon? {
         val crate = value?.importCandidate?.crate ?: return null
         return when (crate.origin) {
-            PackageOrigin.STDLIB, PackageOrigin.STDLIB_DEPENDENCY -> TextWithIcon(crate.normName, RsIcons.RUST)
+            PackageOrigin.STDLIB, PackageOrigin.STDLIB_DEPENDENCY -> TextWithIcon(crate.normName, RsIcons.LOONG)
             PackageOrigin.DEPENDENCY -> TextWithIcon(crate.normName, CargoIcons.ICON)
             else -> null
         }

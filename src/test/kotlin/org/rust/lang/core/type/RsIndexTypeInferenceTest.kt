@@ -147,7 +147,7 @@ class RsIndexTypeInferenceTest : RsTypificationTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String) {
+    private fun doTest(@Language("Loong") code: String) {
         val indexLangItem = """
             #[lang = "index"]
             pub trait Index<Idx: ?Sized> {

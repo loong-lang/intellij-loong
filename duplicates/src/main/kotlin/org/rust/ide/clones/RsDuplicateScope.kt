@@ -32,7 +32,7 @@ class RsDuplicateScope : CommonDuplicateScope() {
      *
      * Used as a DuplicateScope id in settings serialization
      */
-    override val languageName: String = "Rust"
+    override val languageName: String = "Loong"
 
     override fun getIndexVersion(): Int = RustParserDefinition.PARSER_VERSION + VERSION
 

@@ -39,7 +39,7 @@ private class RsCustomBinariesLLDBDriverConfiguration(
     private val binaries: LLDBStatus.Binaries,
     isElevated: Boolean
 ) : RsLLDBDriverConfiguration(isElevated) {
-    override fun getDriverName(): String = "Rust LLDB"
+    override fun getDriverName(): String = "Loong LLDB"
     override fun useSTLRenderers(): Boolean = false
     override fun getLLDBFrameworkFile(architectureType: ArchitectureType): File = binaries.frameworkFile
     override fun getLLDBFrontendFile(architectureType: ArchitectureType): File = binaries.frontendFile

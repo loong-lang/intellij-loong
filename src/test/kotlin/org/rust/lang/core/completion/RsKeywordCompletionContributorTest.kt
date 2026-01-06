@@ -984,7 +984,7 @@ class RsKeywordCompletionContributorTest : RsCompletionTestBase() {
 
     // Smart mode is used for not completion tests to disable additional results
     // from language agnostic `com.intellij.codeInsight.completion.WordCompletionContributor`
-    override fun checkNoCompletion(@Language("Rust") code: String) {
+    override fun checkNoCompletion(@Language("Loong") code: String) {
         val dumbService = DumbServiceImpl.getInstance(project)
         val oldValue = dumbService.isDumb
         try {
@@ -997,8 +997,8 @@ class RsKeywordCompletionContributorTest : RsCompletionTestBase() {
 
     private fun checkCompletion(
         lookupStrings: List<String>,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) {
         for (lookupString in lookupStrings) {
             checkCompletion(lookupString, before, after.replace("/*lookup*/", lookupString))

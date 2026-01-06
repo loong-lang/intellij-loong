@@ -45,9 +45,9 @@ class CratesLocalIndexUpdater : Disposable {
     fun updateCratesIoGitIndex() {
         checkIsDispatchThread()
         if (isUpdating) return
-        // If there isn't any open project with Rust, we don't need to update anything
+        // If there isn't any open project with Loong, we don't need to update anything
         // because there isn't client for the corresponding data.
-        // When next project with Rust is opened,
+        // When next project with Loong is opened,
         // its project model update will trigger `org.rust.toml.crates.local.CratesLocalIndexWaker`
         // which invokes `updateCratesIoGitIndex` again
         if (!hasOpenRustProject) return

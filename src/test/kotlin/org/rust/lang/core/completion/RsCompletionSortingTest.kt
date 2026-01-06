@@ -515,7 +515,7 @@ class RsCompletionSortingTest : RsTestBase() {
         RsMacro::class to "vec_local",
     ))
 
-    private fun doTest(@Language("Rust") code: String, expected: List<Pair<KClass<out Any>, String>>) {
+    private fun doTest(@Language("Loong") code: String, expected: List<Pair<KClass<out Any>, String>>) {
         InlineFile(code).withCaret()
         val elements = myFixture.completeBasic()
         check(elements.size == expected.size) {

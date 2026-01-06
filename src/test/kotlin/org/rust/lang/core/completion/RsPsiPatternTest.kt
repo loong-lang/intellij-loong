@@ -557,13 +557,13 @@ class RsPsiPatternTest : RsTestBase() {
         fn foo() {}//^
     """, RsPsiPattern.insideAnyCfgFeature)
 
-    private inline fun <reified T : PsiElement> testPattern(@Language("Rust") code: String, pattern: ElementPattern<T>) {
+    private inline fun <reified T : PsiElement> testPattern(@Language("Loong") code: String, pattern: ElementPattern<T>) {
         InlineFile(code)
         val element = findElementInEditor<T>()
         assertTrue(pattern.accepts(element))
     }
 
-    private inline fun <reified T : PsiElement> testAttributePattern(@Language("Rust") code: String, pattern: ElementPattern<T>) {
+    private inline fun <reified T : PsiElement> testAttributePattern(@Language("Loong") code: String, pattern: ElementPattern<T>) {
         testPattern(code, pattern)
         val cfgAttrPrefix = "cfg_attr(unix, "
         val codeWithCfgAttr = code.replace("""(#!?)\[foo]""".toRegex(), "$1[${cfgAttrPrefix}foo)]")
@@ -572,7 +572,7 @@ class RsPsiPatternTest : RsTestBase() {
         testPattern(codeWithCfgAttr, pattern)
     }
 
-    private inline fun <reified T : PsiElement> testPatternNegative(@Language("Rust") code: String, pattern: ElementPattern<T>) {
+    private inline fun <reified T : PsiElement> testPatternNegative(@Language("Loong") code: String, pattern: ElementPattern<T>) {
         InlineFile(code)
         val element = findElementInEditor<T>()
         assertFalse(pattern.accepts(element, null))

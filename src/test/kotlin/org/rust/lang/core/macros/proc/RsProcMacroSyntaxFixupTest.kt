@@ -104,7 +104,7 @@ class RsProcMacroSyntaxFixupTest : RsTestBase() {
         }
     """)
 
-    private fun checkSyntaxFixup(input: String, @Language("Rust") expectedOutput: String) {
+    private fun checkSyntaxFixup(input: String, @Language("Loong") expectedOutput: String) {
         InlineFile("""
             |use test_proc_macros::attr_as_is;
             |

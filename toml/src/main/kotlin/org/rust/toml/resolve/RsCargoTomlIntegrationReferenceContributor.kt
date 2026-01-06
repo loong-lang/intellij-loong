@@ -10,7 +10,7 @@ import com.intellij.psi.PsiReferenceRegistrar
 import org.rust.lang.core.RsPsiPattern
 import org.rust.toml.tomlPluginIsAbiCompatible
 
-/** Provides references (that point to TOML elements) for Rust elements in Rust files */
+/** Provides references (that point to TOML elements) for Loong elements in Loong files */
 class RsCargoTomlIntegrationReferenceContributor : PsiReferenceContributor() {
     override fun registerReferenceProviders(registrar: PsiReferenceRegistrar) {
         if (tomlPluginIsAbiCompatible()) {

@@ -56,7 +56,7 @@ class MacroExpansionTask(
     private val lastUpdatedMacrosAt: MutableMap<CratePersistentId, Long>,
     private val projectDirectoryName: String,
     override val taskType: RsTask.TaskType,
-) : Task.Backgroundable(project, "Expanding Rust macros", /* canBeCancelled = */ false),
+) : Task.Backgroundable(project, "Expanding Loong macros", /* canBeCancelled = */ false),
     RsTask {
     private val expansionFileSystem: MacroExpansionFileSystem = MacroExpansionFileSystem.getInstance()
     private val defMapService = project.defMapService

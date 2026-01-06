@@ -448,7 +448,7 @@ class RsStubTest : RsTestBase() {
               MACRO:RsMacroStub
     """)
 
-    private fun doTest(@Language("Rust") code: String, expectedStubText: String) {
+    private fun doTest(@Language("Loong") code: String, expectedStubText: String) {
         val fileName = "main.rs"
         fileTreeFromText("//- $fileName\n$code").create()
         val vFile = myFixture.findFileInTempDir(fileName)

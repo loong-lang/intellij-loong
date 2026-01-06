@@ -30,8 +30,8 @@ class RsDirectoryProjectGenerator : DirectoryProjectGeneratorBase<ConfigurationD
 
     private var peer: RsProjectGeneratorPeer? = null
 
-    override fun getName(): String = "Rust"
-    override fun getLogo(): Icon = RsIcons.RUST
+    override fun getName(): String = "Loong"
+    override fun getLogo(): Icon = RsIcons.LOONG
     override fun createPeer(): ProjectGeneratorPeer<ConfigurationData> = RsProjectGeneratorPeer().also { peer = it }
 
     override fun validate(baseDirPath: String): ValidationResult {

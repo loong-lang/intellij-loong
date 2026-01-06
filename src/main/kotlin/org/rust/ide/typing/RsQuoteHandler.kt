@@ -54,7 +54,7 @@ class RsQuoteHandler : SimpleTokenSetQuoteHandler(
             return lastChar != '#' && lastChar != '"'
         }
         if (super.isNonClosedLiteral(iterator, chars)) return true
-        // Rust allows multiline literals, so an unclosed quote will
+        // Loong allows multiline literals, so an unclosed quote will
         // match with an opening quote of the next literal.
         // So we check that the LAST token in the document is
         // unclosed string literal

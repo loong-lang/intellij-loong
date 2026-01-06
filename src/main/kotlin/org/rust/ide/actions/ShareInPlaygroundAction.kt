@@ -78,7 +78,7 @@ class ShareInPlaygroundAction : DumbAwareAction() {
             val channel = file.cargoProject?.rustcInfo?.version?.channel?.channel ?: "stable"
             val edition = file.crate.edition.presentation
 
-            object : Task.Backgroundable(project, RsBundle.message("action.Rust.ShareInPlayground.progress.title")) {
+            object : Task.Backgroundable(project, RsBundle.message("action.Loong.ShareInPlayground.progress.title")) {
 
                 @Volatile
                 private var gistId: String? = null
@@ -102,12 +102,12 @@ class ShareInPlaygroundAction : DumbAwareAction() {
 
                 override fun onSuccess() {
                     val url = "https://play.rust-lang.org/?version=$channel&edition=$edition&gist=$gistId"
-                    val copyUrlAction = NotificationAction.createSimple(RsBundle.message("action.Rust.ShareInPlayground.notification.copy.url.text")) {
+                    val copyUrlAction = NotificationAction.createSimple(RsBundle.message("action.Loong.ShareInPlayground.notification.copy.url.text")) {
                         CopyPasteManager.getInstance().setContents(StringSelection(url))
                     }
                     project.showBalloon(
-                        RsBundle.message("action.Rust.ShareInPlayground.notification.title"),
-                        RsBundle.message("action.Rust.ShareInPlayground.notification.text", url),
+                        RsBundle.message("action.Loong.ShareInPlayground.notification.title"),
+                        RsBundle.message("action.Loong.ShareInPlayground.notification.text", url),
                         NotificationType.INFORMATION,
                         copyUrlAction,
                         NotificationListener.URL_OPENING_LISTENER
@@ -119,8 +119,8 @@ class ShareInPlaygroundAction : DumbAwareAction() {
                         super.onThrowable(error)
                     }
                     project.showBalloon(
-                        RsBundle.message("action.Rust.ShareInPlayground.notification.title"),
-                        RsBundle.message("action.Rust.ShareInPlayground.notification.error"),
+                        RsBundle.message("action.Loong.ShareInPlayground.notification.title"),
+                        RsBundle.message("action.Loong.ShareInPlayground.notification.error"),
                         NotificationType.ERROR
                     )
                 }
@@ -149,12 +149,12 @@ class ShareInPlaygroundAction : DumbAwareAction() {
             }
 
             val message = if (hasSelection) {
-                RsBundle.message("action.Rust.ShareInPlayground.confirmation.selected.text")
+                RsBundle.message("action.Loong.ShareInPlayground.confirmation.selected.text")
             } else {
-                RsBundle.message("action.Rust.ShareInPlayground.confirmation", file.name)
+                RsBundle.message("action.Loong.ShareInPlayground.confirmation", file.name)
             }
 
-            return MessageDialogBuilder.okCancel(RsBundle.message("action.Rust.ShareInPlayground.text"), message)
+            return MessageDialogBuilder.okCancel(RsBundle.message("action.Loong.ShareInPlayground.text"), message)
                 .yesText(Messages.getOkButton())
                 .noText(Messages.getCancelButton())
                 .icon(Messages.getQuestionIcon())

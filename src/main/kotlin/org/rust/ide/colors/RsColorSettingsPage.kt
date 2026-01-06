@@ -16,7 +16,7 @@ import org.rust.ide.icons.RsIcons
 
 class RsColorSettingsPage : ColorSettingsPage {
     override fun getDisplayName() = RsBundle.message("settings.rust.color.scheme.title")
-    override fun getIcon() = RsIcons.RUST
+    override fun getIcon() = RsIcons.LOONG
     override fun getAttributeDescriptors() = ATTRS
     override fun getColorDescriptors(): Array<ColorDescriptor> = ColorDescriptor.EMPTY_ARRAY
     override fun getHighlighter() = RsHighlighter()

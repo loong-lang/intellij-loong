@@ -17,7 +17,7 @@ import org.rust.lang.core.psi.RsFile
 
 class ShareInPlaygroundIntention : RsElementBaseIntentionAction<Context>(), LowPriorityAction {
     override fun getText(): String = familyName
-    override fun getFamilyName(): String = RsBundle.message("action.Rust.ShareInPlayground.text")
+    override fun getFamilyName(): String = RsBundle.message("action.Loong.ShareInPlayground.text")
 
     override val attributeMacroHandlingStrategy: InvokeInside get() = InvokeInside.MACRO_CALL
     override val functionLikeMacroHandlingStrategy: InvokeInside get() = InvokeInside.MACRO_CALL

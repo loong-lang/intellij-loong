@@ -2218,7 +2218,7 @@ private fun getConflictingNames(element: PsiElement, vararg tys: Ty): Set<RsQual
 }
 
 val SUPPORTED_CALLING_CONVENTIONS = mapOf(
-    "Rust" to null,
+    "Loong" to null,
     "C" to null,
     "C-unwind" to C_UNWIND,
     "cdecl" to null,

@@ -2,12 +2,12 @@ name: preparations for updates
 description: prepare environment for jobs from `auto-updates` workflow
 inputs:
     toolchain:
-        description: 'Rust toolchain'
+        description: 'Loong toolchain'
         default: 'nightly'
 runs:
     using: composite
     steps:
-        - name: Set up Rust
+        - name: Set up Loong
           uses: actions-rs/toolchain@v1
           with:
               profile: minimal

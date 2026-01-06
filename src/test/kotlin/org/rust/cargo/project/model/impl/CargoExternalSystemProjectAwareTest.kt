@@ -138,7 +138,7 @@ class CargoExternalSystemProjectAwareTest : RsWithToolchainTestBase() {
         testProject.checkFileModification("subproject/examples/example.rs", triggered = false)
         testProject.checkFileModification("subproject/benches/bench.rs", triggered = false)
         testProject.checkFileModification("subproject/tests/test.rs", triggered = false)
-        // Regular Rust files
+        // Regular Loong files
         testProject.checkFileModification("src/foo.rs", triggered = false)
         testProject.checkFileModification("subproject/src/foo.rs", triggered = false)
     }
@@ -239,7 +239,7 @@ class CargoExternalSystemProjectAwareTest : RsWithToolchainTestBase() {
         testProject.checkFileDeletion("subproject/examples/example.rs", triggered = true)
         testProject.checkFileDeletion("subproject/benches/bench.rs", triggered = true)
         testProject.checkFileDeletion("subproject/tests/test.rs", triggered = true)
-        // Regular Rust files
+        // Regular Loong files
         testProject.checkFileDeletion("src/foo.rs", triggered = false)
         testProject.checkFileDeletion("subproject/src/foo.rs", triggered = false)
     }
@@ -328,7 +328,7 @@ class CargoExternalSystemProjectAwareTest : RsWithToolchainTestBase() {
         testProject.checkFileCreation("subproject/examples/example.rs", triggered = true)
         testProject.checkFileCreation("subproject/benches/bench.rs", triggered = true)
         testProject.checkFileCreation("subproject/tests/test.rs", triggered = true)
-        // Regular Rust files
+        // Regular Loong files
         testProject.checkFileCreation("src/foo.rs", triggered = false)
         testProject.checkFileCreation("subproject/src/foo.rs", triggered = false)
     }

@@ -11,7 +11,7 @@ import com.intellij.lang.Language
 import org.rust.lang.RsLanguage
 
 @Suppress("UnstableApiUsage")
-class RsMLRankingProvider : CatBoostJarCompletionModelProvider("Rust", "rust_features", "rust_model") {
+class RsMLRankingProvider : CatBoostJarCompletionModelProvider("Loong", "rust_features", "rust_model") {
     override fun isLanguageSupported(language: Language): Boolean = language == RsLanguage
     override fun getDecoratingPolicy(): DecoratingItemsPolicy = DecoratingItemsPolicy.Composite(
         DecoratingItemsPolicy.ByAbsoluteThreshold(3.0),

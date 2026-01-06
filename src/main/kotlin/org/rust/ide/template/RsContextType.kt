@@ -47,7 +47,7 @@ sealed class RsContextType(
 
     override fun createHighlighter(): SyntaxHighlighter = RsHighlighter()
 
-    class Generic : RsContextType("RUST_FILE", "Rust", EverywhereContextType::class) {
+    class Generic : RsContextType("RUST_FILE", "Loong", EverywhereContextType::class) {
         override fun isInContext(element: PsiElement): Boolean = true
     }
 

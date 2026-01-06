@@ -31,7 +31,7 @@ abstract class RsCompletionTestBase(private val defaultFileName: String = "main.
         "Use doSingleCompletion, because it's simpler and checks caret position as well",
         replaceWith = ReplaceWith("doSingleCompletion(code, code)")
     )
-    protected fun checkSingleCompletion(target: String, @Language("Rust") code: String) {
+    protected fun checkSingleCompletion(target: String, @Language("Loong") code: String) {
         InlineFile(code).withCaret()
         executeSoloCompletion()
 
@@ -54,79 +54,79 @@ abstract class RsCompletionTestBase(private val defaultFileName: String = "main.
     }
 
     protected fun doFirstCompletion(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = completionFixture.doFirstCompletion(before, after)
 
     protected fun doSingleCompletion(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = completionFixture.doSingleCompletion(before, after)
 
     protected fun doSingleCompletionByFileTree(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = completionFixture.doSingleCompletionByFileTree(before, after)
 
     protected fun checkContainsCompletion(
         variant: String,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkContainsCompletion(code, listOf(variant), render)
 
     protected fun checkContainsCompletion(
         variants: List<String>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkContainsCompletion(code, variants, render)
 
     protected fun checkContainsCompletionByFileTree(
         variant: String,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkContainsCompletionByFileTree(code, listOf(variant), render)
 
     protected fun checkContainsCompletionByFileTree(
         variants: List<String>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkContainsCompletionByFileTree(code, variants, render)
 
     protected fun checkContainsCompletionPrefixes(
         prefixes: List<String>,
-        @Language("Rust") code: String
+        @Language("Loong") code: String
     ) = completionFixture.checkContainsCompletionPrefixes(code, prefixes)
 
     protected fun checkCompletion(
         lookupString: String,
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         completionChar: Char = '\n'
     ) = completionFixture.checkCompletion(lookupString, before, after, completionChar)
 
     protected fun checkNotContainsCompletion(
         variant: String,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkNotContainsCompletion(code, setOf(variant), render)
 
     protected fun checkNotContainsCompletion(
         variants: Set<String>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) = completionFixture.checkNotContainsCompletion(code, variants, render)
 
     protected fun checkNotContainsCompletion(
         variants: List<String>,
-        @Language("Rust") code: String,
+        @Language("Loong") code: String,
         render: LookupElement.() -> String = { lookupString }
     ) {
         completionFixture.checkNotContainsCompletion(code, variants.toSet(), render)
     }
 
-    protected open fun checkNoCompletion(@Language("Rust") code: String) = completionFixture.checkNoCompletion(code)
+    protected open fun checkNoCompletion(@Language("Loong") code: String) = completionFixture.checkNoCompletion(code)
 
-    protected fun checkNoCompletionByFileTree(@Language("Rust") code: String) =
+    protected fun checkNoCompletionByFileTree(@Language("Loong") code: String) =
         completionFixture.checkNoCompletionByFileTree(code)
 
     protected fun executeSoloCompletion() = completionFixture.executeSoloCompletion()

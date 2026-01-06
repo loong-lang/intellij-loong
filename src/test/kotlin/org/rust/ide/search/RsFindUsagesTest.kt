@@ -319,9 +319,9 @@ class RsFindUsagesTest : RsTestBase() {
         }
     """)
 
-    private fun doTestByText(@Language("Rust") code: String) = doTestByFileTree("//- main.rs\n$code")
+    private fun doTestByText(@Language("Loong") code: String) = doTestByFileTree("//- main.rs\n$code")
 
-    private fun doTestByFileTree(@Language("Rust") code: String) {
+    private fun doTestByFileTree(@Language("Loong") code: String) {
         val testProject = configureByFileTree(code)
 
         val (_, _, offset) = findElementWithDataAndOffsetInEditor<PsiElement>()

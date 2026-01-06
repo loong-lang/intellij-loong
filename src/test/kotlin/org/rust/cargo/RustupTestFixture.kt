@@ -56,7 +56,7 @@ open class RustupTestFixture(
             .toPath()
 
         VfsRootAccess.allowRootAccess(testRootDisposable, cargoPath.toString())
-        // actions-rs/toolchain on CI creates symlink at `~/.cargo` while setting up of Rust toolchain
+        // actions-rs/toolchain on CI creates symlink at `~/.cargo` while setting up of Loong toolchain
         val canonicalCargoPath = cargoPath.toRealPath()
         if (cargoPath != canonicalCargoPath) {
             VfsRootAccess.allowRootAccess(testRootDisposable, canonicalCargoPath.toString())

@@ -414,12 +414,12 @@ class RsNeedlessLifetimesInspectionTest : RsInspectionsTestBase(RsNeedlessLifeti
     """, checkWeakWarn = true)
 
     private fun doTest(
-        @Language("Rust") text: String
+        @Language("Loong") text: String
     ) = checkFixIsUnavailable(FIX_NAME, text, checkWeakWarn = true)
 
     private fun doTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String
+        @Language("Loong") before: String,
+        @Language("Loong") after: String
     ) = checkFixByText(FIX_NAME, before, after, checkWeakWarn = true)
 
     companion object {

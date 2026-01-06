@@ -212,7 +212,7 @@ fun AnnotationHolder.createAnnotationsForFile(
         message.quickFixes
             .singleOrNull { it.applicability <= minApplicability }
             ?.let { f ->
-                val key = HighlightDisplayKey.findOrRegister(RUST_EXTERNAL_LINTER_ID, "Rust external linter")
+                val key = HighlightDisplayKey.findOrRegister(RUST_EXTERNAL_LINTER_ID, "Loong external linter")
                 annotationBuilder.newFix(f).key(key).registerFix()
             }
 

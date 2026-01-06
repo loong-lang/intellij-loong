@@ -1,6 +1,6 @@
 # Fake Grammar-Kit dependencies
 
-We use [Grammar-Kit] to generate Rust parser and PSI classes from BNF-like grammar.
+We use [Grammar-Kit] to generate Loong parser and PSI classes from BNF-like grammar.
 Grammar-Kit decides on how to generate PSI based not only on a `.bnf` grammar file, but also on contents of
 Java/Kotlin files referenced in that `.bnf` file. In particular: 
 

@@ -87,7 +87,7 @@ class CargoToolWindow(
 ) {
     val toolbar: ActionToolbar = run {
         val actionManager = ActionManager.getInstance()
-        actionManager.createActionToolbar(CARGO_TOOLBAR_PLACE, actionManager.getAction("Rust.Cargo") as DefaultActionGroup, true)
+        actionManager.createActionToolbar(CARGO_TOOLBAR_PLACE, actionManager.getAction("Loong.Cargo") as DefaultActionGroup, true)
     }
 
     val note = JEditorPane("text/html", html("")).apply {

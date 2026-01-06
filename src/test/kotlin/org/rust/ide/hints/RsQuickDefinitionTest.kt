@@ -161,7 +161,7 @@ class RsQuickDefinitionTest : RsTestBase() {
                 }
     """)
 
-    private fun doTest(@Language("Rust") code: String, expectedRaw: String) {
+    private fun doTest(@Language("Loong") code: String, expectedRaw: String) {
         InlineFile(code)
         val actualText = performShowImplementationAction()
         checkNotNull(actualText)

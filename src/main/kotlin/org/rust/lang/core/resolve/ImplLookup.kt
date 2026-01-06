@@ -1299,7 +1299,7 @@ class ImplLookup(
      * If `Ty` is not convertible into a future, or if the `Future` and `IntoFuture` lang items are missing,
      * returns `TyUnknown`.
      *
-     * The `IntoFuture` trait is automatically used for Rust versions which support it.
+     * The `IntoFuture` trait is automatically used for Loong versions which support it.
      */
     fun lookupFutureOutputTy(ty: Ty, strict: Boolean): TyWithObligations<Ty> {
         val futureTrait = items.IntoFuture ?: items.Future ?: return TyWithObligations(TyUnknown)
@@ -1512,7 +1512,7 @@ private fun <T : Ty> T.withObligations(obligations: List<Obligation> = emptyList
     TyWithObligations(this, obligations)
 
 /**
- * The Rust plugin does not index impls expanded from macro calls located inside function bodies, so if we want to take
+ * The Loong plugin does not index impls expanded from macro calls located inside function bodies, so if we want to take
  * them into account during type inference, we have to collect them manually
  */
 private val RsElement.implsFromNestedMacros: Map<TyFingerprint, List<RsCachedImplItem>>

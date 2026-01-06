@@ -32,11 +32,11 @@ abstract class RsCodeFragmentCompletionTestBase(
         super.tearDown()
     }
 
-    protected fun checkContainsCompletion(@Language("Rust") context: String, fragment: String, variant: String) {
+    protected fun checkContainsCompletion(@Language("Loong") context: String, fragment: String, variant: String) {
         completionFixture.checkContainsCompletion(Data(context, fragment), listOf(variant))
     }
 
-    protected fun checkNotContainsCompletion(@Language("Rust") context: String, fragment: String, variant: String) {
+    protected fun checkNotContainsCompletion(@Language("Loong") context: String, fragment: String, variant: String) {
         completionFixture.checkNotContainsCompletion(Data(context, fragment), setOf(variant))
     }
 }

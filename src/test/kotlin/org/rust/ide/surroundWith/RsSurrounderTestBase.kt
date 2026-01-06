@@ -15,8 +15,8 @@ import org.rust.lang.RsFileType
 import org.rust.lang.RsLanguage
 
 abstract class RsSurrounderTestBase(private val surrounder: Surrounder) : RsTestBase() {
-    protected fun doTest(@Language("Rust") before: String,
-                         @Language("Rust") after: String,
+    protected fun doTest(@Language("Loong") before: String,
+                         @Language("Loong") after: String,
                          checkSyntaxErrors: Boolean = true) {
         myFixture.configureByText(RsFileType, before)
 
@@ -29,7 +29,7 @@ abstract class RsSurrounderTestBase(private val surrounder: Surrounder) : RsTest
         myFixture.checkResult(after)
     }
 
-    protected fun doTestNotApplicable(@Language("Rust") before: String) {
+    protected fun doTestNotApplicable(@Language("Loong") before: String) {
         myFixture.configureByText(RsFileType, before)
         checkApplicability(before, false)
     }

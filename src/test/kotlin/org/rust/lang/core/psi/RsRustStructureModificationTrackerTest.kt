@@ -45,12 +45,12 @@ class RsRustStructureModificationTrackerTest : RsTestBase() {
         depsOp.check(modTrackerInDeps, oldCountInDeps, "rustStructureModificationTrackerInDependencies")
     }
 
-    private fun checkModCount(op: TestAction, @Language("Rust") code: String, text: String) {
+    private fun checkModCount(op: TestAction, @Language("Loong") code: String, text: String) {
         InlineFile(code).withCaret()
         checkModCount(op) { myFixture.type(text) }
     }
 
-    private fun doTest(op: TestAction, @Language("Rust") code: String, text: String = "a") {
+    private fun doTest(op: TestAction, @Language("Loong") code: String, text: String = "a") {
         checkModCount(op, code, text)
         checkModCount(op, """
             fn wrapped() {

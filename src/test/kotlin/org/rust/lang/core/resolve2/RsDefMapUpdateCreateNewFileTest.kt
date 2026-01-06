@@ -22,7 +22,7 @@ class RsDefMapUpdateCreateNewFileTest : RsDefMapUpdateTestBase() {
 
     private fun doTest(
         fileToCreate: String,
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         shouldChange: Boolean = true
     ) {
         val testProject = fileTreeFromText(before).create()

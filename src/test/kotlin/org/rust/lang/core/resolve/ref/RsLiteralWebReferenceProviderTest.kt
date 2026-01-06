@@ -86,7 +86,7 @@ class RsLiteralWebReferenceProviderTest : RsTestBase() {
         fn g() { }
     """, RUST_GITHUB_ISSUE_URL, RUST_GITHUB_ISSUE_URL, null, null, RUST_GITHUB_ISSUE_URL, null, null, RUST_GITHUB_ISSUE_URL)
 
-    private fun checkUrlReferences(@Language("Rust") code: String, vararg expectedUrls: String?) {
+    private fun checkUrlReferences(@Language("Loong") code: String, vararg expectedUrls: String?) {
         InlineFile(code, "main.rs")
         val allCarets = myFixture.editor.caretModel.allCarets
         check(allCarets.isNotEmpty()) {

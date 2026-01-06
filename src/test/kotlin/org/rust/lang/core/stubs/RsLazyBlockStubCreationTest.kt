@@ -50,7 +50,7 @@ class RsLazyBlockStubCreationTest : RsLazyBlockStubCreationTestBase() {
         }
     """.trimIndent())
 
-    private fun doTest(@Language("Rust") fileTreeText: String) {
+    private fun doTest(@Language("Loong") fileTreeText: String) {
         fileTreeFromText(fileTreeText).create()
         checkRustFiles(myFixture.findFileInTempDir("."), emptyList())
     }

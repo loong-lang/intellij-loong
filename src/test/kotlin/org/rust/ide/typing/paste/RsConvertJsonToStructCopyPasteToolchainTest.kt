@@ -102,8 +102,8 @@ class RsConvertJsonToStructCopyPasteToolchainTest : RsWithToolchainTestBase() {
     )
 
     private fun doCopyPasteTest(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         @Language("JSON") toPaste: String
     ) {
         val testProject = fileTreeFromText(before).create()

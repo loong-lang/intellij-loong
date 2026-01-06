@@ -302,7 +302,7 @@ class RsBuildActionTest : CargoBuildTest() {
     }
 
     private fun performBuildAction() {
-        val action = ActionManager.getInstance().getAction("Rust.Build") as RsBuildAction
+        val action = ActionManager.getInstance().getAction("Loong.Build") as RsBuildAction
         action.performForContext(TestDataProvider(project)::getData)
     }
 

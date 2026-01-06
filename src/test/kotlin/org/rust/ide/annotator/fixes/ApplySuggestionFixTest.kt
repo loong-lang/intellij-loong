@@ -103,25 +103,25 @@ class ApplySuggestionFixTest : RsWithToolchainTestBase() {
     """, "Suppress `type_alias_bounds` for type _SendVec")
 
     private fun checkFixByText(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         fixName: String? = null,
         externalLinter: ExternalLinter = ExternalLinter.DEFAULT
     ) {
-        val action = getQuickFixes(before, fixName, externalLinter).singleOrNull() ?: return // BACKCOMPAT: Rust ???
+        val action = getQuickFixes(before, fixName, externalLinter).singleOrNull() ?: return // BACKCOMPAT: Loong ???
         myFixture.launchAction(action)
         myFixture.checkResult(replaceCaretMarker(after.trimIndent()))
     }
 
     private fun checkFixIsUnavailable(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         externalLinter: ExternalLinter = ExternalLinter.DEFAULT
     ) {
         assertEmpty(getQuickFixes(text, null, externalLinter))
     }
 
     private fun getQuickFixes(
-        @Language("Rust") text: String,
+        @Language("Loong") text: String,
         fixName: String?,
         externalLinter: ExternalLinter
     ): List<IntentionAction> {

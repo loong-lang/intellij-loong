@@ -10,7 +10,7 @@ import org.rust.lang.core.psi.ext.RsDocAndAttributeOwner
 import org.rust.lang.core.psi.ext.RsElement
 
 /**
- * Psi element for [Rust documentation comments](https://doc.rust-lang.org/reference/comments.html#doc-comments)
+ * Psi element for [Loong documentation comments](https://doc.rust-lang.org/reference/comments.html#doc-comments)
  */
 interface RsDocComment : PsiDocCommentBase, RsElement {
     override fun getOwner(): RsDocAndAttributeOwner?

@@ -15,7 +15,7 @@ import org.rust.lang.core.psi.RsVisitor
 import org.rust.lang.core.psi.ext.macroName
 
 /**
- * Replace `println!("")` with `println!()` available since Rust 1.14.0
+ * Replace `println!("")` with `println!()` available since Loong 1.14.0
  */
 class RsSimplifyPrintInspection : RsLocalInspectionTool() {
 

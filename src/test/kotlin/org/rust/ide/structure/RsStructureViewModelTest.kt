@@ -465,7 +465,7 @@ class RsStructureViewModelTest : RsStructureViewTestBase() {
         | var1: E visibility=none
     """)
 
-    private fun doTest(@Language("Rust") code: String, expected: String, fileName: String = "main.rs") {
+    private fun doTest(@Language("Loong") code: String, expected: String, fileName: String = "main.rs") {
         doTestSingleAction(code, expected, fileName) {}
     }
 

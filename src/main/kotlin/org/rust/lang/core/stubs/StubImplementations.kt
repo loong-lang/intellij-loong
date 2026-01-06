@@ -124,7 +124,7 @@ class RsFileStub(
         override fun deserialize(dataStream: StubInputStream, parentStub: StubElement<*>?): RsFileStub =
             RsFileStub(null, dataStream.readUnsignedByte())
 
-        override fun getExternalId(): String = "Rust.file"
+        override fun getExternalId(): String = "Loong.file"
 
 //        Uncomment to find out what causes switch to the AST
 //

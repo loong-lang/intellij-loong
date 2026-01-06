@@ -222,7 +222,7 @@ last
         }
     """)
 
-    fun doTest(@Language("Rust") before: String, @Language("Rust") after: String) {
+    fun doTest(@Language("Loong") before: String, @Language("Loong") after: String) {
         InlineFile(before.trimIndent()).withCaret()
         myFixture.type('\n')
         myFixture.checkResult(replaceCaretMarker(after.trimIndent()))

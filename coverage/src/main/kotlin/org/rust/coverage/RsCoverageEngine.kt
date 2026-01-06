@@ -72,7 +72,7 @@ class RsCoverageEngine : CoverageEngine() {
 
     override fun createEmptyCoverageSuite(coverageRunner: CoverageRunner): CoverageSuite = RsCoverageSuite()
 
-    override fun getPresentableText(): String = "Rust Coverage"
+    override fun getPresentableText(): String = "Loong Coverage"
 
     override fun createCoverageViewExtension(
         project: Project,

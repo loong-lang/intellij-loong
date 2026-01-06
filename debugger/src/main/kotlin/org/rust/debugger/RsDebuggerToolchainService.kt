@@ -198,7 +198,7 @@ class RsDebuggerToolchainService {
         const val LLDB_FRONTEND_PROPERTY_NAME = "lldbFrontend"
         const val LLDB_FRAMEWORK_PROPERTY_NAME = "lldbFramework"
 
-        const val RUST_DEBUGGER_GROUP_ID = "Rust Debugger"
+        const val RUST_DEBUGGER_GROUP_ID = "Loong Debugger"
 
         private fun downloadPath(): Path = Paths.get(PathManager.getTempPath())
         private fun lldbPath(): Path = RsPathManager.pluginDirInSystem().resolve("lldb")

@@ -231,7 +231,7 @@ class RsInlayParameterHintsProviderTest : RsTestBase() {
         check(inlays.size == 1)
     }
 
-    private fun checkByText(@Language("Rust") code: String, smart: Boolean = true) {
+    private fun checkByText(@Language("Loong") code: String, smart: Boolean = true) {
         check("fn main() {" in code) { "Please use hints inside `fn main` function - needed for testing with attr macros" }
 
         doTest(code, smart)
@@ -239,7 +239,7 @@ class RsInlayParameterHintsProviderTest : RsTestBase() {
     }
 
     @Suppress("UnstableApiUsage")
-    private fun doTest(@Language("Rust") code: String, smart: Boolean) {
+    private fun doTest(@Language("Loong") code: String, smart: Boolean) {
         InlineFile(code.replace(HINT_COMMENT_PATTERN, "<$1/>"))
 
         RsInlayParameterHints.smartOption.set(smart)

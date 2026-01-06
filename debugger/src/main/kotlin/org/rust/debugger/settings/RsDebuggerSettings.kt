@@ -15,7 +15,7 @@ import org.rust.debugger.GDBRenderers
 import org.rust.debugger.LLDBRenderers
 import org.rust.debugger.RsDebuggerBundle
 
-class RsDebuggerSettings : XDebuggerSettings<RsDebuggerSettings>("Rust") {
+class RsDebuggerSettings : XDebuggerSettings<RsDebuggerSettings>("Loong") {
 
     var lldbRenderers: LLDBRenderers = LLDBRenderers.DEFAULT
     var gdbRenderers: GDBRenderers = GDBRenderers.DEFAULT
@@ -83,8 +83,8 @@ class RsDebuggerSettings : XDebuggerSettings<RsDebuggerSettings>("Rust") {
         @JvmStatic
         fun getInstance(): RsDebuggerSettings = getInstance(RsDebuggerSettings::class.java)
 
-        const val GENERAL_SETTINGS_ID: String = "Debugger.Rust.General"
-        const val DATA_VIEW_ID: String = "Debugger.Rust.DataView"
-        const val STEPPING_ID: String = "Debugger.Rust.Stepping"
+        const val GENERAL_SETTINGS_ID: String = "Debugger.Loong.General"
+        const val DATA_VIEW_ID: String = "Debugger.Loong.DataView"
+        const val STEPPING_ID: String = "Debugger.Loong.Stepping"
     }
 }

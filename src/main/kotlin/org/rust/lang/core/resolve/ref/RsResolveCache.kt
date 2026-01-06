@@ -114,7 +114,7 @@ class RsResolveCache(project: Project) : Disposable {
             // any change. This is a case of completion, for example
             null -> ResolveCacheDependency.ANY_PSI_CHANGE
             // The case of injected language. Injected PSI don't have it's own event system, so can only
-            // handle evens from outer PSI. For example, Rust language is injected to Kotlin's string
+            // handle evens from outer PSI. For example, Loong language is injected to Kotlin's string
             // literal. If a user change the literal, we can only be notified that the literal is changed.
             // So we have to invalidate caches for injected PSI on any PSI change
             is VirtualFileWindow -> ResolveCacheDependency.ANY_PSI_CHANGE

@@ -337,7 +337,7 @@ private data class CachedData(
     val macroExpansionDepth: Int = 0
 )
 
-// A rust file can be included in multiple places, but currently IntelliJ Rust works properly only with one
+// A rust file can be included in multiple places, but currently IntelliJ Loong works properly only with one
 // inclusion point, so we have to choose one
 private fun List<FileInclusionPoint>.pickSingleInclusionPoint(): FileInclusionPoint? {
     if (isEmpty()) return null

@@ -206,7 +206,7 @@ class RsConsoleRunner(project: Project) :
         val cargoProject = project.cargoProjects.allProjects.firstOrNull()
             ?: throw RuntimeException("No cargo project")
         val toolchain = project.toolchain
-            ?: throw RuntimeException("Rust toolchain is not defined")
+            ?: throw RuntimeException("Loong toolchain is not defined")
         val evcxr = toolchain.evcxr()
             ?: throw RuntimeException("Evcxr executable not found")
 
@@ -295,6 +295,6 @@ class RsConsoleRunner(project: Project) :
     companion object {
         val LOG: Logger = logger<RsConsoleRunner>()
 
-        const val TOOL_WINDOW_TITLE: String = "Rust REPL"
+        const val TOOL_WINDOW_TITLE: String = "Loong REPL"
     }
 }

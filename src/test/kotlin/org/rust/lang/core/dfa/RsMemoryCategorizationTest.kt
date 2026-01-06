@@ -13,7 +13,7 @@ import org.rust.lang.core.psi.RsExpr
 import org.rust.lang.core.types.cmt
 
 class RsMemoryCategorizationTest : RsTestBase() {
-    private fun testExpr(@Language("Rust") code: String, description: String = "") {
+    private fun testExpr(@Language("Loong") code: String, description: String = "") {
         InlineFile(code)
         check(description)
     }
@@ -71,7 +71,7 @@ class RsMemoryCategorizationTest : RsTestBase() {
         }
     """)
 
-    @Language("Rust")
+    @Language("Loong")
     private val indexable = """
         #[lang = "index"]
         pub trait Index<Idx> { type Output; }

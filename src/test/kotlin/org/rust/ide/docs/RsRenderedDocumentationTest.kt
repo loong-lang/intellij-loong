@@ -181,7 +181,7 @@ class RsRenderedDocumentationTest : RsDocumentationProviderTest() {
         """<p><a href="psi_element://Path::For::Smth">foo</a></p>"""
     )
 
-    private fun doTest(@Language("Rust") code: String, @Language("Html") expected: String?) {
+    private fun doTest(@Language("Loong") code: String, @Language("Html") expected: String?) {
         doTest(code, expected) { originalItem, _ ->
             (originalItem as? RsDocAndAttributeOwner)
                 ?.docElements()

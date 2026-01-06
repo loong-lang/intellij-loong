@@ -160,7 +160,7 @@ class RsPromoteModuleToDirectoryActionTest : RsTestBase() {
 
     private fun testActionOnElement(element: PsiElement, shouldBeEnabled: Boolean) {
         myFixture.launchAction(
-            "Rust.RsPromoteModuleToDirectoryAction",
+            "Loong.RsPromoteModuleToDirectoryAction",
             CommonDataKeys.PSI_ELEMENT to element,
             shouldBeEnabled = shouldBeEnabled
         )

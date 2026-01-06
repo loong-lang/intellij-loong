@@ -54,7 +54,7 @@ class RsVcsCodeVisionTestCase : CodeVisionTestCase() {
         macro foo() {}
     """)
 
-    private fun doTest(@Language("Rust") text: String) {
+    private fun doTest(@Language("Loong") text: String) {
         testProviders(text.trimIndent(), "main.rs", VcsCodeVisionProvider.id)
     }
 }

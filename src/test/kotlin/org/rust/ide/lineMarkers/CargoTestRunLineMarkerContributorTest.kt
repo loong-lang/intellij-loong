@@ -248,7 +248,7 @@ class CargoTestRunLineMarkerContributorTest : RsLineMarkerProviderTestBase() {
         }
     }
 
-    private inline fun <reified E : RsElement> checkElement(@Language("Rust") code: String, callback: (E) -> Unit) {
+    private inline fun <reified E : RsElement> checkElement(@Language("Loong") code: String, callback: (E) -> Unit) {
         val element = PsiFileFactory.getInstance(project)
             .createFileFromText("main.rs", RsFileType, code)
             .descendantOfTypeStrict<E>() ?: error("No ${E::class.java} in\n$code")

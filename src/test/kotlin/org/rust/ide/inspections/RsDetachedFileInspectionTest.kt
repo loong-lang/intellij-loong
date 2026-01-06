@@ -355,8 +355,8 @@ class RsDetachedFileInspectionTest : RsInspectionsTestBase(RsDetachedFileInspect
     }
 
     private fun checkFixWithMultipleModules(
-        @Language("Rust") before: String,
-        @Language("Rust") after: String,
+        @Language("Loong") before: String,
+        @Language("Loong") after: String,
         moduleName: String
     ) {
         withMockModuleAttachSelector({ _, modules ->

@@ -5,6 +5,6 @@
     </dependencies>
 
     <extensions defaultExtensionNs="com.intellij">
-        <duplicateScope language="Rust" implementationClass="org.rust.ide.clones.RsDuplicateScope"/>
+        <duplicateScope language="Loong" implementationClass="org.rust.ide.clones.RsDuplicateScope"/>
     </extensions>
 </idea-plugin>

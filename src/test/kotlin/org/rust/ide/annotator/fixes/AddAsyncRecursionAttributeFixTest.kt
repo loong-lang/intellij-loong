@@ -52,7 +52,7 @@ class AddAsyncRecursionAttributeFixTest : RsWithToolchainTestBase() {
     private fun checkFix(
         fixName: String,
         before: FileTree,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
     ) {
         val testProject = before.create()
         val file = testProject.file(testProject.fileWithCaret)

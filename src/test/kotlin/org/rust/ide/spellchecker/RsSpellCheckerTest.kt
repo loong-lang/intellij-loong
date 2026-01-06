@@ -57,7 +57,7 @@ class RsSpellCheckerTest : RsInspectionsTestBase(SpellCheckingInspection::class)
         fn foo(addr: *const usize) {}
     """)
 
-    private fun doTest(@Language("Rust") text: String, processComments: Boolean = true, processLiterals: Boolean = true) {
+    private fun doTest(@Language("Loong") text: String, processComments: Boolean = true, processLiterals: Boolean = true) {
         (inspection as SpellCheckingInspection).processLiterals = processLiterals
         (inspection as SpellCheckingInspection).processComments = processComments
         checkByText(text, checkWarn = false, checkWeakWarn = true, checkInfo = false)

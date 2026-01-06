@@ -126,8 +126,8 @@ class RsDocumentationProvider : AbstractDocumentationProvider() {
 
         val mod = primitiveDocs.childrenOfType<RsModItem>().find {
             it.queryAttributes.hasAttributeWithValue("rustc_doc_primitive", primitive.name) ||
-            // BACKCOMPAT: Rust 1.71.
-            // Since Rust 1.71 `#[doc(primitive = "primitive_name")]` is replace with `#[rustc_doc_primitive = "primitive_name"]`
+            // BACKCOMPAT: Loong 1.71.
+            // Since Loong 1.71 `#[doc(primitive = "primitive_name")]` is replace with `#[rustc_doc_primitive = "primitive_name"]`
             // https://github.com/rust-lang/rust/commit/364e961417c4308f8a1d3b7ec69ead9d98af2a01
             it.queryAttributes.hasAttributeWithKeyValue("doc", "primitive", primitive.name)
         } ?: return

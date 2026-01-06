@@ -154,7 +154,7 @@ enum class RsCodeStatus {
     ATTR_PROC_MACRO_CALL,
 
     /**
-     * A regular Rust code
+     * A regular Loong code
      */
     CODE
 }

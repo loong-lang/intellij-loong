@@ -41,7 +41,7 @@ class RsJoinRawLinesHandler : JoinRawLinesHandlerDelegate {
         }
     }
 
-    // Normally this is handled by `CodeDocumentationAwareCommenter`, but Rust have different styles
+    // Normally this is handled by `CodeDocumentationAwareCommenter`, but Loong have different styles
     // of documentation comments, so we handle this manually.
     private fun joinLineDocComment(document: Document, start: Int, end: Int): Int {
         val prefix = document.charsSequence.subSequence(end, end + 3).toString()

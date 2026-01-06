@@ -11,7 +11,7 @@ import org.intellij.lang.annotations.Language
 import org.rust.RsTestBase
 
 abstract class RsSelectionHandlerTestBase : RsTestBase() {
-    fun doTest(@Language("Rust") before: String, @Language("Rust") vararg after: String) {
+    fun doTest(@Language("Loong") before: String, @Language("Loong") vararg after: String) {
         doTestWithoutMacro(before, after)
         doTestWithMacro(before, after)
     }

@@ -18,7 +18,7 @@ import org.rust.lang.core.psi.ext.*
 // which use `instanceof` under the hood and thus sensitive
 // to PSI structure
 class RsPsiStructureTest : RsTestBase() {
-    private fun checkFunctionOwner(cond: (RsAbstractableOwner) -> Boolean, @Language("Rust") code: String) =
+    private fun checkFunctionOwner(cond: (RsAbstractableOwner) -> Boolean, @Language("Loong") code: String) =
         checkElement<RsFunction>(code) { check(cond(it.owner)) }
 
     fun `test function role free`() = checkFunctionOwner({ it is RsAbstractableOwner.Free }, "fn main() {}")
@@ -30,7 +30,7 @@ class RsPsiStructureTest : RsTestBase() {
     fun `test function role trait impl method`() =
         checkFunctionOwner({ it is RsAbstractableOwner.Impl && it.isTraitImpl }, "impl S for T { fn foo() {} }")
 
-    private fun checkTypeAliasOwner(cond: (RsAbstractableOwner) -> Boolean, @Language("Rust") code: String) =
+    private fun checkTypeAliasOwner(cond: (RsAbstractableOwner) -> Boolean, @Language("Loong") code: String) =
         checkElement<RsTypeAlias>(code) { check(cond(it.owner)) }
 
     fun `test type alias role free 1`() = checkTypeAliasOwner({ it is RsAbstractableOwner.Free }, "type T = ();")
@@ -38,7 +38,7 @@ class RsPsiStructureTest : RsTestBase() {
     fun `test type alias role impl method`() = checkTypeAliasOwner({ it is RsAbstractableOwner.Impl }, "impl S for X { type T = (); }")
     fun `test type alias role trait method`() = checkTypeAliasOwner({ it is RsAbstractableOwner.Trait }, "trait S { type T; }")
 
-    private fun checkConstantRole(cond: (RsAbstractableOwner) -> Boolean, @Language("Rust") code: String) =
+    private fun checkConstantRole(cond: (RsAbstractableOwner) -> Boolean, @Language("Loong") code: String) =
         checkElement<RsConstant>(code) { check(cond(it.owner)) }
 
     fun `test constant role free 1`() = checkConstantRole({ it is RsAbstractableOwner.Free }, "const C: () = ();")
@@ -84,7 +84,7 @@ class RsPsiStructureTest : RsTestBase() {
         check(info == "extern crate <b>collections</b>")
     }
 
-    private inline fun <reified E : RsElement> checkElement(@Language("Rust") code: String, callback: (E) -> Unit) {
+    private inline fun <reified E : RsElement> checkElement(@Language("Loong") code: String, callback: (E) -> Unit) {
         val element = PsiFileFactory.getInstance(project)
             .createFileFromText("main.rs", RsFileType, code)
             .descendantOfTypeStrict<E>() ?: error("No ${E::class.java} in\n$code")

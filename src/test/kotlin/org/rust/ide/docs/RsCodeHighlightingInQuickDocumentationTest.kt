@@ -131,6 +131,6 @@ class RsCodeHighlightingInQuickDocumentationTest : RsDocumentationProviderTest()
         </div>
     """)
 
-    private fun doTest(@Language("Rust") code: String, @Language("Html") expected: String)
+    private fun doTest(@Language("Loong") code: String, @Language("Html") expected: String)
         = doTest(code, expected) { element, context -> generateDoc(element, context)?.hideSpecificStyles() }
 }

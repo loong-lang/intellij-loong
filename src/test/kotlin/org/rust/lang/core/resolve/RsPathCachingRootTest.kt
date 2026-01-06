@@ -182,7 +182,7 @@ class RsPathCachingRootTest : RsTestBase() {
         {}
     """)
 
-    private fun doTest(@Language("Rust") code: String, testWithStub: Boolean = true) {
+    private fun doTest(@Language("Loong") code: String, testWithStub: Boolean = true) {
         val trimmedCode = code.trimIndent()
         InlineFile(trimmedCode)
         val paths = findElementsWithDataAndOffsetInEditor<RsPath>().map { it.first }
@@ -239,7 +239,7 @@ class RsPathCachingRootTest : RsTestBase() {
         }
     }
 
-    private fun checkCachingRootIsNull(@Language("Rust") code: String) {
+    private fun checkCachingRootIsNull(@Language("Loong") code: String) {
         InlineFile(code)
         val path = findElementInEditor<RsPath>()
         assertNull(RsPathReferenceImpl.getRootCachingElement(path))

@@ -10,7 +10,7 @@ import org.intellij.lang.annotations.Language
 abstract class RsStructureViewToggleableActionTest : RsStructureViewTestBase() {
     protected abstract val actionId: String
 
-    protected fun doTest(@Language("Rust") code: String, disabled: String, enabled: String) =
+    protected fun doTest(@Language("Loong") code: String, disabled: String, enabled: String) =
         doTestStructureView(code) {
             setActionActive(actionId, false)
             assertTreeEqual(tree, disabled.trimMargin())

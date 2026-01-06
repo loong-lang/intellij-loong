@@ -321,11 +321,11 @@ class RsIntroduceParameterTest : RsTestBase() {
     """)
 
     private fun doTest(
-        @Language("Rust") before: String,
+        @Language("Loong") before: String,
         expressions: List<String>,
         exprTarget: Int,
         methodTarget: Int,
-        @Language("Rust") after: String,
+        @Language("Loong") after: String,
         replaceAll: Boolean = false
     ) {
         var shownTargetChooser = false

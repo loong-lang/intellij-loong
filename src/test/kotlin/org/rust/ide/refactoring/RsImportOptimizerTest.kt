@@ -732,8 +732,8 @@ class RsImportOptimizerTest: RsTestBase() {
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String, @Language("Rust") excepted: String) =
+    private fun doTest(@Language("Loong") code: String, @Language("Loong") excepted: String) =
         checkEditorAction(code, excepted, "OptimizeImports")
 
-    private fun checkNotChanged(@Language("Rust") code: String) = doTest(code, code)
+    private fun checkNotChanged(@Language("Loong") code: String) = doTest(code, code)
 }

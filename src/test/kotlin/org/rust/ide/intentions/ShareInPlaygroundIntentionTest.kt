@@ -42,7 +42,7 @@ class ShareInPlaygroundIntentionTest : RsIntentionTestBase(ShareInPlaygroundInte
         }
     """)
 
-    private fun doTest(@Language("Rust") code: String, @Language("Rust") codeToShare: String) {
+    private fun doTest(@Language("Loong") code: String, @Language("Loong") codeToShare: String) {
         InlineFile(code.trimIndent())
         ShareInPlaygroundActionTest.doTest(project, mockServerFixture, codeToShare, DEFAULT_EDITION_FOR_TESTS, "stable", ::launchAction)
     }
